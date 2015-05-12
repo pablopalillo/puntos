@@ -4,12 +4,10 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="telemedellin.tv">
 
-	<meta name="viewport" content="width=1024">
-
-	<!--<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.min.css">-->
+	<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/libs/bootstrap/css/bootstrap.min.css">
 
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
 	<link href='http://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
@@ -21,8 +19,9 @@
 </head>
 
 <body>
+
 <header>
-	<div id="header-content">
+	<div class="container-fluid">
 		<div id="logo"><?php echo CHtml::link( CHtml::image(Yii::app()->request->baseUrl . '/images/logo.png', 'Viaja a Suiza con Medellín 2018', array('width' => 232, 'height' => 226)), CHtml::normalizeUrl('/') ); ?></div>
 		<div id="mainmenu">
 			<?php $this->widget('zii.widgets.CMenu',array(
@@ -44,29 +43,36 @@
 			<?php $this->widget('zii.widgets.CMenu',array(
 				'items'=>array(
 					array('label'=>'Ingresa a tu perfil', 'url'=>array('/iniciar-sesion'), 'linkOptions' => array('class' => 'perfil'), 'visible'=>Yii::app()->user->isGuest),
-					array('label'=>'Perfil', 'url'=>array('/perfil'), 'linkOptions' => array('class' => 'sesion'), 'visible'=>!Yii::app()->user->isGuest),
+					array('label'=>'Registro', 'url'=>array('/registro'), 'linkOptions' => array('class' => 'perfil'), 'visible'=>Yii::app()->user->isGuest),
+					array('label'=>'Perfil', 'url'=>array('/perfil'), 'linkOptions' => array('class' => 'perfil'), 'visible'=>!Yii::app()->user->isGuest),
 					array('label'=>'Salir', 'url'=>array('/cerrar-sesion'), 'linkOptions' => array('class' => 'sesion'), 'visible'=>!Yii::app()->user->isGuest),
 				),
 			)); ?>
 		</div>
 	</div>
 </header>
-<div class="container" id="page">
+<div class="container">
+
 	<?php echo $content; ?>
-	<div class="clear"></div>
+
 </div>
 <footer>
-	<div id="footer-content">
-	<ul>
-		<li><a class="tm" href="http://www.telemedellin.tv" target="_blank">Telemedellín</a></li>
-		<li><a class="ol" href="http://www.medellin2018.org" target="_blank">Olímpicos</a></li>
-		<li><a class="mv" href="http://www.noviolenciamedellin.co/" target="_blank">Mayo por la vida</a></li>
-		<li><a class="al" href="http://www.medellin.gov.co" target="_blank">Alcaldía</a></li>
-	</ul>
-	<?php echo CHtml::link( 'Términos y condiciones', array('/terminos-y-condiciones'), array('class' => 'terminos' ) ); ?> <span>contacto@concursomedellin2018.com</span>
+	<div class="container-fluid">
+		<ul>
+			<li><a class="tm" href="http://www.telemedellin.tv" target="_blank">Telemedellín</a></li>
+			<li><a class="ol" href="http://www.medellin2018.org" target="_blank">Olímpicos</a></li>
+			<li><a class="mv" href="http://www.noviolenciamedellin.co/" target="_blank">Mayo por la vida</a></li>
+			<li><a class="al" href="http://www.medellin.gov.co" target="_blank">Alcaldía</a></li>
+		</ul>
+			<?php echo CHtml::link( 'Términos y condiciones', array('/terminos-y-condiciones'), array('class' => 'terminos' ) ); ?> <span>contacto@concursomedellin2018.com</span>
 	</div>
 </footer>
 <div id="fb-root"></div>
+
+<?php Yii::app()->getClientScript()->registerCoreScript('jquery'); ?>
+<?php Yii::app()->getClientScript()->registerScriptFile( Yii::app()->getBaseUrl().'/css/libs/bootstrap/js/bootstrap.min.js' , CClientScript::POS_END);?>
+<?php Yii::app()->getClientScript()->registerScriptFile( Yii::app()->getBaseUrl().'/js/script.js' , CClientScript::POS_END);?>
+
 <script>
 /*concurso */
 /*
