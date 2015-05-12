@@ -1,0 +1,1101 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}
+a{color: #3090c3; font-family: Arial, sans-serif;, text-decoration: none;}
+body {
+	color: #7d7d7d;
+	font-family: Verdana, sans-serif;
+	margin: 0;
+	background: url("../images/background.png");
+	width: 100%;
+}
+header {
+	background: url("../images/header-completo.png") no-repeat top center;
+	height: 258px;
+	margin: 0;
+	z-index: 2;
+	position: relative;
+	width: 100%;
+}
+#header-content {
+	width: 960px;
+	margin: auto;
+	position: relative;
+}
+.container {
+	width: 960px;
+	margin: auto;
+}
+#logo {
+	/*background-image: url("../images/logo.png"); */
+	width: 230px;
+	height: 225px;
+	float: left;
+	/*text-indent: -9999px;*/
+}
+#logo a {
+	width: 230px;
+	height: 225px;
+	display: block;
+}
+/* ------------Menù principal----------*/
+#mainmenu {
+	float: left;
+}
+#mainmenu ul {
+	margin-left: -50px;
+	margin-top: 0px;
+}
+#mainmenu ul li {
+	float: left;
+	list-style-type: none;
+	margin-right: 5px;
+}
+#mainmenu ul li a {
+	width: 213px;
+	height: 42px;
+	display: block;
+	font-family: 'Gochi Hand', sans-serif;
+	color: #fff;
+	text-decoration: none;
+	padding-top: 14px;
+	text-align: center;
+	font-size: 20px;
+}
+#mainmenu a.item1 {
+	display: block;
+	background: url("../images/btn-header.png") no-repeat; 
+}
+#mainmenu a.item1:hover {
+	display: block;
+	background-position: 0 -57px; 
+}
+/* ------------Compartir----------*/
+#share {
+	float: left;
+	margin-top: 35px;
+	margin-left: -25px;
+}
+#share ul li {
+	float: left;
+	list-style: none;
+	display: block
+;	width: 135px;
+	height: 30px;
+}
+#fb-share {
+	width: 115px;
+	height: 25px;
+	float: left;
+}
+#tw-share {
+	width: 115px;
+	height: 25px;
+}
+/* ------------Menù usuario----------*/
+#usermenu {
+	position: absolute;
+	top: 155px;
+	left: 150px;
+}
+#usermenu ul li {
+	float: left;
+	list-style-type: none;
+}
+#usermenu a {
+	font-family: 'Gochi Hand', sans-serif;
+	color: #fff;
+	text-decoration: none;
+	padding-top: 12px;
+	text-align: center;
+	font-size: 19px;
+	width: 172px;
+	height: 43px;
+}
+#usermenu a.perfil {
+	display: block;
+	background-image: url("../images/btn-sesion.png"); 
+	background-repeat: no-repeat;
+}
+#usermenu a.perfil:hover {
+	display: block;
+	background-position: 0 -55px;
+}
+#usermenu a.sesion {
+	display: block;
+	width: 100px;
+	height: 45px;
+	background-image: url("../images/btn-salir.png"); 
+	background-repeat: no-repeat;
+}
+#usermenu a.sesion:hover {
+	display: block;
+	width: 100px;
+	height: 45px;
+	background-position: 0 -55px;
+}
+/* ------------Contenido----------*/
+#page {
+	margin-top: -30px;
+	background-color: #fff;
+	padding-top: 40px;
+	padding-right: 10px;
+	padding-bottom: 70px;
+	padding-left: 10px;
+	overflow: auto;
+	-webkit-box-shadow: 0px 0px 9px rgba(50, 50, 50, 1);
+	-moz-box-shadow: 0px 0px 9px rgba(50, 50, 50, 1);
+	box-shadow: 0px 0px 9px rgba(50, 50, 50, 1);
+}
+#content {
+	clear: both;
+	overflow: auto;
+	position: relative;
+}
+#intro-home {
+	width: 900px;
+	height: auto;
+	padding: 15px;
+	background-color: #135184;
+	-webkit-border-radius: 18px;
+	-moz-border-radius: 18px;
+	border-radius: 18px;
+}
+#intro-home p {
+	font-family: 'Gochi Hand', sans-serif;
+	color: #fff;
+	font-size: 22px;
+	margin: 0px;
+	text-align: center;
+}
+.titulo-video {
+	background-image: url("../images/bg-text-video.png");
+	background-repeat: no-repeat;
+	width: 560px;
+	height: 60px;
+	font-family: 'Gochi Hand', sans-serif;
+	color: #fff;
+	font-size: 22px;
+	margin: 0px;
+	text-align: center;
+	padding-top: 20px;
+	margin-top: 16px;
+	margin-bottom: -20px;
+	z-index: 2;
+	position: relative;
+}
+#left-content {
+	float: left;
+}
+#left-content iframe {
+	padding: 15px;
+	background-color: #383838;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+#right-content ul {
+	list-style: none;
+}
+#right-content ul li {
+	/*padding-top: 25px;
+	padding-left: 25px;*/
+}
+#right-content ul li a {
+	font-family: 'Gochi Hand', sans-serif;
+	text-decoration: none;
+	color: #fff;
+	font-size: 25px;
+	display: block;
+}
+a.registrate {
+	background-image: url("../images/btn-right_11.jpg");
+	background-repeat: no-repeat;
+	float: right;
+	font-family: 'Gochi Hand', sans-serif;
+	font-size: 25px;
+	color: #fff;
+	width: 325px;
+	height: 179px;
+	margin-top: 10px;
+	padding: 15px 0 0 20px;
+	text-decoration: none;
+}
+a.registrate:hover {
+	background-position: 0 -194px;
+}
+a.juega {
+	background-image: url("../images/btn-right_17.jpg");
+	background-repeat: no-repeat;
+	font-family: 'Gochi Hand', sans-serif;
+	font-size: 25px;
+	text-decoration: none;
+	color: #fff;
+	width: 317px;
+	height: 212px;
+	float: right;
+	padding: 15px 5px 0 20px;
+	margin-top: 10px;
+}
+a.juega:hover {
+	background-position: 0 -227px;
+}
+.resaltado {
+	font-size: 32px;
+	display: block;
+}
+/* ------------Footer----------*/
+footer {
+	background-image: url("../images/bg-footer.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	clear: both;
+	margin-top: -58px;
+	position: relative;
+	width: 100%;
+}
+#footer-content {
+	width: 960px;
+	/*height: 109px;*/
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	padding-top: 45px;
+}
+#footer-content ul {
+	display: block;
+	width: 800px;
+	overflow: auto;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	padding: 0px;
+}
+#footer-content ul li {
+	list-style: none;
+	float: left;
+	margin: 0 22px 0 22px;
+}
+#footer-content > span{
+	font-size: .7em;
+	padding-bottom: 5px;
+	vertical-align: top;
+}
+a.tm {
+	background-image: url("../images/telemedellin_pie.jpg");
+	width: 155px;
+	height: 65px;
+	display: block;
+	text-indent: -9999px;
+}
+a.ol {
+	background-image: url("../images/logo-olimpicos-01.jpg");
+	width: 140px;
+	height: 65px;
+	display: block;
+	text-indent: -9999px;
+}
+a.mv {
+	background-image: url("../images/mayo-por-la-vida-ok.jpg");
+	width: 109px;
+	height: 65px;
+	display: block;
+	text-indent: -9999px;
+}
+a.al {
+	background-image: url("../images/alcaldia.jpg");
+	width: 211px;
+	height: 65px;
+	display: block;
+	text-indent: -9999px;
+}
+a.terminos {
+	clear: both;
+	font-family: "arial";
+	text-decoration: none;
+	font-size: 14px;
+	color: #3090c3;
+	display: block;
+	padding-bottom: 5px;
+}
+a.terminos:hover {
+	text-decoration: underline;
+}
+/* -------------------- Página de puntajes ------------------------*/
+#content-ranking {
+	background-color: #135184;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding: 10px;
+	overflow: auto;
+}
+#content-ranking h1 {
+	font-family: 'Gochi Hand', sans-serif;
+	font-size: 40px;
+	color: #fff;
+	text-align: center;
+	margin-top: 0px;
+}
+#ninos {
+	width: 440px;
+	background-color: #2c7cad;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding: 10px;
+	float: left;
+	margin-right: 20px;
+	position: relative;
+}
+#star-left {
+	background-image: url("../images/star.png");
+	width: 98px;
+	height: 89px;
+	position: absolute;
+	top: -60px;
+	left: -5px;
+}
+#ninos h2 {
+	color: #fef6c5;
+	font-family: 'Gochi Hand', sans-serif;
+	font-size: 35px;
+	margin-top: 0px;
+	margin-bottom: 5px;
+	text-align: center;
+}
+#ninos p {
+	display: block;
+	margin: 0px;
+	float: left;
+	font-family: 'Gochi Hand', sans-serif;
+	font-family: 18px;
+	color: #ffad00;
+	margin-right: 100px;
+}
+#ninos p.puntaje {
+	float: right;
+	margin-right: 15px;
+}
+#ninos ul {
+	clear: both;
+	padding-left: 15px;
+}
+#ninos ul li {
+	list-style: none;
+	font-family: 'Gochi Hand', sans-serif;
+	font-size: 18px;
+	color: #fff;
+	background-image: url("../images/separador-puntaje.png");
+	background-position: bottom left;
+	background-repeat: repeat-x;
+	padding-bottom: 15px;
+	padding-top: 10px;
+}
+#ninas {
+	width: 440px;
+	background-color: #2c7cad;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding: 10px;
+	float: left;
+	position: relative;
+	margin-bottom: 25px;
+}
+#star-right {
+	background-image: url("../images/star.png");
+	width: 98px;
+	height: 89px;
+	position: absolute;
+	top: -60px;
+	right: -5px;
+}
+#ninas h2 {
+	color: #fef6c5;
+	font-family: 'Gochi Hand', sans-serif;
+	font-size: 35px;
+	margin-top: 0px;
+	margin-bottom: 5px;
+	text-align: center;
+}
+#ninas p {
+	display: block;
+	margin: 0px;
+	float: left;
+	font-family: 'Gochi Hand', sans-serif;
+	font-family: 18px;
+	color: #ffad00;
+	margin-right: 100px;
+}
+#ninas p.puntaje {
+	float: right;
+	margin-right: 15px;
+}
+#ninas ul {
+	clear: both;
+	padding-left: 15px;
+}
+#ninas ul li {
+	list-style: none;
+	font-family: 'Gochi Hand', sans-serif;
+	font-size: 18px;
+	color: #fff;
+	background-image: url("../images/separador-puntaje.png");
+	background-position: bottom left;
+	background-repeat: repeat-x;
+	padding-bottom: 15px;
+	padding-top: 10px;
+}
+.lugar {
+	font-family: "Impact", sans-serif;
+	font-weight: bold;
+	font-size: 30px;
+	color: #fff;
+	margin-right: 25px;
+}
+.total {
+	font-family: "Impact", sans-serif;
+	font-weight: bold;
+	font-size: 30px;
+	color: #fff;
+	float: right;
+	text-align: center;
+}
+a.btn-jugar {
+	width: 245px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #6f3357;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	font-family: 'Gochi Hand', sans-serif;
+	font-size: 25px;
+	color: #fff;
+	clear: both;
+	padding: 15px;
+	text-align: center;
+	margin-top: 20px;
+	display: block;
+	text-decoration: none;
+	margin-bottom: 20px;
+}
+a.btn-jugar:hover {
+	background-color: #a0276a;
+}
+/*------------------- Página de registro ---------------------*/
+.form {
+	margin-left: 60px;
+}
+#titulo-registro {
+	width: 740px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #50a0b7;
+	-webkit-border-radius: 18px;
+	-moz-border-radius: 18px;
+	border-radius: 18px;
+	padding: 10px;
+	text-align: center;
+}
+#titulo-registro h1 {
+	font-family: 'Gochi Hand', sans-serif;
+	font-size: 45px;
+	color: #fff;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+#titulo-registro p {
+	font-family: 'Gochi Hand', sans-serif;
+	font-size: 20px;
+	color: #fff;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+#subtitulo {
+	clear: both;
+}
+#subtitulo h2 {
+	font-family: 'Gochi Hand', sans-serif;
+	font-size: 30px;
+	color: #4fa1b7;
+	margin: 20px 0 -10px 0;
+	padding-top: 30px;
+}
+#subtitulo p {
+	font-family: 'Gochi Hand', sans-serif;
+	font-size: 18px;
+	color: #7992a6;
+	margin: 5px 0 15px 0;
+}
+.row {
+	clear: both;
+	position: relative;
+}
+div.form label {
+	font-family: 'Gochi Hand', sans-serif;
+	font-size: 25px;
+	color: #8e60a8;
+	margin: 10px 0 15px 0;
+	display: block;
+	width: 260px;
+	display: block;
+	float: left;
+}
+div.form label small {
+	display: block;
+	font-size: 14px;
+}
+div.form input,
+div.form select {
+	margin: 10px 0 15px 0;
+	display: block;
+	width: 285px;
+	display: block;
+	float: left;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	height: 20px;
+	padding: 5px;
+	font-size: 20px;
+	color: #50a0b7;
+}
+div.form select
+{
+	border: solid 1px #999;
+	height: 36px;
+	width:  300px;
+}
+#Jugador_sexo input {
+	width: 25px;
+	margin-top: 103px;
+}
+#Jugador_sexo label {
+	background-image: url("../images/nino.jpg");
+	background-position: top center;
+	background-repeat: no-repeat;
+	width: 85px;
+	height: 5px;
+	padding-top: 90px;
+	margin-right: 30px;
+	padding-left: 10px;
+}
+#Jugador_sexo label.nino-pic{
+	background-image: url("../images/nino.jpg");
+}
+#Jugador_sexo label.nino-pic:last-child {
+	background-image: url("../images/nina.jpg");
+}
+#Jugador_sexo_0 {
+	position: absolute;
+	left: 320px;
+}
+#Jugador_sexo_1 {
+	position: absolute;
+	left: 450px;
+}
+div.form input.btn {
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	background-color: #783b7e;
+	width: 150px;
+	height: 50px;
+	padding: 10px;
+	font-family: 'Gochi Hand', sans-serif;
+	font-size: 25px;
+	color: #fff;
+	cursor: pointer;
+}
+/* ------------------ Juego -----------------*/
+#juego-content {
+	width: 905px;
+	margin-right: auto;
+	margin-left: auto;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	background-color: #2c7cad;
+	position: relative;
+	margin-top: 30px;
+	overflow: auto;
+	margin-bottom: 25px;
+}
+#estado {
+	background-image: url("../images/bg-panel.png");
+	width: 905px;
+	height: 66px;
+	font-family: 'Gochi Hand';
+	color: #fff;
+	z-index: 2;
+	position: absolute;
+	top: 35px;
+	left: 27px;
+}
+#estado span.nivel {
+	font-size: 60px;
+	padding-top: 3px;
+	padding-left: 50px;
+	float: left;
+}
+#estado span.pregunta {
+	font-size: 25px;
+	padding-left: 95px;
+	padding-bottom: 12px;
+	display: block;
+	padding-top: 20px;
+	float: left;
+}
+#estado span.puntos {
+	font-size: 20px;
+	padding-left: 10px;
+	padding-bottom: 12px;
+	display: block;
+	padding-top: 20px;
+	float: left;
+}
+#estado span#puntos {
+	font-family: "Impact", sans-serif;
+	font-weight: bold;
+	font-size: 50px;
+	float: left;
+	padding-left: 80px;
+}
+p.puntaje-general {
+	font-family: 'Gochi Hand', sans-serif;
+	color: #fff;
+	font-size: 20px;
+	line-height: 18px;
+	width: 115px;
+	height: 91px;
+	padding-top: 10px;
+	background-color: #af2a57;
+	position: absolute;
+	right: 73px;
+	top: -9px;
+	display: block;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	text-align: center;
+	z-index: 3
+}
+#content span#total_puntos {
+	font-family: "Impact", sans-serif;
+	font-weight: bold;
+	font-size: 40px;
+	display: block;
+	padding-top: 20px;
+}
+#mensaje {
+	width: 530px;
+	font-family: 'Gochi Hand', sans-serif;
+	height: auto;
+	color: #fff;
+	background: #3d4e56;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	float: left;
+	padding: 20px;
+	margin-top: 110px;
+	margin-left: 25px;
+	text-align: center;
+}
+#mensaje div{
+	border-bottom: 2px dotted #fff;
+	margin-bottom: 25px;
+}
+#mensaje h3{
+	font-size: 1.6em;
+	margin: .5em;
+}
+#mensaje p{
+	font-family: Verdana, sans-serif;
+}
+#mensaje li{
+	font-size: 1.3em;
+	list-style-image: url("../images/star-tip.png");
+	text-align: left;
+}
+#mensaje a{
+	background: #5da6b4;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	color: #FFF;
+	padding: 10px;
+	text-decoration: none;
+}
+#mensaje a:hover{
+	background: #135184;
+}
+#pregunta {
+	width: 625px;
+	height: auto;
+	background-image: url("../images/spark.png"), url("../images/bg_1.gif");
+	background-repeat: no-repeat, no-repeat;
+	background-position: center 82% , left bottom;
+	float: left;
+	padding-top: 85px;
+}
+#pregunta p.tiempo {
+	width: 85px;
+	height: 65px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0px;
+	padding-top: 5px;
+	background-color: #af2a57;
+	font-family: 'Gochi Hand', sans-serif;
+	font-size: 20px;
+	color: #fff;
+	text-align: center;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+#pregunta #tiempo {
+	font-family: "Impact", sans-serif;
+	font-weight: bold;
+	font-size: 30px;
+	display: block;
+}
+#pregunta p.pregunta {
+	width: 545px;
+	height: auto;
+	padding: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #3c4647;
+	font-family: 'Gochi Hand', sans-serif;
+	text-align: center;
+	color: #fff;
+	font-size: 20px;
+}
+#pregunta a {
+	width: 260px;
+	height: 90px;
+	padding-top: 32px;
+	font-family: 'Gochi Hand', sans-serif;
+	font-size: 20px;
+	color: #fff;
+	text-decoration: none;
+	letter-spacing: 1px;
+}
+a#ra {
+	float: left;
+	background-image: url("../images/left-resp.png");
+	padding-left: 20px;
+	padding-right: 8px;
+
+}
+a:hover#ra {
+	background-position: 0 -110px;
+}
+a#ra.active {
+	background-position: 0 -228px;
+}
+a#rb {
+	float: right;
+	background-image: url("../images/right-resp.png");
+	text-align: right;
+	padding-right: 20px;
+	padding-left: 8px;
+}
+a:hover#rb {
+	background-position: 0 -115px;
+}
+a#rb.active {
+	background-position: 0 -232px;
+}
+a#rc {
+	float: left;
+	clear: both;
+	background-image: url("../images/left-resp.png");
+	padding-left: 20px;
+	padding-right: 8px;
+}
+a:hover#rc {
+	background-position: 0 -110px;
+}
+a#rc.active {
+	background-position: 0 -228px;
+}
+a#rd {
+	float: right;
+	background-image: url("../images/right-resp.png");
+	text-align: right;
+	padding-right: 20px;
+	padding-left: 8px;
+}
+a:hover#rd {
+	background-position: 0 -115px;
+}
+a#rd.active {
+	background-position: 0 -232px;
+}
+/*#logo-juego {
+	background-image: url("../images/spark.png");
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 112px;
+	height: 95px;
+	top: 353px;
+	left:  256px;
+}*/
+#sidebar {
+	float: right;
+	width: 280px;
+	height: 420px;
+	padding-top: 110px;
+	background-color: #3d4e56
+}
+.ayudas {
+	width: 100%;
+	background-color: #5fa6b8;
+	font-family: 'Gochi Hand', sans-serif;
+	font-size: 55px;
+	color: #fff;
+	text-align: center;
+	padding: 10px 0 10px 0;
+	margin: 0 0 10px 0;
+}
+#sidebar a {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 85px;
+	display: block;
+	font-family: 'Gochi Hand', sans-serif;
+	font-size: 20px;
+	color: #ddd;
+	text-decoration: none;
+	margin-bottom: 20px;
+	background-position: 0 -2px;
+}
+#sidebar a.segundos {
+	width: 172px;
+	height: 47px;
+	background-image: url("../images/10-segundos.png");
+	background-repeat: no-repeat;
+	padding-top: 25px;
+}
+#sidebar a:hover.segundos {
+	color: #fff;
+}
+#sidebar a.erradas {
+	width: 172px;
+	height: 52px;
+	background-image: url("../images/50-50.png");
+	background-repeat: no-repeat;
+	padding-top: 20px;
+}
+#sidebar a:hover.erradas {
+	color: #fff;
+}
+#sidebar a.avanza {
+	width: 172px;
+	height: 47px;
+	background-image: url("../images/siguiente.png");
+	background-repeat: no-repeat;
+	padding-top: 25px;
+}
+#sidebar a:hover.avanza {
+	color: #fff;
+}
+#sidebar a.nd {
+	color: #CCC;
+	cursor: default;
+	background-position: bottom !important;
+}
+#sidebar a.nd:hover {
+	color: #CCC;
+}
+/* ------------------ Instrucciones -----------------*/
+#instrucciones {
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+h1,
+.login h1
+{
+	font-family: 'Gochi Hand', sans-serif;
+	font-size: 45px;
+	color: #63426d;
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+#instrucciones h2
+{
+	font-family: 'Gochi Hand', sans-serif;
+	font-size: 30px;
+	color: #4fa1b7;
+	margin: 20px 0 -10px 0;
+	padding-top: 10px;
+}
+#instrucciones p,
+#instrucciones li
+{
+	color: #7d7d7d;
+	font-family: Verdana, sans-serif;
+}
+
+/* ------------------ Perfil -----------------*/
+#perfil h2
+{
+	font-family: 'Gochi Hand', sans-serif;
+	font-size: 30px;
+	color: #4fa1b7;
+	margin: 20px 0 -10px 0;
+	padding-top: 30px;
+}
+#perfil #left-content p
+{
+	color: #8b61a6;
+	font-size: 18px;
+	font-family: 'Gochi Hand', sans-serif;
+}
+#estadisticas
+{
+	background: #50a1b7;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	color: #FFF;
+	font-family: 'Gochi Hand', sans-serif;
+	margin-right: 12px;
+	width: 330px;
+}
+#estadisticas h3{
+	background: #2b5b80;
+	-webkit-border-top-left-radius: 15px;
+	-webkit-border-top-right-radius: 15px;
+	-moz-border-radius-topleft: 15px;
+	-moz-border-radius-topright: 15px;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	font-size: 1.8em;
+	margin-top: 0;
+	padding: 15px;
+	text-align: center;
+}
+#estadisticas p{
+	border-bottom: thin dotted #FFF;
+	font-size: 1.1em;
+	padding: 10px 0;
+	margin: 0 15px;
+}
+#estadisticas p:last-child{
+	border: none;
+}
+#estadisticas p span
+{
+	float: right;
+	font-size: 1.3em;
+}
+/* ------------------ Premio -----------------*/
+#content-premio {
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#content-premio h1,
+#terminos h1 {
+	font-family: 'Gochi Hand';
+	font-size: 45px;
+	color: #63426d;
+	margin: 15px 0;
+}
+#content-premio h2 {
+	color: #4fa1b7;
+	font-family: 'Gochi Hand', sans-serif;
+	font-size: 30px;
+	margin: 20px 0 -10px 0;
+	padding-top: 30px;
+}
+#content-premio p,
+#content-premio li {
+	font-family: Verdana, sans-serif;
+	color: #7d7d7d;
+}
+
+.form.login{
+	float: left;
+	width: 500px;
+}
+#LoginForm_rememberMe{
+	width: 40px;
+}
+
+#estadisticas{
+	float: right;
+}
+
+#terminos 
+{
+	margin: auto;
+	width: 800px;
+}
+#terminos h1{
+	font-size: 43px;
+}
+
+div.flash-error, div.flash-notice, div.flash-success
+{
+	padding:.8em;
+	margin-bottom:1em;
+	border:2px solid #ddd;
+}
+
+div.flash-error
+{
+	background:#FBE3E4;
+	color:#8a1f11;
+	border-color:#FBC2C4;
+}
+
+div.flash-notice
+{
+	background:#FFF6BF;
+	color:#514721;
+	border-color:#FFD324;
+	margin-bottom: 80px;
+}
+
+div.flash-success
+{
+	background:#E6EFC2;
+	color:#264409;
+	border-color:#C6D880;
+}
+
+div.flash-error a
+{
+	color:#8a1f11;
+}
+
+div.flash-notice a
+{
+	color:#514721;
+}
+
+div.flash-success a
+{
+	color:#264409;
+}
+
+.clear
+{
+	clear: both;
+}
