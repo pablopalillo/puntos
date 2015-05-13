@@ -204,19 +204,19 @@ class SiteController extends Controller
 	private function verificarCorreo($datos)
     {
 
-		$mnino             = new YiiMailer();
+			$mnino             = new YiiMailer();
         $mnino->setView('verificar-correo');
         $mnino->setData( array('datos' => $datos) );
         $mnino->render();
-		$mnino->Subject    = 'Verifica tu registro en el concurso Viaja a Suiza con Medellín 2018';
+				$mnino->Subject    = 'Verifica tu registro en el concurso Viaja a Suiza con Medellín 2018';
         $mnino->AddAddress($datos['correo']);
         $mnino->From = 'contacto@concursomedellin2018.com';
         $mnino->FromName = 'Concurso Medellín 2018';
         $mnino->Send();
 
 // Verificar correo para adultos
-  /*
-  		$madulto           = new YiiMailer();
+
+  			$madulto           = new YiiMailer();
         $madulto->setView('notificacion-adulto');
         $madulto->setData( array('datos' => $datos) );
         $madulto->render();
@@ -225,7 +225,7 @@ class SiteController extends Controller
         $madulto->From = 'contacto@concursomedellin2018.com';
         $madulto->FromName = 'Concurso Medellín 2018';
         $madulto->Send();
-  */
+
         $this->render('verificar_correo', array('datos' => $datos) );
 
     }

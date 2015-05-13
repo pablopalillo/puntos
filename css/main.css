@@ -9,6 +9,15 @@ header {
 	position: relative;
 	width: 100%;
 }
+
+
+/*------------- Registro Form --------*/
+#registro-form #responsable
+{
+	display: none;
+}
+
+
 #header-content {
 	width: 960px;
 	margin: auto;
@@ -446,41 +455,7 @@ a.btn-jugar:hover {
 .form {
 	margin-left: 60px;
 }
-#titulo-registro {
-	width: 740px;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: #50a0b7;
-	-webkit-border-radius: 18px;
-	-moz-border-radius: 18px;
-	border-radius: 18px;
-	padding: 10px;
-	text-align: center;
-}
-#titulo-registro h1 {
-	font-family: 'Gochi Hand', sans-serif;
-	font-size: 45px;
-	color: #fff;
-	margin-bottom: 5px;
-	margin-top: 5px;
-}
-#titulo-registro p {
-	font-family: 'Gochi Hand', sans-serif;
-	font-size: 20px;
-	color: #fff;
-	margin-bottom: 5px;
-	margin-top: 5px;
-}
-#subtitulo {
-	clear: both;
-}
-#subtitulo h2 {
-	font-family: 'Gochi Hand', sans-serif;
-	font-size: 30px;
-	color: #4fa1b7;
-	margin: 20px 0 -10px 0;
-	padding-top: 30px;
-}
+
 
 
 /* ------------------ Juego -----------------*/
@@ -798,34 +773,7 @@ a#rd.active {
 	color: #CCC;
 }
 /* ------------------ Instrucciones -----------------*/
-#instrucciones {
-	width: 800px;
-	margin-left: auto;
-	margin-right: auto;
-}
-h1,
-.login h1
-{
-	font-family: 'Gochi Hand', sans-serif;
-	font-size: 45px;
-	color: #63426d;
-	margin-bottom: 15px;
-	margin-top: 15px;
-}
-#instrucciones h2
-{
-	font-family: 'Gochi Hand', sans-serif;
-	font-size: 30px;
-	color: #4fa1b7;
-	margin: 20px 0 -10px 0;
-	padding-top: 10px;
-}
-#instrucciones p,
-#instrucciones li
-{
-	color: #7d7d7d;
-	font-family: Verdana, sans-serif;
-}
+
 
 /* ------------------ Perfil -----------------*/
 #perfil h2

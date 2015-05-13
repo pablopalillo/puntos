@@ -10385,3 +10385,38 @@ Stack trace:
 REQUEST_URI=/puntos/registro
 HTTP_REFERER=http://localhost/puntos/registro
 ---
+2015/05/13 16:28:55 [error] [exception.CException] exception 'CException' with message 'La propiedad "Jugador"."correo" no se encuentra definida.' in /var/www/yii-1.1.16/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/db/ar/CActiveRecord.php(145): CComponent->__get('correo')
+#1 /var/www/yii-1.1.16/framework/validators/CEmailValidator.php(70): CActiveRecord->__get('correo')
+#2 /var/www/yii-1.1.16/framework/validators/CValidator.php(201): CEmailValidator->validateAttribute(Object(Jugador), 'correo')
+#3 /var/www/yii-1.1.16/framework/base/CModel.php(159): CValidator->validate(Object(Jugador), NULL)
+#4 /var/www/puntos/protected/controllers/SiteController.php(98): CModel->validate()
+#5 /var/www/yii-1.1.16/framework/web/actions/CInlineAction.php(49): SiteController->actionRegistro()
+#6 /var/www/yii-1.1.16/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /var/www/yii-1.1.16/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /var/www/yii-1.1.16/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): CController->run('registro')
+#10 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController('site/registro')
+#11 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#12 /var/www/puntos/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/puntos/registro
+HTTP_REFERER=http://localhost/puntos/registro
+---
+2015/05/13 17:11:24 [error] [php] Trying to get property of non-object (/var/www/puntos/protected/models/Ronda.php:189)
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/actions/CInlineAction.php(49): JugadorController->actionPerfil()
+#1 /var/www/yii-1.1.16/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /var/www/yii-1.1.16/framework/web/filters/CFilterChain.php(133): JugadorController->runAction()
+#3 /var/www/yii-1.1.16/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /var/www/yii-1.1.16/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /var/www/yii-1.1.16/framework/web/filters/CInlineFilter.php(58): JugadorController->filterAccessControl()
+#6 /var/www/yii-1.1.16/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /var/www/yii-1.1.16/framework/web/CController.php(291): CFilterChain->run()
+#8 /var/www/yii-1.1.16/framework/web/CController.php(265): JugadorController->runActionWithFilters()
+#9 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): JugadorController->run()
+#10 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#12 /var/www/puntos/index.php(13): CWebApplication->run()
+REQUEST_URI=/puntos/perfil

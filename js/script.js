@@ -8,9 +8,27 @@ jQuery(document).ready(function() {
         var fecha_nacimiento  =  $("#Jugador_fecha_nacimiento").val();
         var edad  =  verificar_edad( fecha_nacimiento );
 
-        if(  edad < 18)
+        if( edad < 18 )
         {
-           alert('Usted es un marciano hp!');
+          $("#responsable").show();
+
+          $("#Jugador_nombre_adulto").attr('disabled',false);
+          $("#Jugador_documento_adulto").attr('disabled',false);
+          $("#Jugador_parentesco_id").attr('disabled',false);
+          $("#Jugador_correo_adulto").attr('disabled',false);
+          $("#Jugador_telefono").attr('disabled',false);
+
+        }
+        else
+        {
+          $("#Jugador_nombre_adulto").attr('disabled',true);
+          $("#Jugador_documento_adulto").attr('disabled',true);
+          $("#Jugador_parentesco_id").attr('disabled',true);
+          $("#Jugador_correo_adulto").attr('disabled',true);
+          $("#Jugador_telefono").attr('disabled',true);
+
+
+          $("#responsable").hide();
 
         }
 

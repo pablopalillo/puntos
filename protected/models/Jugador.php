@@ -57,6 +57,7 @@ class Jugador extends CActiveRecord
 			array('documento, documento_adulto', 'numerical', 'integerOnly'=>true),
 			array('documento','numerical','integerOnly'=>true),
 			array('nombre, nombre_adulto', 'length', 'max'=>255),
+			array('correo_adulto', 'email'),
 			array('nombre','length','max'=>255),
 			array('sexo', 'length', 'max'=>1),
 			array('correo_adulto', 'length', 'max'=>100),
