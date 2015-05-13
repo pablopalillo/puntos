@@ -44,7 +44,7 @@ return array(
 			'urlFormat'=>'path',
 			'showScriptName'=>false,
 			'rules'=>array(
-				'iniciar-sesion'	=>'site/login',
+				'participar'	=>'site/login',
 				'cerrar-sesion'		=>'site/logout',
 				'como-jugar'		=>'site/page/view/instrucciones',
 				'premio'			=>'site/page/view/premio',

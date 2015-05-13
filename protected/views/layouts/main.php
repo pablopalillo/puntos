@@ -42,7 +42,7 @@
 		<div id="usermenu">
 			<?php $this->widget('zii.widgets.CMenu',array(
 				'items'=>array(
-					array('label'=>'Ingresa a tu perfil', 'url'=>array('/iniciar-sesion'), 'linkOptions' => array('class' => 'perfil'), 'visible'=>Yii::app()->user->isGuest),
+					array('label'=>'Ingresa a tu perfil', 'url'=>array('/participar'), 'linkOptions' => array('class' => 'perfil'), 'visible'=>Yii::app()->user->isGuest),
 					array('label'=>'Registro', 'url'=>array('/registro'), 'linkOptions' => array('class' => 'perfil'), 'visible'=>Yii::app()->user->isGuest),
 					array('label'=>'Perfil', 'url'=>array('/perfil'), 'linkOptions' => array('class' => 'perfil'), 'visible'=>!Yii::app()->user->isGuest),
 					array('label'=>'Salir', 'url'=>array('/cerrar-sesion'), 'linkOptions' => array('class' => 'sesion'), 'visible'=>!Yii::app()->user->isGuest),
@@ -63,7 +63,7 @@
 			<li><a class="ol" href="http://www.medellin2018.org" target="_blank">Olímpicos</a></li>
 			<li><a class="mv" href="http://www.noviolenciamedellin.co/" target="_blank">Mayo por la vida</a></li>
 			<li><a class="al" href="http://www.medellin.gov.co" target="_blank">Alcaldía</a></li>
-		</ul> 
+		</ul>
 			<?php echo CHtml::link( 'Términos y condiciones', array('/terminos-y-condiciones'), array('class' => 'terminos' ) ); ?> <span>contacto@concursomedellin2018.com</span>
 	</div>
 </footer>
