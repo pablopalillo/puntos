@@ -56,14 +56,14 @@
 	<?php echo $content; ?>
 
 </div>
-<footer>
-	<div class="container-fluid">
+<footer class="container-fluid">
+	<div  class="row">
 		<ul>
 			<li><a class="tm" href="http://www.telemedellin.tv" target="_blank">Telemedellín</a></li>
 			<li><a class="ol" href="http://www.medellin2018.org" target="_blank">Olímpicos</a></li>
 			<li><a class="mv" href="http://www.noviolenciamedellin.co/" target="_blank">Mayo por la vida</a></li>
 			<li><a class="al" href="http://www.medellin.gov.co" target="_blank">Alcaldía</a></li>
-		</ul>
+		</ul> 
 			<?php echo CHtml::link( 'Términos y condiciones', array('/terminos-y-condiciones'), array('class' => 'terminos' ) ); ?> <span>contacto@concursomedellin2018.com</span>
 	</div>
 </footer>

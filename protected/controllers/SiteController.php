@@ -81,56 +81,57 @@ class SiteController extends Controller
 	public function actionRegistro()
 	{
 		Yii::app()->user->setFlash('error', "Estamos revisando los resultados");
-	//	$this->redirect('puntajes');
+		//	$this->redirect('puntajes');
 		$usuario = new Usuario;
 		$jugador = new Jugador;
 
 		if(isset($_POST['Usuario'], $_POST['Jugador']))
 		{
 			$usuario->attributes = $_POST['Usuario'];
-        	$jugador->attributes = $_POST['Jugador'];
+			$jugador->attributes = $_POST['Jugador'];
 
-        	$jugador->colegio 	 		= '';
-        	$jugador->nombre_adulto 	= '';
-			$jugador->documento_adulto  = '';
-			$jugador->correo_adulto     = '';
-			$jugador->parentesco_id 	= '';
+			$jugador->colegio 	 				= '';
+			$jugador->parentesco_id 		= '7';
 
-        	$valid = false;
+			$valid = false;
 
-        	if($usuario->validate() && $jugador->validate())
-        		$valid = true;
+			if($usuario->validate() && $jugador->validate())
+			{
+				$valid = true;
+			}
 
-        	if($valid)
-	        {
-	            $usuario->save(false);
-	            $jugador->usuario_id = $usuario->id;
-	            $jugador->save(false);
-/*
-	            $datos = array(	'nombre' 			=> $jugador->nombre,
-	            				'nombre_adulto'		=> $jugador->nombre_adulto,
-	            				'correo' 			=> $usuario->correo,
-	            				'correo_adulto'		=> $jugador->correo_adulto,
-	            				'llave_activacion' 	=> $usuario->llave_activacion
-	            				);
-*/
 
-      			$datos = array(	'nombre' 			=> $jugador->nombre,
-	            				'correo' 			=> $usuario->correo,
-	            				'llave_activacion' 	=> $usuario->llave_activacion
-	            				);
 
-	            $this->verificarCorreo($datos);
+			if($valid)
+			{
+				$usuario->save(false);
+				$jugador->usuario_id = $usuario->id;
+				$jugador->save(false);
 
-	            Yii::app()->end();
-	        }
-		}
+				$datos = array(	'nombre' 			=> $jugador->nombre,
+				'nombre_adulto'		=> $jugador->nombre_adulto,
+				'correo' 			=> $usuario->correo,
+				'correo_adulto'		=> $jugador->correo_adulto,
+				'llave_activacion' 	=> $usuario->llave_activacion
+				);
+
+
+					$datos = array(	'nombre' 			=> $jugador->nombre,
+					'correo' => $usuario->correo,
+					'llave_activacion' 	=> $usuario->llave_activacion
+					);
+
+					$this->verificarCorreo($datos);
+
+					Yii::app()->end();
+				}
+			}
 
 
 		$this->render('registro', array(
-				'usuario' => $usuario,
-				'jugador' => $jugador,
-			)
+			'usuario' => $usuario,
+			'jugador' => $jugador,
+		)
 		);
 	}
 
@@ -151,7 +152,7 @@ class SiteController extends Controller
 			$mensaje = 'fallido';
 			//FALTA MENSAJE DE FALLA
 		}
-			
+
 		$this->render('verificar', array('mensaje' => $mensaje));
 	}
 
@@ -170,13 +171,13 @@ class SiteController extends Controller
 		}else{
 			$this->render('recuperar',array('model'=>$model));
 		}
-		
+
 	}
 
 	public function actionValidarIdentidad($llave_activacion)
 	{
-		
-		
+
+
 		$recuperar = Usuario::model()->validarToken($llave_activacion);
 		if($recuperar)
 		{
@@ -196,12 +197,12 @@ class SiteController extends Controller
 		{
 			$this->render('recuperar-mensaje', array('mensaje' => 'Ooops!'));
 		}
-		
-		
+
+
 	}
 
 	private function verificarCorreo($datos)
-    {   
+    {
 
 		$mnino             = new YiiMailer();
         $mnino->setView('verificar-correo');
@@ -210,11 +211,11 @@ class SiteController extends Controller
 		$mnino->Subject    = 'Verifica tu registro en el concurso Viaja a Suiza con Medellín 2018';
         $mnino->AddAddress($datos['correo']);
         $mnino->From = 'contacto@concursomedellin2018.com';
-        $mnino->FromName = 'Concurso Medellín 2018';  
+        $mnino->FromName = 'Concurso Medellín 2018';
         $mnino->Send();
 
 // Verificar correo para adultos
-  /*      
+  /*
   		$madulto           = new YiiMailer();
         $madulto->setView('notificacion-adulto');
         $madulto->setData( array('datos' => $datos) );
@@ -226,6 +227,6 @@ class SiteController extends Controller
         $madulto->Send();
   */
         $this->render('verificar_correo', array('datos' => $datos) );
-               
+
     }
 }

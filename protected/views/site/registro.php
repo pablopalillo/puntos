@@ -24,14 +24,14 @@ Yii::app()->clientScript->registerScript('datepicker',
 
 	<?php echo $activeform->errorSummary(array($usuario, $jugador), '', '', array('class' => 'flash-notice')); ?>
 
-	<div id="subtitulo">
+	<div class="well well-lg">
 		<h2>Datos de acceso</h2>
 		<p>Recuerda muy bien estos datos, porque los necesitarás para poder a ganar puntos</p>
 	</div>
 
 	<div class="row">
 		<?php echo $activeform->label($usuario,'correo'); ?>
-		<?php echo $activeform->emailField($usuario,'correo',array('size'=>60, 'maxlength'=>100)); ?>
+		<?php echo $activeform->emailField($usuario,'correo',array('size'=>60, 'maxlength'=>100,'placeholder' => 'Correo electronico')); ?>
 	</div>
 
 	<div class="row">
@@ -39,7 +39,7 @@ Yii::app()->clientScript->registerScript('datepicker',
 		<?php echo $activeform->passwordField($usuario,'password',array('size'=>60,'maxlength'=>255)); ?>
 	</div>
 
-	<div id="subtitulo">
+	<div class="well well-lg">
 		<h2>Datos personales</h2>
 		<p>Estos son los datos basicos que utilizaremos para contactarte.</p>
 	</div>
@@ -54,10 +54,6 @@ Yii::app()->clientScript->registerScript('datepicker',
 			<?php echo $activeform->textField($jugador,'documento',array('size'=>45,'maxlength'=>45)); ?>
 		</div>
 
-		<div class="row">
-			<?php echo $activeform->label($jugador,'fecha_nacimiento'); ?>
-			<?php echo $activeform->textField($jugador,'fecha_nacimiento', array('class' => 'datepicker')); ?>
-		</div>
 
 		<div class="control-group">
 			<?php echo $activeform->label($jugador,'Genero'); ?>
@@ -66,9 +62,14 @@ Yii::app()->clientScript->registerScript('datepicker',
 			</div>
 		</div>
 
+		<div class="row">
+			<?php echo $activeform->label($jugador,'fecha_nacimiento'); ?>
+			<?php echo $activeform->textField($jugador,'fecha_nacimiento', array('class' => 'datepicker')); ?>
+		</div>
+
 <div id="responsable" class="parent-group">
 
-		<div class="well well-lg" id="subtitulo">
+		<div class="well well-lg">
 			<h2>Información del adulto responsable</h2>
 			<p>Ingresa estos datos con mucho cuidado, porque serán utilizados si resultas ganador</p>
 		</div>
@@ -82,28 +83,30 @@ Yii::app()->clientScript->registerScript('datepicker',
 			<?php echo $activeform->label($jugador,'documento_adulto'); ?>
 			<?php echo $activeform->textField($jugador,'documento_adulto',array('class' => 'form-control','size'=>45,'maxlength'=>45)); ?>
 		</div>
-
+<!--
 		<div class="form-group">
 			<?php echo $activeform->label($jugador,'parentesco_id'); ?>
 			<?php echo $activeform->dropDownList($jugador,'parentesco_id', CHtml::listData(Parentesco::model()->findAll(), 'id', 'nombre'), array('class'=>'form-control')); ?>
 		</div>
-
+-->
 		<div class="form-group">
 			<?php echo $activeform->label($jugador,'correo_adulto'); ?>
-			<?php echo $activeform->emailField($jugador,'correo_adulto',array('class' => 'form-control','size'=>60,'maxlength'=>100)); ?>
+			<?php echo $activeform->emailField($jugador,'correo_adulto',array('class' => 'form-control','size'=>60,'maxlength'=>100, 'placeholder' => 'Correo responsable')); ?>
 		</div>
 
 		<div class="form-group">
 			<?php echo $activeform->label($jugador,'telefono'); ?>
 			<?php echo $activeform->textField($jugador,'telefono',array('class' => 'form-control','size'=>45,'maxlength'=>45)); ?>
 		</div>
+
 </div>
 
-		<div class="row">
+		<div class="well well-lg">
 			<p>Antes de registrarte asegúrate de haber leído y estar de acuerdo con los <?php echo CHtml::link('términos y condiciones del concurso', array('/terminos-y-condiciones'), array('target' => '_blank'));?>.</p>
 		</div>
-		<div class="row buttons submit">
-			<?php echo CHtml::submitButton('Registro', array('class'=>'btn')); ?>
+
+		<div class="form-group">
+			<?php echo CHtml::submitButton('Registro', array('class'=>'btn btn-default')); ?>
 		</div>
 
 	<?php $this->endWidget(); ?>

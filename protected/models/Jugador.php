@@ -52,18 +52,17 @@ class Jugador extends CActiveRecord
 	public function rules()
 	{
 		return array(
-			array('nombre, documento, sexo, fecha_nacimiento, colegio, nombre_adulto, documento_adulto, correo_adulto, telefono, parentesco_id', 'required'),
+			array('nombre, documento, sexo, fecha_nacimiento, telefono', 'required'),
 			array('documento', 'unique'),
-		//	array('documento, documento_adulto, parentesco_id', 'numerical', 'integerOnly'=>true),
+			array('documento, documento_adulto', 'numerical', 'integerOnly'=>true),
 			array('documento','numerical','integerOnly'=>true),
-			//array('nombre, colegio, nombre_adulto', 'length', 'max'=>255),
+			array('nombre, nombre_adulto', 'length', 'max'=>255),
 			array('nombre','length','max'=>255),
 			array('sexo', 'length', 'max'=>1),
-			//array('correo_adulto', 'length', 'max'=>100),
+			array('correo_adulto', 'length', 'max'=>100),
 			array('telefono', 'length', 'max'=>45),
-					
-			//array('id, nombre, documento, usuario_id, sexo, fecha_nacimiento, colegio, nombre_adulto, documento_adulto, correo_adulto, telefono, parentesco_id, fecha_registro, fecha_actualizacion, puntaje', 'safe', 'on'=>'search'),
-			array('id, nombre, documento, usuario_id, sexo, fecha_nacimiento,  telefono, fecha_registro, fecha_actualizacion, puntaje', 'safe', 'on'=>'search'),
+			array('id, nombre, documento, usuario_id, sexo, fecha_nacimiento, nombre_adulto, documento_adulto, correo_adulto, telefono, parentesco_id, fecha_registro, fecha_actualizacion, puntaje', 'safe', 'on'=>'search'),
+			//array('id, nombre, documento, usuario_id, sexo, fecha_nacimiento,  telefono, fecha_registro, documento_adulto, fecha_actualizacion, puntaje', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -91,11 +90,11 @@ class Jugador extends CActiveRecord
 			'sexo' => 'Sexo',
 			'fecha_nacimiento' => 'Fecha de nacimiento',
 		//	'colegio' => 'Colegio de Medellín',
-		//	'nombre_adulto' => 'Nombre adulto responsable',
-		//	'documento_adulto' => 'Documento adulto responsable',
-		//	'correo_adulto' => 'Correo adulto responsable',
+			'nombre_adulto' => 'Nombre adulto responsable',
+			'documento_adulto' => 'Documento adulto responsable',
+			'correo_adulto' => 'Correo adulto responsable',
 			'telefono' => 'Teléfono',
-		//	'parentesco_id' => 'Parentesco',
+	//		'parentesco_id' => 'Parentesco',
 			'fecha_registro' => 'Fecha de registro',
 			'fecha_actualizacion' => 'Fecha de actualizacion',
 			'puntaje' => 'Puntaje',
@@ -108,7 +107,7 @@ class Jugador extends CActiveRecord
 	 */
 	public function search()
 	{
-	
+
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
@@ -118,11 +117,11 @@ class Jugador extends CActiveRecord
 		$criteria->compare('sexo',$this->sexo,true);
 		$criteria->compare('fecha_nacimiento',$this->fecha_nacimiento,true);
 	//	$criteria->compare('colegio',$this->colegio,true);
-	//	$criteria->compare('nombre_adulto',$this->nombre_adulto,true);
-	//	$criteria->compare('documento_adulto',$this->documento_adulto);
-	//	$criteria->compare('correo_adulto',$this->correo_adulto,true);
+		$criteria->compare('nombre_adulto',$this->nombre_adulto,true);
+		$criteria->compare('documento_adulto',$this->documento_adulto);
+		$criteria->compare('correo_adulto',$this->correo_adulto,true);
 		$criteria->compare('telefono',$this->telefono,true);
-	//	$criteria->compare('parentesco_id',$this->parentesco_id);
+		//$criteria->compare('parentesco_id',$this->parentesco_id);
 		$criteria->compare('fecha_registro',$this->fecha_registro,true);
 		$criteria->compare('fecha_actualizacion',$this->fecha_actualizacion,true);
 		$criteria->compare('puntaje',$this->puntaje);
@@ -139,7 +138,7 @@ class Jugador extends CActiveRecord
 		 $interval = $now->diff($date);
 		 return $interval->y;
 	}
-	
+
 	public function getPuntos($jugador_id = 0)
 	{
 		 if($jugador_id == 0) $jugador_id = Yii::app()->user->id;
@@ -160,7 +159,7 @@ class Jugador extends CActiveRecord
 
 	public function getRanking()
 	{
-		 
+
 		 $c = new CDbCriteria;
 		 $c->addCondition('puntaje > 0');
 		 $c->limit = 10;
@@ -169,21 +168,21 @@ class Jugador extends CActiveRecord
 		 $ninas = $this->findAllByAttributes(array('sexo' => 'F'), $c);
 		 $resultado = array('ninos' => $ninos, 'ninas' => $ninas);
 		 return $resultado;
-		 
+
 	}
 
 	protected function beforeSave()
 	{
-		        
+
         if($this->isNewRecord)
         {
         	$this->fecha_registro = date('Y-m-d H:i:s');
-        	$this->puntaje = 0;	
+        	$this->puntaje = 0;
         }else
         {
         	$this->fecha_actualizacion = date('Y-m-d H:i:s');
         }
-        
+
     	return true;
 	}
 }

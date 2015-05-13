@@ -12,7 +12,7 @@ return array(
 	'language' => 'es',
 
 	// preloading 'log' component
-	//'preload'=>array('log'),
+	'preload'=>array('log'),
 
 	// autoloading model and component classes
 	'import'=>array(
@@ -23,14 +23,14 @@ return array(
 
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
-		
+
 		/*'gii'=>array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'asdf1234*',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),*/
-		
+
 	),
 
 	// application components
@@ -85,11 +85,11 @@ return array(
 					'levels'=>'error, warning',
 				),
 				// uncomment the following to show log messages on web pages
-				
+
 				array(
 					'class'=>'CWebLogRoute',
 				),
-				
+
 			),
 		),
 		'request'=>array(
