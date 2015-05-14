@@ -10,22 +10,22 @@
 	<section class="col-sm-12" id="estadisticas-content">
 
 		<div class="col-sm-11">
-			<h3> Posicion actual</h3>
-			<span> 15 </span>
+			<span> Posicion actual</span>
+			<h3> 15 </h3>
 		</div>
 
 		<div class="col-sm-11">
-			<h3> Puntaje del mes actual  </h3>
-			<span> 16 </span>
+			<span> Puntaje del mes actual  </span>
+			<h3> 16 </h3>
 		</div>
 		<div class="col-sm-11">
-			<h3>Puntaje acomulado del año</h3>
-			<span> 1500 </span>
+			<span>Puntaje acomulado del año</span>
+			<h3> 1500 </h3>
 		</div>
 
 		<div class="col-sm-11">
-			<h3> Puntaje total</h3>
-			<span> <?php echo $jugador->puntaje ?> </span>
+			<span> Puntaje total</span>
+			<h3> <?php echo $jugador->puntaje ?> </h3>
 		</div>
 
 	<!-- 	<p> Rondas jugadas <span> <?php //echo $estadisticas['rondas'] ?> </span></p> -->
