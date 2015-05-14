@@ -69,9 +69,7 @@ class SiteController extends Controller
 
 	}
 
-	/**
-	 * Logs out the current user and redirect to homepage.
-	 */
+
 	public function actionLogout()
 	{
 		Yii::app()->user->logout();
@@ -101,7 +99,6 @@ class SiteController extends Controller
 			{
 				$valid = true;
 			}
-
 
 
 			if($valid)
@@ -141,7 +138,7 @@ class SiteController extends Controller
 	{
 		$ranking = Jugador::model()->getRanking();
 		$this->render('ranking', array('ranking' => $ranking));
-	}//Ranking
+	}
 
 	public function actionVerificar($llave_activacion)
 	{
@@ -154,7 +151,6 @@ class SiteController extends Controller
 			$mensaje = 'fallido';
 			//FALTA MENSAJE DE FALLA
 		}
-
 		$this->render('verificar', array('mensaje' => $mensaje));
 	}
 
@@ -215,8 +211,6 @@ class SiteController extends Controller
         $mnino->From = 'contacto@concursomedellin2018.com';
         $mnino->FromName = 'Concurso Medellín 2018';
         $mnino->Send();
-
-// Verificar correo para adultos
 
   			$madulto           = new YiiMailer();
         $madulto->setView('notificacion-adulto');
