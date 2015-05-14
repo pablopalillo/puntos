@@ -1,0 +1,5 @@
+!assets/.gitignore
+protected/runtime/*
+!protected/runtime/.gitignore
+protected/config/*
+themes/classic/views/
