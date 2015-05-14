@@ -10493,3 +10493,12 @@ Stack trace:
 #11 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
 #12 /var/www/puntos/index.php(13): CWebApplication->run()
 REQUEST_URI=/puntos/perfil
+2015/05/14 16:32:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Editar"' in /var/www/yii-1.1.16/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController('Editar')
+#1 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/puntos/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/puntos/Editar
+HTTP_REFERER=http://localhost/puntos/perfil
+---
