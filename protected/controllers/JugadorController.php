@@ -26,7 +26,7 @@ class JugadorController extends Controller
 				'users'=>array('*'),
 			),*/
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('perfil', 'editar'),
+				'actions'=>array('perfil', 'update'),
 				'users'=>array('@'),
 			),
 			array('deny',  // deny all users
@@ -45,6 +45,23 @@ class JugadorController extends Controller
 		//$this->render('perfil', array('jugador' => $jugador, 'estadisticas' => $estadisticas));
 
 		$this->render('perfil', array('jugador' => $jugador));
+	}
+
+
+	public function actionUpdate()
+	{
+		$model = $this->loadModel( Yii::app()->user->id);
+
+		if(isset($_POST['Jugador']))
+		{
+			$model->attributes=$_POST['Jugador'];
+			if($model->save())
+			$this->redirect(array('perfil','id'=>$model->id));
+		}
+
+		$this->render('_form',array(
+			'model'=>$model,
+		));
 	}
 
 	/**

@@ -5,25 +5,33 @@
 
 $this->pageTitle= 'Recuperar contraseña - ' .Yii::app()->name;
 ?>
+<div id="recuperar">
 
-<div class="form login">
-	<h1>Recuperar contraseña</h1>
-<?php 
-$form=$this->beginWidget('CActiveForm', array(
-	'id'=>'recuperar-form',
-)); 
-?>
-	<div class="row">
-		<?php echo $form->label($model,'correo'); ?>
-		<?php echo $form->emailField($model,'correo'); ?>
-	</div>
+	<header>
+		<div id="titulo-recuperar">
+			<h1>Recuperar contraseña</h1>
+		</div>
+	</header>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Recuperar', array('class' =>'btn')); ?>
-	</div>
+		<div class="form col-sm-5">
 
-<?php $this->endWidget(); ?>
-</div><!-- form -->
-<div id="right-content">
-	<?php echo CHtml::link('<span class="resaltado">Regístrate</span> y empieza a jugar', array('registro'), array('class' => 'registrate') )?>
+			<?php
+			$form=$this->beginWidget('CActiveForm', array(
+				'id'=>'recuperar-form',
+			));
+			?>
+
+				<div class="control-group">
+					<?php echo $form->label($model,'correo'); ?>
+					<?php echo $form->emailField($model,'correo', array('class' => 'form-control') ); ?>
+				</div>
+
+				<div class="control-group">
+					<?php echo CHtml::submitButton('Recuperar', array('class' => 'btn btn-default')); ?>
+				</div>
+
+			<?php $this->endWidget(); ?>
+
+		</div><!-- form -->
+
 </div>

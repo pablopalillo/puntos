@@ -10502,3 +10502,183 @@ Stack trace:
 REQUEST_URI=/puntos/Editar
 HTTP_REFERER=http://localhost/puntos/perfil
 ---
+2015/05/14 18:47:14 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii-1.1.16/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii-1.1.16/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii-1.1.16/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii-1.1.16/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii-1.1.16/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii-1.1.16/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii-1.1.16/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): CController->run('update')
+#8 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController('jugador/update')
+#9 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/puntos/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/puntos/perfil/editar
+HTTP_REFERER=http://localhost/puntos/perfil
+---
+2015/05/14 18:48:04 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii-1.1.16/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii-1.1.16/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii-1.1.16/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii-1.1.16/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii-1.1.16/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii-1.1.16/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii-1.1.16/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): CController->run('update')
+#8 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController('jugador/update')
+#9 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/puntos/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/puntos/editar-perfil
+HTTP_REFERER=http://localhost/puntos/perfil
+---
+2015/05/14 18:49:06 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii-1.1.16/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii-1.1.16/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii-1.1.16/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii-1.1.16/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii-1.1.16/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii-1.1.16/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii-1.1.16/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): CController->run('update')
+#8 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController('jugador/update')
+#9 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/puntos/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/puntos/editar-perfil
+---
+2015/05/14 18:49:19 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii-1.1.16/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii-1.1.16/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii-1.1.16/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii-1.1.16/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii-1.1.16/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii-1.1.16/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii-1.1.16/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): CController->run('update')
+#8 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController('jugador/update')
+#9 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/puntos/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/puntos/jugador/update
+---
+2015/05/14 18:51:03 [error] [php] Undefined variable: id (/var/www/puntos/protected/controllers/JugadorController.php:53)
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/filters/CFilterChain.php(133): JugadorController->runAction()
+#1 /var/www/yii-1.1.16/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/yii-1.1.16/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/yii-1.1.16/framework/web/filters/CInlineFilter.php(58): JugadorController->filterAccessControl()
+#4 /var/www/yii-1.1.16/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/yii-1.1.16/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii-1.1.16/framework/web/CController.php(265): JugadorController->runActionWithFilters()
+#7 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): JugadorController->run()
+#8 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/puntos/index.php(13): CWebApplication->run()
+REQUEST_URI=/puntos/editar-perfil
+2015/05/14 18:52:51 [error] [php] Undefined variable: usuario (/var/www/puntos/protected/views/jugador/_form.php:17)
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CController.php(869): JugadorController->renderFile()
+#1 /var/www/yii-1.1.16/framework/web/CController.php(782): JugadorController->renderPartial()
+#2 /var/www/puntos/protected/controllers/JugadorController.php(64): JugadorController->render()
+#3 /var/www/yii-1.1.16/framework/web/actions/CInlineAction.php(49): JugadorController->actionUpdate()
+#4 /var/www/yii-1.1.16/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii-1.1.16/framework/web/filters/CFilterChain.php(133): JugadorController->runAction()
+#6 /var/www/yii-1.1.16/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii-1.1.16/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/yii-1.1.16/framework/web/filters/CInlineFilter.php(58): JugadorController->filterAccessControl()
+#9 /var/www/yii-1.1.16/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/yii-1.1.16/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii-1.1.16/framework/web/CController.php(265): JugadorController->runActionWithFilters()
+#12 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): JugadorController->run()
+#13 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /var/www/puntos/index.php(13): CWebApplication->run()
+REQUEST_URI=/puntos/editar-perfil
+2015/05/14 18:54:06 [error] [php] Undefined variable: usuario (/var/www/puntos/protected/views/jugador/_form.php:17)
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CController.php(869): JugadorController->renderFile()
+#1 /var/www/yii-1.1.16/framework/web/CController.php(782): JugadorController->renderPartial()
+#2 /var/www/puntos/protected/controllers/JugadorController.php(64): JugadorController->render()
+#3 /var/www/yii-1.1.16/framework/web/actions/CInlineAction.php(49): JugadorController->actionUpdate()
+#4 /var/www/yii-1.1.16/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii-1.1.16/framework/web/filters/CFilterChain.php(133): JugadorController->runAction()
+#6 /var/www/yii-1.1.16/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii-1.1.16/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/yii-1.1.16/framework/web/filters/CInlineFilter.php(58): JugadorController->filterAccessControl()
+#9 /var/www/yii-1.1.16/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/yii-1.1.16/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii-1.1.16/framework/web/CController.php(265): JugadorController->runActionWithFilters()
+#12 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): JugadorController->run()
+#13 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /var/www/puntos/index.php(13): CWebApplication->run()
+REQUEST_URI=/puntos/editar-perfil
+2015/05/14 18:54:13 [error] [php] Undefined variable: usuario (/var/www/puntos/protected/views/jugador/_form.php:17)
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CController.php(869): JugadorController->renderFile()
+#1 /var/www/yii-1.1.16/framework/web/CController.php(782): JugadorController->renderPartial()
+#2 /var/www/puntos/protected/controllers/JugadorController.php(64): JugadorController->render()
+#3 /var/www/yii-1.1.16/framework/web/actions/CInlineAction.php(49): JugadorController->actionUpdate()
+#4 /var/www/yii-1.1.16/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii-1.1.16/framework/web/filters/CFilterChain.php(133): JugadorController->runAction()
+#6 /var/www/yii-1.1.16/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii-1.1.16/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/yii-1.1.16/framework/web/filters/CInlineFilter.php(58): JugadorController->filterAccessControl()
+#9 /var/www/yii-1.1.16/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/yii-1.1.16/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii-1.1.16/framework/web/CController.php(265): JugadorController->runActionWithFilters()
+#12 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): JugadorController->run()
+#13 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /var/www/puntos/index.php(13): CWebApplication->run()
+REQUEST_URI=/puntos/editar-perfil
+2015/05/14 18:56:06 [error] [exception.CException] exception 'CException' with message 'La propiedad "Jugador"."id_usuario" no se encuentra definida.' in /var/www/yii-1.1.16/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/db/ar/CActiveRecord.php(145): CComponent->__get('id_usuario')
+#1 /var/www/puntos/protected/controllers/JugadorController.php(59): CActiveRecord->__get('id_usuario')
+#2 /var/www/yii-1.1.16/framework/web/actions/CInlineAction.php(49): JugadorController->actionUpdate()
+#3 /var/www/yii-1.1.16/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii-1.1.16/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii-1.1.16/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/yii-1.1.16/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/yii-1.1.16/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/yii-1.1.16/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/yii-1.1.16/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/yii-1.1.16/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): CController->run('update')
+#12 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController('jugador/update')
+#13 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#14 /var/www/puntos/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/puntos/editar-perfil
+HTTP_REFERER=http://localhost/puntos/editar-perfil
+---
+2015/05/14 18:58:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "view" solicitada.' in /var/www/yii-1.1.16/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CController.php(270): CController->missingAction('view')
+#1 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): CController->run('view')
+#2 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController('jugador/view/id...')
+#3 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/puntos/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/puntos/jugador/view/id/734
+HTTP_REFERER=http://localhost/puntos/editar-perfil
+---
+2015/05/14 18:58:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "view" solicitada.' in /var/www/yii-1.1.16/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CController.php(270): CController->missingAction('view')
+#1 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): CController->run('view')
+#2 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController('jugador/view/id...')
+#3 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/puntos/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/puntos/jugador/view/id/734
+HTTP_REFERER=http://localhost/puntos/editar-perfil
+---

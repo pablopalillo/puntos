@@ -49,6 +49,7 @@ return array(
 				'como-jugar'		=>'site/page/view/instrucciones',
 				'premio'			=>'site/page/view/premio',
 				'perfil'			=>'jugador/perfil',
+				'editar-perfil' =>'jugador/update',
 				'puntajes'			=>'site/puntajes',
 				'registro'			=>'site/registro',
 				'recuperar-contrasena'=>'site/recuperarcontrasena',

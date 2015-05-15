@@ -6,10 +6,18 @@
 $this->pageTitle= 'Recuperar contraseña - ' .Yii::app()->name;
 ?>
 
-<div>
-	<h1>Recuperar contraseña</h1>
-	<p><?php echo $mensaje; ?></p>
-</div><!-- form -->
-<div id="right-content">
-	<?php echo CHtml::link('<span class="resaltado">Regístrate</span> y empieza a jugar', array('registro'), array('class' => 'registrate') )?>
+<div id="recuperar">
+
+	<header>
+		<div id="titulo-recuperar">
+			<h1>Recuperar contraseña</h1>
+		</div>
+	</header>
+
+		<div class="col-sm-5">
+			<div class="well">
+		 			<?php echo $mensaje; ?>
+			</div>
+		</div>
+
 </div>

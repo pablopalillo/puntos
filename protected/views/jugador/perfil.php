@@ -70,7 +70,7 @@
 		<?php endif; ?>
 
 		<div >
-			<?php echo CHtml::link( 'Editar Información', Yii::app()->request->baseUrl . '/participar', array('class'=>'btn btn-primary') ); ?>
+			<?php echo CHtml::link( 'Editar Información', Yii::app()->request->baseUrl . '/editar-perfil', array('class'=>'btn btn-primary') ); ?>
 		</div>
 	</section>
 

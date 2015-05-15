@@ -69,6 +69,12 @@ Yii::app()->clientScript->registerScript('datepicker',
 			<?php echo $activeform->textField($jugador,'fecha_nacimiento', array('class' => 'form-control datepicker')); ?>
 		</div>
 
+		<div class="form-group">
+			<?php echo $activeform->label($jugador,'telefono'); ?>
+			<?php echo $activeform->textField($jugador,'telefono',array('class' => 'form-control','size'=>45,'maxlength'=>45)); ?>
+		</div>
+
+
 		<div id="responsable" >
 				<div class="well well-lg">
 					<h2>Información del adulto responsable</h2>
