@@ -2,4 +2,8 @@
 protected/runtime/*
 !protected/runtime/.gitignore
 protected/config/*
-themes/classic/views/
+protected/config/main.php
+index.php
+.htaccess
+assets/
+
