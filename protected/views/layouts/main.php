@@ -19,20 +19,32 @@
 </head>
 
 <body>
-
-<header>
-	<div class="container-fluid">
-		<div id="logo"><?php echo CHtml::link( CHtml::image(Yii::app()->request->baseUrl . '/images/logo.png', 'Viaja a Suiza con Medellín 2018', array('width' => 232, 'height' => 226)), CHtml::normalizeUrl('/') ); ?></div>
-		<div id="mainmenu">
-			<?php $this->widget('zii.widgets.CMenu',array(
-				'items'=>array(
-					array('label'=>'¿Cómo participar?', 'url'=>array('/como-jugar'), 'linkOptions' => array('class' => 'item1')),
-					array('label'=>'Estos eran los premios', 'url'=>array('/premio'), 'linkOptions' => array('class' => 'item1')),
-					array('label'=>'Puntajes más altos', 'url'=>array('/puntajes'), 'linkOptions' => array('class' => 'item1')),
-				),
-			)); ?>
+<div class="container">
+	<header>
+		<div class="row">
+			<div class="col-sm-6 col-md-8">
+				<div id="logo"><?php echo CHtml::link( CHtml::image(Yii::app()->request->baseUrl . '/images/logo.png', 'Viaja a Suiza con Medellín 2018'), CHtml::normalizeUrl('/') ); ?></div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="row">
+					<div class="ctn-btnParticipar col-sm-12 col-xs-6">
+						<a href="#" class="btnParticipar">Participa</a>
+					</div>
+					<div class="ctn_mainmenu col-sm-12 col-xs-6">
+						<div id="mainmenu">
+							<?php $this->widget('zii.widgets.CMenu',array(
+								'items'=>array(
+									array('label'=>'Mecánica', 'url'=>array('/como-jugar'), 'linkOptions' => array('class' => 'item1')),
+									array('label'=>'Premios', 'url'=>array('/premio'), 'linkOptions' => array('class' => 'item1')),
+									array('label'=>'Ranking', 'url'=>array('/puntajes'), 'linkOptions' => array('class' => 'item1')),
+								),
+							)); ?>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div id="share">
+		<!-- <div id="share">
 			<ul>
 				<li><div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true" data-action="recommend"></div></li>
 				<li><a href="https://twitter.com/share" class="twitter-share-button" data-text="Estoy concursando por un viaje a Suiza con @Medellin2018yog ¡y tú también puedes participar!" data-hashtags="Medellín2018" data-dnt="true">Tweet</a>
@@ -48,25 +60,20 @@
 					array('label'=>'Salir', 'url'=>array('/cerrar-sesion'), 'linkOptions' => array('class' => 'sesion'), 'visible'=>!Yii::app()->user->isGuest),
 				),
 			)); ?>
-		</div>
+		</div> -->
+	</header>
+	<div class="ctn_main">
+
+		<?php echo $content; ?>
+
 	</div>
-</header>
-<div class="container">
-
-	<?php echo $content; ?>
-
-</div>
-<footer class="container-fluid">
-	<div  class="row">
-		<ul>
-			<li><a class="tm" href="http://www.telemedellin.tv" target="_blank">Telemedellín</a></li>
-			<li><a class="ol" href="http://www.medellin2018.org" target="_blank">Olímpicos</a></li>
-			<li><a class="mv" href="http://www.noviolenciamedellin.co/" target="_blank">Mayo por la vida</a></li>
-			<li><a class="al" href="http://www.medellin.gov.co" target="_blank">Alcaldía</a></li>
-		</ul>
+	<footer class="container-fluid ctn_footer">
+		<div  class="row">
+			<a class="tm" href="http://www.telemedellin.tv" target="_blank">Telemedellín</a>
 			<?php echo CHtml::link( 'Términos y condiciones', array('/terminos-y-condiciones'), array('class' => 'terminos' ) ); ?> <span>contacto@concursomedellin2018.com</span>
-	</div>
-</footer>
+		</div>
+	</footer>
+</div>
 <div id="fb-root"></div>
 
 <?php Yii::app()->getClientScript()->registerCoreScript('jquery'); ?>

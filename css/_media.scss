@@ -1,0 +1,24 @@
+@media (min-width:768px){
+	#mainmenu{
+		ul{
+			li{
+				display: inline-block;
+				a{
+					width: auto;
+					height: auto;
+					padding: 10px;
+				}
+			}
+		}
+	}
+}
+@media (min-width:992px) {
+	.ctn_mainmenu {
+		margin-top: 24px;
+	}
+}
+@media (min-width:992px){
+	#logo img {
+	  width: 82%;
+	}
+}
