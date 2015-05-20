@@ -16,11 +16,8 @@
  */
 class Pregunta extends CActiveRecord
 {
-	/**
-	 * Returns the static model of the specified AR class.
-	 * @param string $className active record class name.
-	 * @return Pregunta the static model class
-	 */
+
+
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
@@ -42,12 +39,12 @@ class Pregunta extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nivel_id, pregunta, estado', 'required'),
+			array('nivel_id, pregunta', 'required'),
 			array('nivel_id, estado', 'numerical', 'integerOnly'=>true),
 			array('pregunta', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, nivel_id, pregunta, estado', 'safe', 'on'=>'search'),
+			array('p.id, nivel_id, pregunta, estado', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -87,11 +84,11 @@ class Pregunta extends CActiveRecord
 		// Warning: Please modify the following code to remove attributes that
 		// should not be searched.
 
-		$criteria=new CDbCriteria;
+		$criteria = new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
+		$criteria->compare('id', $this->id);
 		$criteria->compare('nivel_id',$this->nivel_id);
-		$criteria->compare('pregunta',$this->pregunta,true);
+		$criteria->compare('pregunta',$this->pregunta);
 		$criteria->compare('estado',$this->estado);
 
 		return new CActiveDataProvider($this, array(
@@ -101,16 +98,16 @@ class Pregunta extends CActiveRecord
 
 	public function obtener_pregunta($nivel = 5, $pregunta_id = 0)
 	{
-		
+
 		if($pregunta_id)
 		{
-			$pregunta = $this->findByPk($pregunta_id);			
+			$pregunta = $this->findByPk($pregunta_id);
 		}
 		else
 		{
-			
+
 			$pregunta = $this->pregunta_al_azar($nivel);
-			
+
 		}
 
 		$rcriteria 				= new CDbCriteria;
@@ -135,11 +132,11 @@ class Pregunta extends CActiveRecord
 		$prCriteria = new CDbCriteria;
 		$prCriteria->select = 'pregunta_id';
 		$prCriteria->with = array( 'ronda' => array(
-											'select' => null, 
+											'select' => null,
 											'condition' => 'jugador_id='.Yii::app()->user->id,
-											), 
+											),
 							);
-		
+
 		$pr = PreguntaXRonda::model()->findAll($prCriteria);
 		$preguntas = array();
 		for($i=0; $i < count($pr); $i++)
@@ -154,7 +151,7 @@ class Pregunta extends CActiveRecord
 		//$pcriteria->addNotInCondition('id', $preguntas);
 		$pcriteria->offset 		= $offset;
 		$pcriteria->limit 		= 1;
-	
+
 		$pregunta = $this->findAll($pcriteria);
 		if(isset($pregunta[0]))
 			 $pregunta = $pregunta[0];
@@ -175,24 +172,24 @@ class Pregunta extends CActiveRecord
 		$pcriteria->addCondition('nivel_id', $nivel);
 		$pcriteria->offset 		= $offset;
 		$pcriteria->limit 		= 1;
-	
+
 		$pregunta = $this->findAll($pcriteria);
 		$pregunta = $pregunta[0];
 
 		//Verifico que no haya resuelto ya la pregunta
 		$prCriteria = new CDbCriteria;
 		$prCriteria->with = array( 'ronda' => array(
-											'select' => null, 
+											'select' => null,
 											'condition' => 'pregunta_id='.$pregunta->id,
 											'with' => array(
 														'jugador' => array(
-															'select' => 'id', 
+															'select' => 'id',
 															'condition' => 'jugador.id ='.Yii::app()->user->id,
 															),
 												),
-											), 
+											),
 							);
-		
+
 		$pr = PreguntaXRonda::model()->findAll($prCriteria);
 
 		if( isset($pr[0]) )
