@@ -8,7 +8,6 @@
 	<meta name="author" content="telemedellin.tv">
 
 	<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/libs/bootstrap/css/bootstrap.min.css">
-
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
 	<link href='http://fonts.googleapis.com/css?family=Economica:400,700' rel='stylesheet' type='text/css'>
 	<link rel="icon" href="/images/favicon.ico" />
@@ -28,7 +27,7 @@
 			<div class="col-sm-4 col-md-4">
 				<div class="row">
 					<div class="ctn-btnParticipar col-sm-12 col-xs-6">
-						<a href="#" class="btnParticipar">Participa</a>
+						<a href="/participar" class="btnParticipar">Participa</a>
 					</div>
 					<div class="ctn_mainmenu col-sm-12 col-xs-6">
 						<div id="mainmenu">
@@ -63,9 +62,11 @@
 		</div> -->
 	</header>
 	<div class="ctn_main">
-
-		<?php echo $content; ?>
-
+        <div id="content-page">
+            <?php echo $content; ?>
+        </div>
+        <div id="progress"></div>
+        <div class="clear"></div>
 	</div>
 	<footer class="container-fluid ctn_footer">
 		<div  class="row">

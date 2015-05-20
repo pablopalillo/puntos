@@ -8,7 +8,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 
 # otherwise forward it to index.php
 RewriteRule . index.php
-RewriteCond %{HTTP_HOST} ^telemedellin\.com$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.telemedellin\.com$
-RewriteRule ^/?$ "http\:\/\/www\.telemedellin\.tv\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^puntos\.dllo$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.puntos\.dllo$
+#RewriteRule ^/?$ "http\:\/\/www\.telemedellin\.tv\/" [R=301,L]
 
