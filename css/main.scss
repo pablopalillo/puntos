@@ -168,15 +168,10 @@ a{
 /* ------------Contenido----------*/
 .ctn_main{
 	background-color: #ffffff;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	-ms-border-radius: 10px;
-	-o-border-radius: 10px;
+	@include bordes-redondos;
 	border-radius: 10px;
 	padding: 10px;
-	-moz-box-shadow: 6px 7px 0px rgba(0, 0, 0, 0.3);
-	-webkit-box-shadow: 6px 7px 0px rgba(0, 0, 0, 0.3);
-	box-shadow: 6px 7px 0px rgba(0, 0, 0, 0.3);
+	@include sombra;
 	overflow: auto;
 }
 
@@ -485,7 +480,34 @@ a.btn-jugar:hover {
 	background-color: #a0276a;
 }
 
+/*------------------- Participar-------------*/
 
+.ctn_participar{
+	h2{
+		font-family: $fprincipal;
+		color: $naranja;
+		font-size: 46px;
+		text-align: center;
+	}
+	.texto{
+		padding: 15px;
+		@include sombra;
+		@include bordes-redondos;
+		background-color: $verde;
+		color: #ffffff;
+		font-family: $fprincipal;
+		font-size: 24px;
+		width: 80%;
+		margin-right: auto;
+		margin-left: auto;
+		text-align: center;
+		margin-bottom: 60px;
+		margin-top: 60px;
+		p{
+			margin: 0px
+		}
+	}
+}
 
 
 /* ------------------ Juego -----------------*/

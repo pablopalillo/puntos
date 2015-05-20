@@ -3,3 +3,9 @@
 	-webkit-box-shadow: 6px 7px 0px rgba(0, 0, 0, 0.3);
 	box-shadow: 6px 7px 0px rgba(0, 0, 0, 0.3);
 }
+@mixin bordes-redondos{
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+}

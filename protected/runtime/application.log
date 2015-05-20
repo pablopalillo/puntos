@@ -12351,3 +12351,337 @@ Stack trace:
 REQUEST_URI=/puntos/jugar/control
 HTTP_REFERER=http://localhost/puntos/puntajes
 ---
+2015/05/20 23:54:21 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Inicio de sesión necesario' in C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#2 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(282): CController->run('control')
+#9 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(141): CWebApplication->runController('jugar/control')
+#10 C:\xampp\htdocs\yii-1.1.16\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\puntos\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/puntos/jugar/control
+HTTP_REFERER=http://localhost/puntos/participar
+---
+2015/05/20 23:59:43 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Inicio de sesión necesario' in C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#2 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(282): CController->run('control')
+#9 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(141): CWebApplication->runController('jugar/control')
+#10 C:\xampp\htdocs\yii-1.1.16\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\puntos\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/puntos/jugar/control
+HTTP_REFERER=http://localhost/puntos/participar
+---
+2015/05/21 00:00:56 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Inicio de sesión necesario' in C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#2 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(282): CController->run('control')
+#9 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(141): CWebApplication->runController('jugar/control')
+#10 C:\xampp\htdocs\yii-1.1.16\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\puntos\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/puntos/jugar/control
+HTTP_REFERER=http://localhost/puntos/participar
+---
+2015/05/21 00:01:21 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Inicio de sesión necesario' in C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#2 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(282): CController->run('control')
+#9 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(141): CWebApplication->runController('jugar/control')
+#10 C:\xampp\htdocs\yii-1.1.16\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\puntos\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/puntos/jugar/control
+HTTP_REFERER=http://localhost/puntos/participar
+---
+2015/05/21 00:01:41 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Inicio de sesión necesario' in C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#2 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(282): CController->run('control')
+#9 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(141): CWebApplication->runController('jugar/control')
+#10 C:\xampp\htdocs\yii-1.1.16\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\puntos\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/puntos/jugar/control
+HTTP_REFERER=http://localhost/puntos/participar
+---
+2015/05/21 00:02:07 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Inicio de sesión necesario' in C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#2 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(282): CController->run('control')
+#9 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(141): CWebApplication->runController('jugar/control')
+#10 C:\xampp\htdocs\yii-1.1.16\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\puntos\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/puntos/jugar/control
+HTTP_REFERER=http://localhost/puntos/participar
+---
+2015/05/21 00:03:52 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Inicio de sesión necesario' in C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#2 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(282): CController->run('control')
+#9 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(141): CWebApplication->runController('jugar/control')
+#10 C:\xampp\htdocs\yii-1.1.16\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\puntos\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/puntos/jugar/control
+HTTP_REFERER=http://localhost/puntos/participar
+---
+2015/05/21 00:04:04 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Inicio de sesión necesario' in C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#2 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(282): CController->run('control')
+#9 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(141): CWebApplication->runController('jugar/control')
+#10 C:\xampp\htdocs\yii-1.1.16\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\puntos\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/puntos/jugar/control
+HTTP_REFERER=http://localhost/puntos/participar
+---
+2015/05/21 00:05:41 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Inicio de sesión necesario' in C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#2 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(282): CController->run('control')
+#9 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(141): CWebApplication->runController('jugar/control')
+#10 C:\xampp\htdocs\yii-1.1.16\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\puntos\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/puntos/jugar/control
+HTTP_REFERER=http://localhost/puntos/participar
+---
+2015/05/21 00:06:00 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Inicio de sesión necesario' in C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#2 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(282): CController->run('control')
+#9 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(141): CWebApplication->runController('jugar/control')
+#10 C:\xampp\htdocs\yii-1.1.16\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\puntos\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/puntos/jugar/control
+HTTP_REFERER=http://localhost/puntos/participar
+---
+2015/05/21 00:06:56 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Inicio de sesión necesario' in C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#2 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(282): CController->run('control')
+#9 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(141): CWebApplication->runController('jugar/control')
+#10 C:\xampp\htdocs\yii-1.1.16\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\puntos\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/puntos/jugar/control
+HTTP_REFERER=http://localhost/puntos/participar
+---
+2015/05/21 00:08:02 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Inicio de sesión necesario' in C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#2 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(282): CController->run('control')
+#9 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(141): CWebApplication->runController('jugar/control')
+#10 C:\xampp\htdocs\yii-1.1.16\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\puntos\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/puntos/jugar/control
+HTTP_REFERER=http://localhost/puntos/participar
+---
+2015/05/21 00:08:19 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Inicio de sesión necesario' in C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#2 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(282): CController->run('control')
+#9 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(141): CWebApplication->runController('jugar/control')
+#10 C:\xampp\htdocs\yii-1.1.16\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\puntos\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/puntos/jugar/control
+HTTP_REFERER=http://localhost/puntos/participar
+---
+2015/05/21 00:08:30 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Inicio de sesión necesario' in C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#2 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(282): CController->run('control')
+#9 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(141): CWebApplication->runController('jugar/control')
+#10 C:\xampp\htdocs\yii-1.1.16\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\puntos\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/puntos/jugar/control
+HTTP_REFERER=http://localhost/puntos/participar
+---
+2015/05/21 00:08:42 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Inicio de sesión necesario' in C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#2 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(282): CController->run('control')
+#9 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(141): CWebApplication->runController('jugar/control')
+#10 C:\xampp\htdocs\yii-1.1.16\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\puntos\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/puntos/jugar/control
+HTTP_REFERER=http://localhost/puntos/participar
+---
+2015/05/21 00:10:08 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Inicio de sesión necesario' in C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#2 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(282): CController->run('control')
+#9 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(141): CWebApplication->runController('jugar/control')
+#10 C:\xampp\htdocs\yii-1.1.16\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\puntos\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/puntos/jugar/control
+HTTP_REFERER=http://localhost/puntos/participar
+---
+2015/05/21 00:10:10 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Inicio de sesión necesario' in C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#2 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(282): CController->run('control')
+#9 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(141): CWebApplication->runController('jugar/control')
+#10 C:\xampp\htdocs\yii-1.1.16\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\puntos\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/puntos/jugar/control
+HTTP_REFERER=http://localhost/puntos/participar
+---
+2015/05/21 00:10:46 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Inicio de sesión necesario' in C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii-1.1.16\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#2 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii-1.1.16\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(282): CController->run('control')
+#9 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(141): CWebApplication->runController('jugar/control')
+#10 C:\xampp\htdocs\yii-1.1.16\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\puntos\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/puntos/jugar/control
+HTTP_REFERER=http://localhost/puntos/participar
+---
+2015/05/21 00:11:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "loguin" solicitada.' in C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(270): CController->missingAction('loguin')
+#1 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(282): CController->run('loguin')
+#2 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loguin')
+#3 C:\xampp\htdocs\yii-1.1.16\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\puntos\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/puntos/site/loguin
+---
