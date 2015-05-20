@@ -12,7 +12,7 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->getBaseUrl().'/js/juego
 	<?php if( Yii::app()->user->hasFlash('error') ):?>
 		<div class="flash-notice"><?php echo Yii::app()->user->getFlash('error'); ?></div>
 	<?php endif;?>
-    <div class="col-lg-6">
+    <div class="col-md-6">
 	    <div id="total-mes">
             <div class="col-md-8">
                 <h2>Total por mes</h2>
@@ -42,7 +42,7 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->getBaseUrl().'/js/juego
 		    </ul>
 	    </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-md-6">
         <div id="total-anho">
             <h2>Total por año</h2>
             <p>Puesto</p>
