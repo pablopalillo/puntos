@@ -16,7 +16,7 @@
     <?php
     $activeform = $this->beginWidget('CActiveForm', array(
       'id'=>'pregunta-form',
-      'enableAjaxValidation'=>true,
+      //'enableAjaxValidation'=>true,
       'enableClientValidation'=>true,
     ));
     ?>
@@ -38,13 +38,13 @@
 
 <?php for( $i=0 ; $i <= 3 ; $i++ ): ?>
     <div class="form-group">
-      <?php echo CHtml::label('respuesta','respuesta'.$i); ?>
+      <?php echo CHtml::label('respuesta '.($i+1),'respuesta'); ?>
       <?php echo CHtml::textField('respuesta[]','', array('class' => 'form-control','maxlength'=>255)); ?>
     </div>
 
     <div class="radio">
       <label>
-        <?php echo CHtml::radioButton('es_correcta', ''); ?>
+        <?php echo CHtml::radioButton('es_correcta',false,array('value' => "$i" )); ?>
         <?php echo CHtml::label('correcta','correcta'); ?>
       </label>
     </div>

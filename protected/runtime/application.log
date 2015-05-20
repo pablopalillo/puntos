@@ -90,3 +90,399 @@ REQUEST_URI=/puntos/admin/administrator/create
 in /var/www/puntos/protected/modules/admin/views/administrator/form.php (42)
 in /var/www/puntos/protected/modules/admin/controllers/AdministratorController.php (71)
 in /var/www/puntos/index.php (13)
+2015/05/20 09:25:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "admin/create"' in /var/www/yii-1.1.16/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/create')
+#1 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/puntos/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/puntos/admin/create
+---
+2015/05/20 09:38:30 [error] [php] Invalid argument supplied for foreach() (/var/www/yii-1.1.16/framework/web/helpers/CHtml.php:1261)
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CBaseController.php(95): AdministratorController->renderInternal()
+#1 /var/www/yii-1.1.16/framework/web/CController.php(869): AdministratorController->renderFile()
+#2 /var/www/yii-1.1.16/framework/web/CController.php(782): AdministratorController->renderPartial()
+#3 /var/www/puntos/protected/modules/admin/controllers/AdministratorController.php(74): AdministratorController->render()
+#4 /var/www/yii-1.1.16/framework/web/actions/CInlineAction.php(49): AdministratorController->actionCreate()
+#5 /var/www/yii-1.1.16/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /var/www/yii-1.1.16/framework/web/CController.php(286): AdministratorController->runAction()
+#7 /var/www/yii-1.1.16/framework/web/CController.php(265): AdministratorController->runActionWithFilters()
+#8 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): AdministratorController->run()
+#9 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#11 /var/www/puntos/index.php(13): CWebApplication->run()
+REQUEST_URI=/puntos/admin/administrator/create
+in /var/www/puntos/protected/modules/admin/views/administrator/form.php (47)
+in /var/www/puntos/protected/modules/admin/controllers/AdministratorController.php (74)
+in /var/www/puntos/index.php (13)
+2015/05/20 09:38:56 [error] [php] Missing argument 3 for CHtml::radioButtonList(), called in /var/www/puntos/protected/modules/admin/views/administrator/form.php on line 47 and defined (/var/www/yii-1.1.16/framework/web/helpers/CHtml.php:1239)
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CBaseController.php(95): AdministratorController->renderInternal()
+#1 /var/www/yii-1.1.16/framework/web/CController.php(869): AdministratorController->renderFile()
+#2 /var/www/yii-1.1.16/framework/web/CController.php(782): AdministratorController->renderPartial()
+#3 /var/www/puntos/protected/modules/admin/controllers/AdministratorController.php(74): AdministratorController->render()
+#4 /var/www/yii-1.1.16/framework/web/actions/CInlineAction.php(49): AdministratorController->actionCreate()
+#5 /var/www/yii-1.1.16/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /var/www/yii-1.1.16/framework/web/CController.php(286): AdministratorController->runAction()
+#7 /var/www/yii-1.1.16/framework/web/CController.php(265): AdministratorController->runActionWithFilters()
+#8 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): AdministratorController->run()
+#9 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#11 /var/www/puntos/index.php(13): CWebApplication->run()
+REQUEST_URI=/puntos/admin/administrator/create
+in /var/www/puntos/protected/modules/admin/views/administrator/form.php (47)
+in /var/www/puntos/protected/modules/admin/controllers/AdministratorController.php (74)
+in /var/www/puntos/index.php (13)
+2015/05/20 09:39:08 [error] [php] Invalid argument supplied for foreach() (/var/www/yii-1.1.16/framework/web/helpers/CHtml.php:1261)
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CBaseController.php(95): AdministratorController->renderInternal()
+#1 /var/www/yii-1.1.16/framework/web/CController.php(869): AdministratorController->renderFile()
+#2 /var/www/yii-1.1.16/framework/web/CController.php(782): AdministratorController->renderPartial()
+#3 /var/www/puntos/protected/modules/admin/controllers/AdministratorController.php(74): AdministratorController->render()
+#4 /var/www/yii-1.1.16/framework/web/actions/CInlineAction.php(49): AdministratorController->actionCreate()
+#5 /var/www/yii-1.1.16/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /var/www/yii-1.1.16/framework/web/CController.php(286): AdministratorController->runAction()
+#7 /var/www/yii-1.1.16/framework/web/CController.php(265): AdministratorController->runActionWithFilters()
+#8 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): AdministratorController->run()
+#9 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#11 /var/www/puntos/index.php(13): CWebApplication->run()
+REQUEST_URI=/puntos/admin/administrator/create
+in /var/www/puntos/protected/modules/admin/views/administrator/form.php (47)
+in /var/www/puntos/protected/modules/admin/controllers/AdministratorController.php (74)
+in /var/www/puntos/index.php (13)
+2015/05/20 10:10:33 [error] [php] Undefined variable: respuestas (/var/www/puntos/protected/modules/admin/controllers/AdministratorController.php:73)
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CController.php(286): AdministratorController->runAction()
+#1 /var/www/yii-1.1.16/framework/web/CController.php(265): AdministratorController->runActionWithFilters()
+#2 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): AdministratorController->run()
+#3 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /var/www/puntos/index.php(13): CWebApplication->run()
+REQUEST_URI=/puntos/admin/administrator/create
+in /var/www/puntos/protected/modules/admin/controllers/AdministratorController.php (73)
+in /var/www/puntos/index.php (13)
+2015/05/20 10:25:58 [error] [php] Undefined index: Respuesta (/var/www/puntos/protected/modules/admin/controllers/AdministratorController.php:77)
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CController.php(286): AdministratorController->runAction()
+#1 /var/www/yii-1.1.16/framework/web/CController.php(265): AdministratorController->runActionWithFilters()
+#2 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): AdministratorController->run()
+#3 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /var/www/puntos/index.php(13): CWebApplication->run()
+REQUEST_URI=/puntos/admin/administrator/create
+in /var/www/puntos/protected/modules/admin/controllers/AdministratorController.php (77)
+in /var/www/puntos/index.php (13)
+2015/05/20 10:26:30 [error] [php] Undefined index: Respuesta (/var/www/puntos/protected/modules/admin/controllers/AdministratorController.php:77)
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CController.php(286): AdministratorController->runAction()
+#1 /var/www/yii-1.1.16/framework/web/CController.php(265): AdministratorController->runActionWithFilters()
+#2 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): AdministratorController->run()
+#3 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /var/www/puntos/index.php(13): CWebApplication->run()
+REQUEST_URI=/puntos/admin/administrator/create
+in /var/www/puntos/protected/modules/admin/controllers/AdministratorController.php (77)
+in /var/www/puntos/index.php (13)
+2015/05/20 10:27:30 [error] [php] Undefined index: Respuesta (/var/www/puntos/protected/modules/admin/controllers/AdministratorController.php:78)
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CController.php(286): AdministratorController->runAction()
+#1 /var/www/yii-1.1.16/framework/web/CController.php(265): AdministratorController->runActionWithFilters()
+#2 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): AdministratorController->run()
+#3 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /var/www/puntos/index.php(13): CWebApplication->run()
+REQUEST_URI=/puntos/admin/administrator/create
+in /var/www/puntos/protected/modules/admin/controllers/AdministratorController.php (78)
+in /var/www/puntos/index.php (13)
+2015/05/20 10:28:29 [error] [php] Undefined index: es_correcta (/var/www/puntos/protected/modules/admin/controllers/AdministratorController.php:59)
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CController.php(286): AdministratorController->runAction()
+#1 /var/www/yii-1.1.16/framework/web/CController.php(265): AdministratorController->runActionWithFilters()
+#2 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): AdministratorController->run()
+#3 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /var/www/puntos/index.php(13): CWebApplication->run()
+REQUEST_URI=/puntos/admin/administrator/create
+in /var/www/puntos/protected/modules/admin/controllers/AdministratorController.php (59)
+in /var/www/puntos/index.php (13)
+2015/05/20 10:28:30 [error] [php] Undefined index: es_correcta (/var/www/puntos/protected/modules/admin/controllers/AdministratorController.php:59)
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CController.php(286): AdministratorController->runAction()
+#1 /var/www/yii-1.1.16/framework/web/CController.php(265): AdministratorController->runActionWithFilters()
+#2 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): AdministratorController->run()
+#3 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /var/www/puntos/index.php(13): CWebApplication->run()
+REQUEST_URI=/puntos/admin/administrator/create
+in /var/www/puntos/protected/modules/admin/controllers/AdministratorController.php (59)
+in /var/www/puntos/index.php (13)
+2015/05/20 10:28:42 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in /var/www/yii-1.1.16/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/yii-1.1.16/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /var/www/yii-1.1.16/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): CController->run('view')
+#4 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/administr...')
+#5 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#6 /var/www/puntos/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/puntos/admin/administrator/view
+HTTP_REFERER=http://localhost/puntos/admin/administrator/create
+---
+2015/05/20 10:37:41 [error] [php] Undefined index: es_correcta (/var/www/puntos/protected/modules/admin/controllers/AdministratorController.php:59)
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CController.php(286): AdministratorController->runAction()
+#1 /var/www/yii-1.1.16/framework/web/CController.php(265): AdministratorController->runActionWithFilters()
+#2 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): AdministratorController->run()
+#3 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /var/www/puntos/index.php(13): CWebApplication->run()
+REQUEST_URI=/puntos/admin/administrator/create
+in /var/www/puntos/protected/modules/admin/controllers/AdministratorController.php (59)
+in /var/www/puntos/index.php (13)
+2015/05/20 10:37:42 [error] [php] Undefined index: es_correcta (/var/www/puntos/protected/modules/admin/controllers/AdministratorController.php:59)
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CController.php(286): AdministratorController->runAction()
+#1 /var/www/yii-1.1.16/framework/web/CController.php(265): AdministratorController->runActionWithFilters()
+#2 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): AdministratorController->run()
+#3 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /var/www/puntos/index.php(13): CWebApplication->run()
+REQUEST_URI=/puntos/admin/administrator/create
+in /var/www/puntos/protected/modules/admin/controllers/AdministratorController.php (59)
+in /var/www/puntos/index.php (13)
+2015/05/20 10:38:29 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in /var/www/yii-1.1.16/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/yii-1.1.16/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /var/www/yii-1.1.16/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): CController->run('view')
+#4 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/administr...')
+#5 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#6 /var/www/puntos/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/puntos/admin/administrator/view
+HTTP_REFERER=http://localhost/puntos/admin/administrator/create
+---
+2015/05/20 10:42:56 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in /var/www/yii-1.1.16/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/yii-1.1.16/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /var/www/yii-1.1.16/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): CController->run('view')
+#4 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/administr...')
+#5 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#6 /var/www/puntos/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/puntos/admin/administrator/view
+HTTP_REFERER=http://localhost/puntos/admin/administrator/create
+---
+2015/05/20 10:43:02 [error] [php] Undefined variable: pregunta (/var/www/puntos/protected/modules/admin/views/administrator/view.php:4)
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CController.php(869): AdministratorController->renderFile()
+#1 /var/www/yii-1.1.16/framework/web/CController.php(782): AdministratorController->renderPartial()
+#2 /var/www/puntos/protected/modules/admin/controllers/AdministratorController.php(66): AdministratorController->render()
+#3 /var/www/yii-1.1.16/framework/web/actions/CInlineAction.php(49): AdministratorController->actionCreate()
+#4 /var/www/yii-1.1.16/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii-1.1.16/framework/web/CController.php(286): AdministratorController->runAction()
+#6 /var/www/yii-1.1.16/framework/web/CController.php(265): AdministratorController->runActionWithFilters()
+#7 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): AdministratorController->run()
+#8 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/puntos/index.php(13): CWebApplication->run()
+REQUEST_URI=/puntos/admin/administrator/create
+in /var/www/puntos/protected/modules/admin/views/administrator/view.php (4)
+in /var/www/puntos/protected/modules/admin/controllers/AdministratorController.php (66)
+in /var/www/puntos/index.php (13)
+2015/05/20 10:43:38 [error] [php] Undefined index: es_correcta (/var/www/puntos/protected/modules/admin/controllers/AdministratorController.php:58)
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CController.php(286): AdministratorController->runAction()
+#1 /var/www/yii-1.1.16/framework/web/CController.php(265): AdministratorController->runActionWithFilters()
+#2 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): AdministratorController->run()
+#3 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /var/www/puntos/index.php(13): CWebApplication->run()
+REQUEST_URI=/puntos/admin/administrator/create
+in /var/www/puntos/protected/modules/admin/controllers/AdministratorController.php (58)
+in /var/www/puntos/index.php (13)
+2015/05/20 10:43:38 [error] [php] Undefined index: es_correcta (/var/www/puntos/protected/modules/admin/controllers/AdministratorController.php:58)
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CController.php(286): AdministratorController->runAction()
+#1 /var/www/yii-1.1.16/framework/web/CController.php(265): AdministratorController->runActionWithFilters()
+#2 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): AdministratorController->run()
+#3 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /var/www/puntos/index.php(13): CWebApplication->run()
+REQUEST_URI=/puntos/admin/administrator/create
+in /var/www/puntos/protected/modules/admin/controllers/AdministratorController.php (58)
+in /var/www/puntos/index.php (13)
+2015/05/20 10:43:58 [error] [php] Undefined variable: pregunta (/var/www/puntos/protected/modules/admin/views/administrator/view.php:4)
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CController.php(869): AdministratorController->renderFile()
+#1 /var/www/yii-1.1.16/framework/web/CController.php(782): AdministratorController->renderPartial()
+#2 /var/www/puntos/protected/modules/admin/controllers/AdministratorController.php(65): AdministratorController->render()
+#3 /var/www/yii-1.1.16/framework/web/actions/CInlineAction.php(49): AdministratorController->actionCreate()
+#4 /var/www/yii-1.1.16/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii-1.1.16/framework/web/CController.php(286): AdministratorController->runAction()
+#6 /var/www/yii-1.1.16/framework/web/CController.php(265): AdministratorController->runActionWithFilters()
+#7 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): AdministratorController->run()
+#8 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/puntos/index.php(13): CWebApplication->run()
+REQUEST_URI=/puntos/admin/administrator/create
+in /var/www/puntos/protected/modules/admin/views/administrator/view.php (4)
+in /var/www/puntos/protected/modules/admin/controllers/AdministratorController.php (65)
+in /var/www/puntos/index.php (13)
+2015/05/20 10:46:44 [error] [php] Undefined index: es_correcta (/var/www/puntos/protected/modules/admin/controllers/AdministratorController.php:58)
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CController.php(286): AdministratorController->runAction()
+#1 /var/www/yii-1.1.16/framework/web/CController.php(265): AdministratorController->runActionWithFilters()
+#2 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): AdministratorController->run()
+#3 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /var/www/puntos/index.php(13): CWebApplication->run()
+REQUEST_URI=/puntos/admin/administrator/create
+in /var/www/puntos/protected/modules/admin/controllers/AdministratorController.php (58)
+in /var/www/puntos/index.php (13)
+2015/05/20 10:46:45 [error] [php] Undefined index: es_correcta (/var/www/puntos/protected/modules/admin/controllers/AdministratorController.php:58)
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CController.php(286): AdministratorController->runAction()
+#1 /var/www/yii-1.1.16/framework/web/CController.php(265): AdministratorController->runActionWithFilters()
+#2 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): AdministratorController->run()
+#3 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /var/www/puntos/index.php(13): CWebApplication->run()
+REQUEST_URI=/puntos/admin/administrator/create
+in /var/www/puntos/protected/modules/admin/controllers/AdministratorController.php (58)
+in /var/www/puntos/index.php (13)
+2015/05/20 10:47:03 [error] [php] strpos() expects parameter 1 to be string, array given (/var/www/yii-1.1.16/framework/web/CController.php:706)
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CController.php(867): AdministratorController->getViewFile()
+#1 /var/www/yii-1.1.16/framework/web/CController.php(782): AdministratorController->renderPartial()
+#2 /var/www/puntos/protected/modules/admin/controllers/AdministratorController.php(65): AdministratorController->render()
+#3 /var/www/yii-1.1.16/framework/web/actions/CInlineAction.php(49): AdministratorController->actionCreate()
+#4 /var/www/yii-1.1.16/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii-1.1.16/framework/web/CController.php(286): AdministratorController->runAction()
+#6 /var/www/yii-1.1.16/framework/web/CController.php(265): AdministratorController->runActionWithFilters()
+#7 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): AdministratorController->run()
+#8 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/puntos/index.php(13): CWebApplication->run()
+REQUEST_URI=/puntos/admin/administrator/create
+in /var/www/puntos/protected/modules/admin/controllers/AdministratorController.php (65)
+in /var/www/puntos/index.php (13)
+2015/05/20 10:48:33 [error] [php] Undefined index: es_correcta (/var/www/puntos/protected/modules/admin/controllers/AdministratorController.php:58)
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CController.php(286): AdministratorController->runAction()
+#1 /var/www/yii-1.1.16/framework/web/CController.php(265): AdministratorController->runActionWithFilters()
+#2 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): AdministratorController->run()
+#3 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /var/www/puntos/index.php(13): CWebApplication->run()
+REQUEST_URI=/puntos/admin/administrator/create
+in /var/www/puntos/protected/modules/admin/controllers/AdministratorController.php (58)
+in /var/www/puntos/index.php (13)
+2015/05/20 10:48:34 [error] [php] Undefined index: es_correcta (/var/www/puntos/protected/modules/admin/controllers/AdministratorController.php:58)
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CController.php(286): AdministratorController->runAction()
+#1 /var/www/yii-1.1.16/framework/web/CController.php(265): AdministratorController->runActionWithFilters()
+#2 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): AdministratorController->run()
+#3 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /var/www/puntos/index.php(13): CWebApplication->run()
+REQUEST_URI=/puntos/admin/administrator/create
+in /var/www/puntos/protected/modules/admin/controllers/AdministratorController.php (58)
+in /var/www/puntos/index.php (13)
+2015/05/20 10:51:32 [error] [php] Undefined index: es_correcta (/var/www/puntos/protected/modules/admin/controllers/AdministratorController.php:58)
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CController.php(286): AdministratorController->runAction()
+#1 /var/www/yii-1.1.16/framework/web/CController.php(265): AdministratorController->runActionWithFilters()
+#2 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): AdministratorController->run()
+#3 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /var/www/puntos/index.php(13): CWebApplication->run()
+REQUEST_URI=/puntos/admin/administrator/create
+in /var/www/puntos/protected/modules/admin/controllers/AdministratorController.php (58)
+in /var/www/puntos/index.php (13)
+2015/05/20 10:56:34 [error] [php] Undefined index: es_correcta (/var/www/puntos/protected/modules/admin/controllers/AdministratorController.php:58)
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CController.php(286): AdministratorController->runAction()
+#1 /var/www/yii-1.1.16/framework/web/CController.php(265): AdministratorController->runActionWithFilters()
+#2 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): AdministratorController->run()
+#3 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /var/www/puntos/index.php(13): CWebApplication->run()
+REQUEST_URI=/puntos/admin/administrator/create
+in /var/www/puntos/protected/modules/admin/controllers/AdministratorController.php (58)
+in /var/www/puntos/index.php (13)
+2015/05/20 10:56:35 [error] [php] Undefined index: es_correcta (/var/www/puntos/protected/modules/admin/controllers/AdministratorController.php:58)
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CController.php(286): AdministratorController->runAction()
+#1 /var/www/yii-1.1.16/framework/web/CController.php(265): AdministratorController->runActionWithFilters()
+#2 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): AdministratorController->run()
+#3 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /var/www/puntos/index.php(13): CWebApplication->run()
+REQUEST_URI=/puntos/admin/administrator/create
+in /var/www/puntos/protected/modules/admin/controllers/AdministratorController.php (58)
+in /var/www/puntos/index.php (13)
+2015/05/20 10:56:36 [error] [php] Undefined index: es_correcta (/var/www/puntos/protected/modules/admin/controllers/AdministratorController.php:58)
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CController.php(286): AdministratorController->runAction()
+#1 /var/www/yii-1.1.16/framework/web/CController.php(265): AdministratorController->runActionWithFilters()
+#2 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): AdministratorController->run()
+#3 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /var/www/puntos/index.php(13): CWebApplication->run()
+REQUEST_URI=/puntos/admin/administrator/create
+in /var/www/puntos/protected/modules/admin/controllers/AdministratorController.php (58)
+in /var/www/puntos/index.php (13)
+2015/05/20 11:05:34 [error] [php] Undefined index: es_correcta (/var/www/puntos/protected/modules/admin/controllers/AdministratorController.php:58)
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CController.php(286): AdministratorController->runAction()
+#1 /var/www/yii-1.1.16/framework/web/CController.php(265): AdministratorController->runActionWithFilters()
+#2 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): AdministratorController->run()
+#3 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /var/www/puntos/index.php(13): CWebApplication->run()
+REQUEST_URI=/puntos/admin/administrator/create
+in /var/www/puntos/protected/modules/admin/controllers/AdministratorController.php (58)
+in /var/www/puntos/index.php (13)
+2015/05/20 11:05:34 [error] [php] Undefined index: es_correcta (/var/www/puntos/protected/modules/admin/controllers/AdministratorController.php:58)
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CController.php(286): AdministratorController->runAction()
+#1 /var/www/yii-1.1.16/framework/web/CController.php(265): AdministratorController->runActionWithFilters()
+#2 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): AdministratorController->run()
+#3 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /var/www/puntos/index.php(13): CWebApplication->run()
+REQUEST_URI=/puntos/admin/administrator/create
+in /var/www/puntos/protected/modules/admin/controllers/AdministratorController.php (58)
+in /var/www/puntos/index.php (13)
+2015/05/20 11:11:42 [error] [php] Undefined index: es_correcta (/var/www/puntos/protected/modules/admin/controllers/AdministratorController.php:58)
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/CController.php(286): AdministratorController->runAction()
+#1 /var/www/yii-1.1.16/framework/web/CController.php(265): AdministratorController->runActionWithFilters()
+#2 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): AdministratorController->run()
+#3 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /var/www/puntos/index.php(13): CWebApplication->run()
+REQUEST_URI=/puntos/admin/administrator/create
+in /var/www/puntos/protected/modules/admin/controllers/AdministratorController.php (58)
+in /var/www/puntos/index.php (13)
+2015/05/20 11:15:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to find the code you requested.' in /var/www/yii-1.1.16/framework/gii/CCodeGenerator.php:90
+Stack trace:
+#0 /var/www/yii-1.1.16/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionCode()
+#1 /var/www/yii-1.1.16/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /var/www/yii-1.1.16/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#3 /var/www/yii-1.1.16/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 /var/www/yii-1.1.16/framework/web/CWebApplication.php(282): CController->run('code')
+#5 /var/www/yii-1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/controller/...')
+#6 /var/www/yii-1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#7 /var/www/puntos/index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/puntos/gii/controller/code/id/0
+HTTP_REFERER=http://localhost/puntos/gii/controller/index
+---
