@@ -51,7 +51,7 @@ return array(
 				'perfil'			=>'jugador/perfil',
                 'participar'                  =>'participar/participar',
 				'editar-perfil' =>'jugador/update',
-				'puntajes'			=>'site/puntajes',
+				'ranking'			=>'site/puntajes',
                 'consultar-ranking'            =>'site/consultar',
 				'registro'			=>'site/registro',
 				'recuperar-contrasena'=>'site/recuperarcontrasena',
