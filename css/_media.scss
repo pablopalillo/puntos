@@ -1,24 +1,103 @@
 @media (min-width:768px){
+	header{
+		position: relative;
+		z-index: 0;
+	}
+	.ctn_main{
+		position: relative;
+		z-index: 1;
+	}
 	#mainmenu{
 		ul{
+			float: right;
+			margin-top: 14px;
+			-webkit-border-top-left-radius: 10px;
+			-moz-border-top-left-radius: 10px;
+			-ms-border-top-left-radius: 10px;
+			-o-border-top-left-radius: 10px;
+			border-top-left-radius: 10px;
+			-webkit-border-top-right-radius: 10px;
+			-moz-border-top-right-radius: 10px;
+			-ms-border-top-right-radius: 10px;
+			-o-border-top-right-radius: 10px;
+			border-top-right-radius: 10px;
+			margin-right: 10px;
+			-moz-box-shadow: 6px 7px 0px rgba(0, 0, 0, 0.3);
+			-webkit-box-shadow: 6px 7px 0px rgba(0, 0, 0, 0.3);
+			box-shadow: 6px 7px 0px rgba(0, 0, 0, 0.3);
 			li{
 				display: inline-block;
 				a{
 					width: auto;
 					height: auto;
-					padding: 10px;
+					padding: 10px 8px;
+					font-size: 18px;
+				}
+				&:first-child{
+					a{
+						-webkit-border-top-left-radius: 10px;
+						-moz-border-top-left-radius: 10px;
+						-ms-border-top-left-radius: 10px;
+						-o-border-top-left-radius: 10px;
+						border-top-left-radius: 10px;
+					}
+				}
+				&:last-child{
+					a{
+						-webkit-border-top-right-radius: 10px;
+						-moz-border-top-right-radius: 10px;
+						-ms-border-top-right-radius: 10px;
+						-o-border-top-right-radius: 10px;
+						border-top-right-radius: 10px;
+					}
 				}
 			}
 		}
 	}
-}
-@media (min-width:992px) {
-	.ctn_mainmenu {
-		margin-top: 24px;
+	#logo a{
+		width: 100%;
+	}
+	.btnParticipar{
+		width: 100px;
+		height: 100px;
+		padding: 25px 0px;
 	}
 }
-@media (min-width:992px){
+@media (min-width:992px) {
 	#logo img {
 	  width: 82%;
+	}
+	.ctn_mainmenu {
+		margin-top: 0px;
+	}
+	.btnParticipar{
+		margin-top: 15px;
+	}
+	#mainmenu{
+		ul{
+			li {
+				a{
+					padding: 10px 20px;
+				}
+			}
+		}	
+	} 
+}
+@media (min-width:1200px){
+	
+	.btnParticipar {
+	  width: 120px;
+	  height: 120px;
+	  padding: 35px 0px;
+	}
+	#mainmenu {
+		ul {
+			margin-top: 18px;
+			li {
+				a{
+					font-size: 24px;
+				}
+			}
+		}
 	}
 }

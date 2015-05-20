@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/libs/bootstrap/css/bootstrap.min.css">
 
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
-	<link href='http://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Economica:400,700' rel='stylesheet' type='text/css'>
 	<link rel="icon" href="/images/favicon.ico" />
 	<!--[if LTE IE 8]>
 		<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/modernizr.custom.95570.js"></script>
@@ -22,10 +22,10 @@
 <div class="container">
 	<header>
 		<div class="row">
-			<div class="col-sm-6 col-md-8">
+			<div class="col-sm-8 col-md-8">
 				<div id="logo"><?php echo CHtml::link( CHtml::image(Yii::app()->request->baseUrl . '/images/logo.png', 'Viaja a Suiza con Medellín 2018'), CHtml::normalizeUrl('/') ); ?></div>
 			</div>
-			<div class="col-sm-6 col-md-4">
+			<div class="col-sm-4 col-md-4">
 				<div class="row">
 					<div class="ctn-btnParticipar col-sm-12 col-xs-6">
 						<a href="#" class="btnParticipar">Participa</a>
