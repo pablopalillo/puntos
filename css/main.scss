@@ -508,7 +508,57 @@ a.btn-jugar:hover {
 		}
 	}
 }
+.ctn_iniciar-sesion{
 
+}
+.iniciar-sesion_title{
+	padding: 15px;
+	color: $naranja;
+	text-align: center;
+	h1{
+		font-size: 46px;
+		font-family: $fprincipal;
+	}
+	p{
+		color: $azul;
+	}
+}
+.ctn_formulario{
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+	label{
+		color: $azul;
+	}
+}
+.ctn_recuperar{
+	text-align: center;
+}
+.ctn_registro{
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+	border-top: solid 3px $verde;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.btn-general_lg{
+	background-color: $naranja;
+	font-family: $fprincipal;
+	font-size: 36px;
+	color: #ffffff;
+	@include bordes-redondos;
+	border: none;
+	padding: 15px 25px;
+	width: 100%;
+	margin: 0 auto;
+	display: block;
+	&:hover, &:active, &:focus{
+		background-color: darken($naranja, 10%);
+		color: #ffffff;
+		text-decoration: none;
+	}
+}
 
 /* ------------------ Juego -----------------*/
 #juego-content {
