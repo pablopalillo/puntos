@@ -35,8 +35,8 @@
 						<div id="mainmenu">
 							<?php $this->widget('zii.widgets.CMenu',array(
 								'items'=>array(
-									array('label'=>'Preguntas', 'url'=>array('/como-jugar'), 'linkOptions' => array('class' => 'item1')),
-									array('label'=>'Ranking', 'url'=>array('/premio'), 'linkOptions' => array('class' => 'item1')),
+									array('label'=>'Preguntas', 'url'=>array('/admin/administrator'), 'linkOptions' => array('class' => 'item1')),
+									array('label'=>'Ranking', 'url'=>array('/puntajes'), 'linkOptions' => array('class' => 'item1')),
 								),
 							)); ?>
 						</div>

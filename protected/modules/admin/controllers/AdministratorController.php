@@ -36,6 +36,9 @@ class AdministratorController extends Controller
 		$pregunta 	= new Pregunta ;
 		$respuestas = new Respuesta;
 
+		// Ajax validation
+		$this->performAjaxValidation($pregunta);
+
 		if( !empty($_POST['Pregunta'] ) )
 		{
 
@@ -102,6 +105,15 @@ class AdministratorController extends Controller
 
 		// render - 1. vista 2. array con los objetos de tipo CActiveReord
 		$this->render('view', array('pregunta'=>$pregunta, 'dataProvider'=>$respuestas));
+	}
+
+	protected function performAjaxValidation($model)
+	{
+	    if(isset($_POST['ajax']) && $_POST['ajax']==='pregunta-form')
+	    {
+	        echo CActiveForm::validate($model);
+	        Yii::app()->end();
+	    }
 	}
 
 

@@ -8,7 +8,9 @@
 
 class AdminModule extends CWebModule
 {
-  public $urlRules	= array('admin/inicio' => 'admin/administrator/',);
+  public $urlRules	= array('admin/inicio' => 'admin/administrator/',
+                            'admin/crear' => 'admin/administrator/crear/',
+                            );
 
   public function init()
   {

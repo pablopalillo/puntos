@@ -19,6 +19,9 @@
 
 		<?php	$this->widget('zii.widgets.CListView', array(
 				'dataProvider'=>$dataProvider,
+				'sortableAttributes'=>array(
+					'estado',
+					),
 				'itemView'=>'_view',
 			));
 		 ?>
