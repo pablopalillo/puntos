@@ -300,8 +300,8 @@ a.terminos:hover {
   text-align: center;
   margin-top: 0px; }
 
-#ninos {
-  width: 440px;
+#ninos, #total-mes {
+  width: 100%;
   background-color: #2c7cad;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -319,7 +319,7 @@ a.terminos:hover {
   top: -60px;
   left: -5px; }
 
-#ninos h2 {
+#ninos, #total-mes h2 {
   color: #fef6c5;
   font-family: 'Gochi Hand', sans-serif;
   font-size: 35px;
@@ -327,7 +327,7 @@ a.terminos:hover {
   margin-bottom: 5px;
   text-align: center; }
 
-#ninos p {
+#ninos, #total-mes p {
   display: block;
   margin: 0px;
   float: left;
@@ -336,15 +336,15 @@ a.terminos:hover {
   color: #ffad00;
   margin-right: 100px; }
 
-#ninos p.puntaje {
+#ninos, #total-mes p.puntaje {
   float: right;
   margin-right: 15px; }
 
-#ninos ul {
+#ninos, #total-mes ul {
   clear: both;
   padding-left: 15px; }
 
-#ninos ul li {
+#ninos, #total-mes ul li {
   list-style: none;
   font-family: 'Gochi Hand', sans-serif;
   font-size: 18px;
@@ -355,8 +355,8 @@ a.terminos:hover {
   padding-bottom: 15px;
   padding-top: 10px; }
 
-#ninas {
-  width: 440px;
+#ninas, #total-anho {
+  width: 100%;
   background-color: #2c7cad;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -374,7 +374,7 @@ a.terminos:hover {
   top: -60px;
   right: -5px; }
 
-#ninas h2 {
+#ninas, #total-anho h2 {
   color: #fef6c5;
   font-family: 'Gochi Hand', sans-serif;
   font-size: 35px;
@@ -382,7 +382,7 @@ a.terminos:hover {
   margin-bottom: 5px;
   text-align: center; }
 
-#ninas p {
+#ninas, #total-anho p {
   display: block;
   margin: 0px;
   float: left;
@@ -391,15 +391,15 @@ a.terminos:hover {
   color: #ffad00;
   margin-right: 100px; }
 
-#ninas p.puntaje {
+#ninas, #total-anho p.puntaje {
   float: right;
   margin-right: 15px; }
 
-#ninas ul {
+#ninas, #total-anho ul {
   clear: both;
   padding-left: 15px; }
 
-#ninas ul li {
+#ninas, #total-anho ul li {
   list-style: none;
   font-family: 'Gochi Hand', sans-serif;
   font-size: 18px;

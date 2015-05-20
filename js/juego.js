@@ -1,1 +1,453 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('$(9(){b V=0;b M=1;b 1g=0;b 1c=0;b S=0;b z=10;b 1o;b D;b W;b 22=$(\'#22\');b 1p=$(\'#u\');b p=$(\'#p\');b J=$(\'#J\');b L=$(\'#L\');b Q=$(\'#Q\');b P=$(\'#P\');b X=$(\'#X\');b G=$(\'#X 39\');b k=$(\'#X a\');b 1b=$(\'.1b\');$("#37").H("3a",9(){$(28).1B()}).H("3e",9(){$(28).1r()});$(v).H(\'B\',\'.k-1a\',1i);$(v).H(\'B\',\'#u a\',1k);$(v).H(\'B\',\'.1t\',1E);$(v).H(\'B\',\'.1Y\',1C);$(v).H(\'B\',\'.1b\',1D);$(v).H(\'B\',\'.24\',9(e){e.Z()});1v();9 2a(){$(\'#M\').g(M);$(\'#1K\').g(S);$(\'#1Z\').g(1g);$(\'#3d\').g(1c)}9 1C(e){$.K(\'A/14\',{a:3},17);e.Z()}9 1D(e){$.K(\'A/14\',{a:2},17);e.Z()}9 1E(e){$.K(\'A/14\',{a:1},17);e.Z()}9 1i(e){$.K(\'A/3c\',1S);e.Z()}9 1v(){$.K(\'A/1v\',1n)}9 35(){}9 1n(8){V=8.s;M=8.n;S=8.1j;1g=8.2d;1c=8.1X;z=1s(8.t);13=8.a;1q();R()}9 R(){2a();1h(V){h 1:N(1);i;h 2:1i();i;h 3:N(3);i;h 4:N(4);i;h 5:N(5);i;h 6:N(6);i;h 7:N(7);i}}9 N(1O){2b();1h(1O){h 1:G.U(\'<q>3s 3i 2o 1x 2n 2J 2W 2K:</q><29><w>2R 2H 23 2A 2f A 2y.</w><w>2G 1Z 2D 2E I 1u 2F 2C.</w><w>2x 2w 2z 2v: 2Iín, 1W 2P O 1W 2Q 2Sí2O 2N y x 2L O x 2M.</w><!--<w>2T x u 2já 2l 2hí2u 2q 2t 3 13: 2m x u, 2i 10 1t más 2f 2p o 2r 23 O 2s 2k 1l.</w>--><w>2B z O x 3B u 3n a 3o 3p 3m 1x 3lón “A”.</w></29>\');k.g(\'3h\');k.F(\'k-1a\');i;h 3:G.U(\'<q>¡1T I 1L 1u!</q>\');k.g(\'1N a x 1z u\');k.F(\'k-1a\');i;h 4:G.U(\'<q>¡3j 3k 3q x I!</q><p>3r 1P 16 19</p>\');k.g(\'3y O 16 19\');k.15(\'1e\',\'12\');i;h 5:G.U(\'<q>¡1T I 1L 1u, 3zás 3A 3x 1z M!</q>\');k.g(\'1N a x u 3w 1z M\');k.F(\'k-1a\');i;h 6:G.U(\'<q>¡3t, 3u 1P 16 19!</q>\');k.g(\'1M x 1R O 12\');k.15(\'1e\',\'12\').j(\'f\');i;h 7:G.U(\'<q>3v 3gó 1x z, 3f 31 16 19</q>\');k.g(\'1M x 1R O 12\');k.15(\'1e\',\'12\').j(\'f\');i}X.1B(\'32\')}9 1S(8){Y(!8.s){Y(8.u&&8.1l){V=2;z=1s(8.t);1I=8.u;E=8.1l.33(9(){1F 0.5-30.2Z()});p.g(1I.u);J.g(E[0].I).F(E[0].C);L.g(E[1].I).F(E[1].C);Q.g(E[2].I).F(E[2].C);P.g(E[3].I).F(E[3].C);2c();S=8.1j;$(\'#1K\').g(S);1p.1B(\'2V\');Y(T.1U(\'t\')==2U){1d(\'z\',z)}1A{1d(\'z\',T.1U(\'t\'))}}1A{R()}}1A{V=8.s;R()}}9 21(8){V=8.s;M=8.n;S=8.1j;1g=8.2d;1c=8.1X;13=8.a;1q();R()}9 2c(){X.1r();G.l();k.l().15(\'1e\',\'#\').2X()}9 2b(){1p.1r();p.l();J.l().j(\'f\');L.l().j(\'f\');Q.l().j(\'f\');P.l().j(\'f\')}9 1k(e){b C=e.2Y.C;b 18=$(\'#\'+C).15(\'f\');Y(1s(18)==18){$.K(\'A/1k\',{r:18,t:D},21);T.1m(\'t\');1w(W);J.j(\'f\');L.j(\'f\');Q.j(\'f\');P.j(\'f\');$(\'#\'+C).F(\'34\')}e.Z()}9 1q(){26(14 25 13){b c;1h(13[14]){h\'1\':c=\'.1t\';$(v).1H(\'B\',c,1E);i;h\'2\':c=\'.1b\';$(v).1H(\'B\',c,1D);i;h\'3\':c=\'.1Y\';$(v).1H(\'B\',c,1C);i}$(c).F(\'24\')}}9 17(8){Y(8.d==\'s\'){1h(8.a){h\'1\':1w(W);D+=10;1d(\'z\',D);i;h\'2\':1f=8.1f;26(27 25 1f){$(\'.\'+1f[27].C).l().j(\'f\')}i;h\'3\':1w(W);T.1m(\'t\');p.l();J.l().j(\'f\');L.l().j(\'f\');Q.l().j(\'f\');P.l().j(\'f\');R();i}}}9 1d(20,11){1o=v.3b(20);D=11;1y();W=2e(1G,2g)}9 1G(){Y(D<=0){T.1m(\'t\');$.K(\'A/z\',1n);J.g(\'\').j(\'f\');L.g(\'\').j(\'f\');Q.g(\'\').j(\'f\');P.g(\'\').j(\'f\');1F}D-=1;1y();W=2e(1G,2g)}9 1y(){T.36(\'t\',D);b 1J=D;b 1V=1Q(1J);1o.38=1V}9 1Q(11){1F(11<10)?"0"+11:+11}});',62,224,'||||||||data|function||var||||class|text|case|break|removeAttr|mb|empty|||||h3||||pregunta|document|li|la||tiempo|jugar|click|id|TotalSeconds|tmp_respuestas|addClass|mp|on|respuesta|ra|post|rb|nivel|mostrar_mensaje|de|rd|rc|inicializar|preguntan|localStorage|html|situacion|TimeO|mensaje|if|preventDefault||Time|puntajes|ayudas|ayuda|attr|esta|usar_ayuda|respuesta_id|ronda|cp|erradas|puntost|CreateTimer|href|malas|puntosr|switch|cargar_pregunta|pn|responder|respuestas|removeItem|get_control|Timer|dpregunta|setear_ayudas|hide|parseInt|segundos|correcta|control|clearTimeout|el|UpdateTimer|siguiente|else|show|ayuda_avanza|ayuda_erradas|ayuda_segundos|return|Tick|off|tmp_pregunta|Seconds|numero_pregunta|es|Ver|Ir|caso|terminado|LeadingZero|tabla|mostrar_pregunta|La|getItem|TimeStr|los|pt|avanza|puntos|TimerID|mostrar_respuesta|estado|dos|nd|in|for|mala|this|ul|actualizar_datos|ocultar_pregunta|ocultar_mensaje|pr|setTimeout|para|1000|dif|pedir|est|posibles|muy|cambiar|juego|iniciar|responderla|puedes|eliminar|las|utilizar|cil|sobre|preguntas|Las|diariamente|son|oportunidades|El|tengas|por|cada|que|Acumulas|solo|Medell|necesitas|esto|importancia|convivencia|Juveniles|mpicos|deportes|Juegos|Tienes|Ol|Si|null|fast|recordar|removeClass|target|random|Math|finalizado|slow|sort|active|error|setItem|cargando|innerHTML|div|ajaxStart|getElementById|cargarpregunta|total_puntos|ajaxStop|ha|agot|Jugar|poder|Esta|no|bot|presiones|empieza|correr|cuando|era|Ha|Para|Felicitaciones|has|Se|del|al|Salir|adem|avanzas|primera'.split('|')))
+$(function() {
+    var situacion = 0;
+    var nivel = 1;
+    var puntosr = 0;
+    var puntost = 0;
+    var preguntan = 0;
+    var tiempo = 10;
+    var Timer;
+    var TotalSeconds;
+    var TimeO;
+    var estado = $('#estado');
+    var dpregunta = $('#pregunta');
+    var p = $('#p');
+    var ra = $('#ra');
+    var rb = $('#rb');
+    var rc = $('#rc');
+    var rd = $('#rd');
+    var mensaje = $('#mensaje');
+    var mp = $('#mensaje div');
+    var mb = $('#mensaje a');
+    var erradas = $('.erradas');
+    $("#cargando").on("ajaxStart", function() {
+        $(this).show()
+    }).on("ajaxStop", function() {
+        $(this).hide()
+    });
+    $(document).on('click', '.mb-cp', cargar_pregunta);
+    $(document).on('click', '#pregunta a', responder);
+    $(document).on('click', '.segundos', ayuda_segundos);
+    $(document).on('click', '.avanza', ayuda_avanza);
+    $(document).on('click', '.erradas', ayuda_erradas);
+    $(document).on('click', '.nd', function(e) {
+        e.preventDefault()
+    });
+    control();
+
+    function actualizar_datos() {
+        $('#nivel').text(nivel);
+        $('#numero_pregunta').text(preguntan);
+        $('#puntos').text(puntosr);
+        $('#total_puntos').text(puntost)
+    }
+
+    function ayuda_avanza(e) {
+        $.post('jugar/ayuda', {
+            a: 3
+        }, usar_ayuda);
+        e.preventDefault()
+    }
+
+    function ayuda_erradas(e) {
+        $.post('jugar/ayuda', {
+            a: 2
+        }, usar_ayuda);
+        e.preventDefault()
+    }
+
+    function ayuda_segundos(e) {
+        $.post('jugar/ayuda', {
+            a: 1
+        }, usar_ayuda);
+        e.preventDefault()
+    }
+
+    function cargar_pregunta(e) {
+        $.post('jugar/cargarpregunta', mostrar_pregunta);
+        e.preventDefault()
+    }
+
+    function control() {
+        $.post('jugar/control', get_control)
+    }
+
+    function error() {}
+
+    function get_control(data) {
+        situacion = data.s;
+        nivel = data.n;
+        preguntan = data.pn;
+        puntosr = data.pr;
+        puntost = data.pt;
+        tiempo = parseInt(data.t);
+        ayudas = data.a;
+        setear_ayudas();
+        inicializar()
+    }
+
+    function inicializar() {
+        actualizar_datos();
+        switch (situacion) {
+            case 1:
+                mostrar_mensaje(1);
+                break;
+            case 2:
+                cargar_pregunta();
+                break;
+            case 3:
+                mostrar_mensaje(3);
+                break;
+            case 4:
+                mostrar_mensaje(4);
+                break;
+            case 5:
+                mostrar_mensaje(5);
+                break;
+            case 6:
+                mostrar_mensaje(6);
+                break;
+            case 7:
+                mostrar_mensaje(7);
+                break
+        }
+    }
+
+    function mostrar_mensaje(caso) {
+        ocultar_pregunta();
+        switch (caso) {
+            case 1:
+                mp.html('<h3>Para poder iniciar el juego necesitas recordar esto:</h3><ul><li>Tienes solo dos oportunidades para jugar diariamente.</li><li>Acumulas puntos por cada respuesta correcta que tengas.</li><li>Las preguntas son sobre: Medellín, los deportes de los Juegos Olímpicos Juveniles y la importancia de la convivencia.</li><!--<li>Si la pregunta está muy difícil puedes utilizar 3 ayudas: cambiar la pregunta, pedir 10 segundos más para responderla o eliminar dos de las posibles respuestas.</li>--><li>El tiempo de la primera pregunta empieza a correr cuando presiones el botón “jugar”.</li></ul>');
+                mb.text('Jugar');
+                mb.addClass('mb-cp');
+                break;
+            case 3:
+                mp.html('<h3>¡La respuesta es correcta!</h3>');
+                mb.text('Ir a la siguiente pregunta');
+                mb.addClass('mb-cp');
+                break;
+            case 4:
+                mp.html('<h3>¡Esta no era la respuesta!</h3><p>Ha terminado esta ronda</p>');
+                mb.text('Salir de esta ronda');
+                mb.attr('href', 'puntajes');
+                break;
+            case 5:
+                mp.html('<h3>¡La respuesta es correcta, además avanzas al siguiente nivel!</h3>');
+                mb.text('Ir a la pregunta del siguiente nivel');
+                mb.addClass('mb-cp');
+                break;
+            case 6:
+                mp.html('<h3>¡Felicitaciones, has terminado esta ronda!</h3>');
+                mb.text('Ver la tabla de puntajes');
+                mb.attr('href', 'puntajes').removeAttr('class');
+                break;
+            case 7:
+                mp.html('<h3>Se agotó el tiempo, ha finalizado esta ronda</h3>');
+                mb.text('Ver la tabla de puntajes');
+                mb.attr('href', 'puntajes').removeAttr('class');
+                break
+        }
+        mensaje.show('slow')
+    }
+
+    function mostrar_pregunta(data) {
+        if (!data.s) {
+            if (data.pregunta && data.respuestas) {
+                situacion = 2;
+                tiempo = parseInt(data.t);
+                tmp_pregunta = data.pregunta;
+                tmp_respuestas = data.respuestas.sort(function() {
+                    return 0.5 - Math.random()
+                });
+                p.text(tmp_pregunta.pregunta);
+                ra.text(tmp_respuestas[0].respuesta).addClass(tmp_respuestas[0].id);
+                rb.text(tmp_respuestas[1].respuesta).addClass(tmp_respuestas[1].id);
+                rc.text(tmp_respuestas[2].respuesta).addClass(tmp_respuestas[2].id);
+                rd.text(tmp_respuestas[3].respuesta).addClass(tmp_respuestas[3].id);
+                ocultar_mensaje();
+                preguntan = data.pn;
+                $('#numero_pregunta').text(preguntan);
+                dpregunta.show('fast');
+                if (localStorage.getItem('t') == null) {
+                    CreateTimer('tiempo', tiempo)
+                } else {
+                    CreateTimer('tiempo', localStorage.getItem('t'))
+                }
+            } else {
+                inicializar()
+            }
+        } else {
+            situacion = data.s;
+            inicializar()
+        }
+    }
+
+    function mostrar_respuesta(data) {
+        situacion = data.s;
+        nivel = data.n;
+        preguntan = data.pn;
+        puntosr = data.pr;
+        puntost = data.pt;
+        ayudas = data.a;
+        setear_ayudas();
+        inicializar()
+    }
+
+    function ocultar_mensaje() {
+        mensaje.hide();
+        mp.empty();
+        mb.empty().attr('href', '#').removeClass()
+    }
+
+    function ocultar_pregunta() {
+        dpregunta.hide();
+        p.empty();
+        ra.empty().removeAttr('class');
+        rb.empty().removeAttr('class');
+        rc.empty().removeAttr('class');
+        rd.empty().removeAttr('class')
+    }
+
+    function responder(e) {
+        var id = e.target.id;
+        var respuesta_id = $('#' + id).attr('class');
+        if (parseInt(respuesta_id) == respuesta_id) {
+            $.post('jugar/responder', {
+                r: respuesta_id,
+                t: TotalSeconds
+            }, mostrar_respuesta);
+            localStorage.removeItem('t');
+            clearTimeout(TimeO);
+            ra.removeAttr('class');
+            rb.removeAttr('class');
+            rc.removeAttr('class');
+            rd.removeAttr('class');
+            $('#' + id).addClass('active')
+        }
+        e.preventDefault()
+    }
+
+    function setear_ayudas() {
+        for (ayuda in ayudas) {
+            var c;
+            switch (ayudas[ayuda]) {
+                case '1':
+                    c = '.segundos';
+                    $(document).off('click', c, ayuda_segundos);
+                    break;
+                case '2':
+                    c = '.erradas';
+                    $(document).off('click', c, ayuda_erradas);
+                    break;
+                case '3':
+                    c = '.avanza';
+                    $(document).off('click', c, ayuda_avanza);
+                    break
+            }
+            $(c).addClass('nd')
+        }
+    }
+
+    function usar_ayuda(data) {
+        if (data.d == 's') {
+            switch (data.a) {
+                case '1':
+                    clearTimeout(TimeO);
+                    TotalSeconds += 10;
+                    CreateTimer('tiempo', TotalSeconds);
+                    break;
+                case '2':
+                    malas = data.malas;
+                    for (mala in malas) {
+                        $('.' + malas[mala].id).empty().removeAttr('class')
+                    }
+                    break;
+                case '3':
+                    clearTimeout(TimeO);
+                    localStorage.removeItem('t');
+                    p.empty();
+                    ra.empty().removeAttr('class');
+                    rb.empty().removeAttr('class');
+                    rc.empty().removeAttr('class');
+                    rd.empty().removeAttr('class');
+                    inicializar();
+                    break
+            }
+        }
+    }
+
+    function CreateTimer(TimerID, Time) {
+        Timer = document.getElementById(TimerID);
+        TotalSeconds = Time;
+        UpdateTimer();
+        TimeO = setTimeout(Tick, 1000)
+    }
+
+    function Tick() {
+        if (TotalSeconds <= 0) {
+            localStorage.removeItem('t');
+            $.post('jugar/tiempo', get_control);
+            ra.text('').removeAttr('class');
+            rb.text('').removeAttr('class');
+            rc.text('').removeAttr('class');
+            rd.text('').removeAttr('class');
+            return
+        }
+        TotalSeconds -= 1;
+        UpdateTimer();
+        TimeO = setTimeout(Tick, 1000)
+    }
+
+    function UpdateTimer() {
+        localStorage.setItem('t', TotalSeconds);
+        var Seconds = TotalSeconds;
+        var TimeStr = LeadingZero(Seconds);
+        Timer.innerHTML = TimeStr
+    }
+
+    function LeadingZero(Time) {
+        return (Time < 10) ? "0" + Time : +Time
+    }
+
+    $("button[id=responder]").on('click', function(evt) {
+        var id = $(this).prev().val();
+        var pregunta = $($(this).parent().prev().children().get(0)).text();
+
+        $('#content-page').hide();
+
+        $('#progress').html($('<h4/>').text('En un momento listaremos las respuestas disponibles...').prepend($('<img>', {
+            'src': '/images/loading.gif'
+        }).css({
+            'width': '58',
+            'float': 'right'
+        })).css({
+            'width': '68%',
+            'margin': '0 auto',
+            'padding-top': '14%',
+            'text-transform':'uppercase',
+            'font-size': '30px',
+            'text-align': 'center'
+        })).show('clip').css({
+            'height':'300px'
+        });
+
+        $.ajax({
+            url: 'participar/responder',
+            method: 'POST',
+            data: {id:id,pregunta:pregunta},
+            success: function(data)
+            {
+                $('#progress').css({'height':'0','display':'none'}).html('');
+                $('#content-page').show('clip');
+
+                $('#content-page').html(data.html);
+            }
+        });
+
+        evt.preventDefault();
+    });
+
+    $("button[id=respuesta]").on('click', function(evt) {
+        var id = $(this).prev().val();
+
+        $('#content-page').hide();
+
+        $('#progress').html($('<h4/>').text('En el momento estamos analizando tu respuesta...').prepend($('<img>', {
+            'src': '/images/loading.gif'
+        }).css({
+            'width': '58',
+            'float': 'right'
+        })).css({
+            'width': '68%',
+            'margin': '0 auto',
+            'padding-top': '14%',
+            'text-transform':'uppercase',
+            'font-size': '30px',
+            'text-align': 'center'
+        })).css({
+            'height':'300px',
+            'text-align':'center'
+        }).show('clip');
+
+        $.ajax({
+            url: 'participar/respuesta',
+            method: 'POST',
+            data: {id:id},
+            success: function(data)
+            {
+                var r = data;
+                var h4 = $('#progress').children();
+                var img = $('#progress').children().children();
+
+                img.attr('src','/images/' + r.status + '.png');
+                $('#progress').html(h4.text(r.message).prepend(img));
+                $('.ctn_main').append($('<span id="clock"></span>'));
+                $('#clock').append('En 5<label id="secs" style="display:none;"></label> segundos sera redirigido al listado de preguntas.&nbsp;' +
+                '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;');
+                $('#clock').appendTo('#progress');
+
+                conteo(1);
+            }
+        });
+
+        evt.preventDefault();
+    });
+
+    $('#goBack').on('click', function(evt) {
+        window.location = '/participar';
+        evt.preventDefault();
+    });
+
+    $('#meses').on('change', function(evt) {
+        var mes = $(this).val();
+        $.ajax({
+            url: '/consultar-ranking',
+            method: 'POST',
+            data: {mes:mes},
+            success: function(data)
+            {
+                var data = data.r;
+                var ul = $('#total-mes > ul');
+                ul.html('');
+                $.each(data, function(k, v) {
+                    var indice = (k+1);
+                    ul.append('<li id="jugador-' + indice + '"></li>');
+                    var li = $('#jugador-' + indice);
+                    li.append('<span class="lugar">' + indice + '</span>');
+                    li.append(v.jugador);
+                    li.append('<span class="total">' + v.puntaje + '</span>');
+                });
+
+                if (ul.is(':empty'))
+                    ul.append('<li style="text-align:center;">No se han encontrado resultados.</li>');
+            }
+        });
+        evt.preventDefault();
+    });
+
+    $(window).on('load', function(evt) {
+        var date = new Date();
+        date = date.toLocaleDateString();
+        date = date.split('/');
+        var month = toSt(date[1]);
+        $('#meses').val(month);
+    });
+});
+
+function conteo(second)
+{
+    var secs = $('#secs');
+    count = parseInt(secs.text() == "" ? 0 : secs.text()) + second;
+
+    secs.text(toSt(count%60));
+
+    if (secs.text() < 5)
+        setTimeout("conteo(1)",1000);
+    else
+        window.location = "/participar";
+}
+
+function toSt(n) {
+    s=""
+    if(n<10) s+="0"
+    return s+n.toString();
+}

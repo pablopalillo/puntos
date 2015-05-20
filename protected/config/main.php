@@ -49,8 +49,10 @@ return array(
 				'como-jugar'		=>'site/page/view/instrucciones',
 				'premio'			=>'site/page/view/premio',
 				'perfil'			=>'jugador/perfil',
+                'participar'                  =>'participar/participar',
 				'editar-perfil' =>'jugador/update',
 				'puntajes'			=>'site/puntajes',
+                'consultar-ranking'            =>'site/consultar',
 				'registro'			=>'site/registro',
 				'recuperar-contrasena'=>'site/recuperarcontrasena',
 				'verificar/<llave_activacion:\w+>'=>'site/verificar',
@@ -70,7 +72,7 @@ return array(
 			'connectionString' => 'mysql:host=localhost;dbname=puntos',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => 'mysql',/*V14j4a5v1z4***/
+			'password' => '',/*V14j4a5v1z4***/
 			'charset' => 'utf8',
 			//'enableProfiling'=>true,
 		),

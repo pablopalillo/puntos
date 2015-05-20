@@ -136,8 +136,16 @@ class SiteController extends Controller
 
 	public function actionPuntajes()
 	{
-		$ranking = Jugador::model()->getRanking();
-		$this->render('ranking', array('ranking' => $ranking));
+		//$ranking = Jugador::model()->getRanking();
+
+        $total_mes = Jugador::model()->rankingMes();
+        $total_anho = Jugador::model()->rankingAnho();
+
+		$this->render('ranking', array(
+                'total_mes' => $total_mes,
+                'total_anho' => $total_anho
+            )
+        );
 	}
 
 	public function actionVerificar($llave_activacion)
@@ -224,5 +232,18 @@ class SiteController extends Controller
 
         $this->render('verificar_correo', array('datos' => $datos) );
 
+    }
+
+    public function actionConsultar()
+    {
+        if (!Yii::app()->request->isAjaxRequest) throw new CHttpException('403', 'Forbidden access.');
+
+        $mes = Yii::app()->request->restParams['mes'];
+        $ranking = Jugador::model()->rankingMes($mes);
+
+        header('Content-Type: application/json; charset="UTF-8"');
+        $r = array('r' => $ranking);
+        echo CJSON::encode($r);
+        Yii::app()->end();
     }
 }
