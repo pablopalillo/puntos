@@ -10,6 +10,7 @@ return array(
 	'name'=>'Puntos TM',
 	'sourceLanguage' => '00',
 	'language' => 'es',
+	'timeZone' => 'America/Bogota',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -17,6 +18,7 @@ return array(
 	// autoloading model and component classes
 	'import'=>array(
 		'application.models.*',
+		'application.modules.*',
 		'application.components.*',
 		'ext.YiiMailer.YiiMailer',
 	),
@@ -24,12 +26,16 @@ return array(
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
 
-		/*'gii'=>array(
+		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'asdf1234*',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
-		),*/
+		),
+
+		'admin' => array(
+			'defaultController' => 'administrator'
+		),
 
 	),
 
@@ -44,21 +50,25 @@ return array(
 			'urlFormat'=>'path',
 			'showScriptName'=>false,
 			'rules'=>array(
-				'participar'	=>'site/login',
+			//	'participar'	=>'site/login',
 				'cerrar-sesion'		=>'site/logout',
 				'como-jugar'		=>'site/page/view/instrucciones',
 				'premio'			=>'site/page/view/premio',
 				'perfil'			=>'jugador/perfil',
-                'participar'                  =>'participar/participar',
+        'participar'                  =>'participar/participar',
 				'editar-perfil' =>'jugador/update',
+
 				'puntajes'			=>'site/puntajes',
+        'consultar-ranking'   =>'site/consultar',
+
+				'ranking'			=>'site/puntajes',
                 'consultar-ranking'            =>'site/consultar',
 				'registro'			=>'site/registro',
 				'recuperar-contrasena'=>'site/recuperarcontrasena',
 				'verificar/<llave_activacion:\w+>'=>'site/verificar',
 				'validar-identidad/<llave_activacion:\w+>'=>'site/validaridentidad',
 				'terminos-y-condiciones' =>'site/page/view/terminos-y-condiciones',
-				'<controller:\w+>/<action:\w+>/<llave_activacion:\w+>'=>'<controller>/<action>',
+		//		'<controller:\w+>/<action:\w+>/<llave_activacion:\w+>'=>'<controller>/<action>',
 				'<controller:\w\->/<id:\d+>'=>'<controller>/view',
 				'<controller:\w\->/<action:\w\->/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w\->/<action:\w\->'=>'<controller>/<action>',

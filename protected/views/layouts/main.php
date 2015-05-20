@@ -35,7 +35,7 @@
 								'items'=>array(
 									array('label'=>'Mecánica', 'url'=>array('/como-jugar'), 'linkOptions' => array('class' => 'item1')),
 									array('label'=>'Premios', 'url'=>array('/premio'), 'linkOptions' => array('class' => 'item1')),
-									array('label'=>'Ranking', 'url'=>array('/puntajes'), 'linkOptions' => array('class' => 'item1')),
+									array('label'=>'Ranking', 'url'=>array('/ranking'), 'linkOptions' => array('class' => 'item1')),
 								),
 							)); ?>
 						</div>

@@ -11315,6 +11315,7 @@ Stack trace:
 REQUEST_URI=/puntajes/consultar
 HTTP_REFERER=http://puntos.dllo/puntajes
 ---
+<<<<<<< HEAD
 2015/05/20 21:06:54 [error] [exception.CDbException] SQLSTATE[HY000] [1049] Unknown database 'puntos'
 2015/05/20 21:06:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection.' in C:\xampp\htdocs\yii-1.1.16\framework\db\CDbConnection.php:405
 Stack trace:
@@ -12684,4 +12685,14 @@ Stack trace:
 #4 C:\xampp\htdocs\puntos\index.php(13): CApplication->run()
 #5 {main}
 REQUEST_URI=/puntos/site/loguin
+=======
+2015/05/20 14:09:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "puntajes"' in C:\xampp\htdocs\Yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\Yii\web\CWebApplication.php(141): CWebApplication->runController('puntajes')
+#1 C:\xampp\htdocs\Yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Puntos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/puntajes
+HTTP_REFERER=http://puntos.dllo/participar
+>>>>>>> adc3e8c8467ca78c5a395967f69110cd1e3b6908
 ---
