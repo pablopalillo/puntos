@@ -511,7 +511,7 @@ a.btn-jugar:hover {
 .ctn_iniciar-sesion{
 
 }
-.iniciar-sesion_title{
+.pagina_title{
 	padding: 15px;
 	color: $naranja;
 	text-align: center;
@@ -545,7 +545,7 @@ a.btn-jugar:hover {
 .btn-general_lg{
 	background-color: $naranja;
 	font-family: $fprincipal;
-	font-size: 36px;
+	font-size: 36px !important;
 	color: #ffffff;
 	@include bordes-redondos;
 	border: none;
@@ -557,6 +557,34 @@ a.btn-jugar:hover {
 		background-color: darken($naranja, 10%);
 		color: #ffffff;
 		text-decoration: none;
+	}
+}
+
+/*-------------------- REGISTRO --------------*/
+
+.ctn_formulario-registro{
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+	label{
+		color: $azul
+	}
+	input{
+		font-size: 24px;
+		height: 45px;
+	}
+	.btn-general_lg{
+		height: auto;
+	}
+}
+.ctn_grupo-formulario {
+  margin-bottom: 50px;
+}
+.ctn_titulo-grupo{
+	h2{
+		font-family: $fprincipal;
+		color: $naranja;
+		font-size: 36px;
 	}
 }
 

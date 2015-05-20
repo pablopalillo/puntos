@@ -495,14 +495,14 @@ a.btn-jugar:hover {
   .ctn_participar .texto p {
     margin: 0px; }
 
-.iniciar-sesion_title {
+.pagina_title {
   padding: 15px;
   color: #E88A2C;
   text-align: center; }
-  .iniciar-sesion_title h1 {
+  .pagina_title h1 {
     font-size: 46px;
     font-family: "Economica", sans-serif; }
-  .iniciar-sesion_title p {
+  .pagina_title p {
     color: #078EC3; }
 
 .ctn_formulario {
@@ -526,7 +526,7 @@ a.btn-jugar:hover {
 .btn-general_lg {
   background-color: #E88A2C;
   font-family: "Economica", sans-serif;
-  font-size: 36px;
+  font-size: 36px !important;
   color: #ffffff;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -541,6 +541,27 @@ a.btn-jugar:hover {
     background-color: #cb7116;
     color: #ffffff;
     text-decoration: none; }
+
+/*-------------------- REGISTRO --------------*/
+.ctn_formulario-registro {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto; }
+  .ctn_formulario-registro label {
+    color: #078EC3; }
+  .ctn_formulario-registro input {
+    font-size: 24px;
+    height: 45px; }
+  .ctn_formulario-registro .btn-general_lg {
+    height: auto; }
+
+.ctn_grupo-formulario {
+  margin-bottom: 50px; }
+
+.ctn_titulo-grupo h2 {
+  font-family: "Economica", sans-serif;
+  color: #E88A2C;
+  font-size: 36px; }
 
 /* ------------------ Juego -----------------*/
 #juego-content {
@@ -964,7 +985,13 @@ div.flash-success a {
     padding: 10px 20px; }
 
   .btn-general_lg {
-    width: 70%; } }
+    width: 70%; }
+
+  .ctn_formulario-registro {
+    width: 45%; }
+    .ctn_formulario-registro input {
+      font-size: 16px;
+      height: auto; } }
 @media (min-width: 1200px) {
   .btnParticipar {
     width: 120px;
