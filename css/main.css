@@ -163,7 +163,8 @@ a {
   padding: 10px;
   -moz-box-shadow: 6px 7px 0px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 6px 7px 0px rgba(0, 0, 0, 0.3);
-  box-shadow: 6px 7px 0px rgba(0, 0, 0, 0.3); }
+  box-shadow: 6px 7px 0px rgba(0, 0, 0, 0.3);
+  overflow: auto; }
 
 #page {
   margin-top: -30px;
@@ -173,9 +174,9 @@ a {
   padding-bottom: 70px;
   padding-left: 10px;
   overflow: auto;
-  -webkit-box-shadow: 0px 0px 9px #323232;
-  -moz-box-shadow: 0px 0px 9px #323232;
-  box-shadow: 0px 0px 9px #323232; }
+  -moz-box-shadow: 6px 7px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 6px 7px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 6px 7px 0px rgba(0, 0, 0, 0.3); }
 
 #intro-home {
   width: 900px;
@@ -299,7 +300,6 @@ a.terminos:hover {
 
 /* -------------------- P├ígina de puntajes ------------------------*/
 #content-ranking {
-  background-color: #135184;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
@@ -307,9 +307,9 @@ a.terminos:hover {
   overflow: auto; }
 
 #content-ranking h1 {
-  font-family: 'Gochi Hand', sans-serif;
-  font-size: 40px;
-  color: #fff;
+  font-family: "Economica", sans-serif;
+  font-size: 46px;
+  color: #E88A2C;
   text-align: center;
   margin-top: 0px; }
 
@@ -322,7 +322,14 @@ a.terminos:hover {
   padding: 10px;
   float: left;
   margin-right: 20px;
+  margin-bottom: 15px;
   position: relative; }
+
+#total-mes select#meses {
+  font-family: "Economica", sans-serif;
+  font-size: 20px;
+  height: 40px;
+  padding: 7px; }
 
 #star-left {
   background-image: url("../images/star.png");
@@ -333,8 +340,8 @@ a.terminos:hover {
   left: -5px; }
 
 #ninos, #total-mes h2 {
-  color: #fef6c5;
-  font-family: 'Gochi Hand', sans-serif;
+  color: #ffffff;
+  font-family: "Economica", sans-serif;
   font-size: 35px;
   margin-top: 0px;
   margin-bottom: 5px;
@@ -344,9 +351,9 @@ a.terminos:hover {
   display: block;
   margin: 0px;
   float: left;
-  font-family: 'Gochi Hand', sans-serif;
+  font-family: "Economica", sans-serif;
   font-family: 18px;
-  color: #ffad00;
+  color: #ffffff;
   margin-right: 100px; }
 
 #ninos, #total-mes p.puntaje {
@@ -359,10 +366,10 @@ a.terminos:hover {
 
 #ninos, #total-mes ul li {
   list-style: none;
-  font-family: 'Gochi Hand', sans-serif;
-  font-size: 18px;
-  color: #fff;
-  background-image: url("../images/separador-puntaje.png");
+  font-family: "Economica", sans-serif;
+  font-size: 24px;
+  color: #def394;
+  border-bottom: solid 1px #ffffff;
   background-position: bottom left;
   background-repeat: repeat-x;
   padding-bottom: 15px;
@@ -388,8 +395,8 @@ a.terminos:hover {
   right: -5px; }
 
 #ninas, #total-anho h2 {
-  color: #fef6c5;
-  font-family: 'Gochi Hand', sans-serif;
+  color: #ffffff;
+  font-family: "Economica", sans-serif;
   font-size: 35px;
   margin-top: 0px;
   margin-bottom: 5px;
@@ -399,9 +406,9 @@ a.terminos:hover {
   display: block;
   margin: 0px;
   float: left;
-  font-family: 'Gochi Hand', sans-serif;
+  font-family: "Economica", sans-serif;
   font-family: 18px;
-  color: #ffad00;
+  color: #ffffff;
   margin-right: 100px; }
 
 #ninas, #total-anho p.puntaje {
@@ -414,27 +421,27 @@ a.terminos:hover {
 
 #ninas, #total-anho ul li {
   list-style: none;
-  font-family: 'Gochi Hand', sans-serif;
-  font-size: 18px;
-  color: #fff;
-  background-image: url("../images/separador-puntaje.png");
+  font-family: "Economica", sans-serif;
+  font-size: 24px;
+  color: #def394;
+  border-bottom: solid 1px #ffffff;
   background-position: bottom left;
   background-repeat: repeat-x;
   padding-bottom: 15px;
   padding-top: 10px; }
 
 .lugar {
-  font-family: "Impact", sans-serif;
+  font-family: "Economica", sans-serif;
   font-weight: bold;
   font-size: 30px;
   color: #fff;
   margin-right: 25px; }
 
 .total {
-  font-family: "Impact", sans-serif;
+  font-family: "Economica", sans-serif;
   font-weight: bold;
   font-size: 30px;
-  color: #fff;
+  color: #def394;
   float: right;
   text-align: center; }
 
@@ -459,6 +466,102 @@ a.btn-jugar {
 
 a.btn-jugar:hover {
   background-color: #a0276a; }
+
+/*------------------- Participar-------------*/
+.ctn_participar h2 {
+  font-family: "Economica", sans-serif;
+  color: #E88A2C;
+  font-size: 46px;
+  text-align: center; }
+.ctn_participar .texto {
+  padding: 15px;
+  -moz-box-shadow: 6px 7px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 6px 7px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 6px 7px 0px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  background-color: #ACD618;
+  color: #ffffff;
+  font-family: "Economica", sans-serif;
+  font-size: 24px;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  margin-bottom: 60px;
+  margin-top: 60px; }
+  .ctn_participar .texto p {
+    margin: 0px; }
+
+.pagina_title {
+  padding: 15px;
+  color: #E88A2C;
+  text-align: center; }
+  .pagina_title h1 {
+    font-size: 46px;
+    font-family: "Economica", sans-serif; }
+  .pagina_title p {
+    color: #078EC3; }
+
+.ctn_formulario {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto; }
+  .ctn_formulario label {
+    color: #078EC3; }
+
+.ctn_recuperar {
+  text-align: center; }
+
+.ctn_registro {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  border-top: solid 3px #ACD618;
+  margin-top: 50px;
+  margin-bottom: 50px; }
+
+.btn-general_lg {
+  background-color: #E88A2C;
+  font-family: "Economica", sans-serif;
+  font-size: 36px !important;
+  color: #ffffff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border: none;
+  padding: 15px 25px;
+  width: 100%;
+  margin: 0 auto;
+  display: block; }
+  .btn-general_lg:hover, .btn-general_lg:active, .btn-general_lg:focus {
+    background-color: #cb7116;
+    color: #ffffff;
+    text-decoration: none; }
+
+/*-------------------- REGISTRO --------------*/
+.ctn_formulario-registro {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto; }
+  .ctn_formulario-registro label {
+    color: #078EC3; }
+  .ctn_formulario-registro input {
+    font-size: 24px;
+    height: 45px; }
+  .ctn_formulario-registro .btn-general_lg {
+    height: auto; }
+
+.ctn_grupo-formulario {
+  margin-bottom: 50px; }
+
+.ctn_titulo-grupo h2 {
+  font-family: "Economica", sans-serif;
+  color: #E88A2C;
+  font-size: 36px; }
 
 /* ------------------ Juego -----------------*/
 #juego-content {
@@ -805,6 +908,9 @@ div.flash-success a {
 .clear {
   clear: both; }
 
+.correcto {
+  background-color: #ACD618; }
+
 @media (min-width: 768px) {
   header {
     position: relative;
@@ -857,7 +963,14 @@ div.flash-success a {
   .btnParticipar {
     width: 100px;
     height: 100px;
-    padding: 25px 0px; } }
+    padding: 25px 0px; }
+
+  .ctn_registro {
+    border: none;
+    margin-top: 0px; }
+
+  .ctn_iniciar-sesion {
+    border-right: solid 3px #ACD618; } }
 @media (min-width: 992px) {
   #logo img {
     width: 82%; }
@@ -869,7 +982,16 @@ div.flash-success a {
     margin-top: 15px; }
 
   #mainmenu ul li a {
-    padding: 10px 20px; } }
+    padding: 10px 20px; }
+
+  .btn-general_lg {
+    width: 70%; }
+
+  .ctn_formulario-registro {
+    width: 45%; }
+    .ctn_formulario-registro input {
+      font-size: 16px;
+      height: auto; } }
 @media (min-width: 1200px) {
   .btnParticipar {
     width: 120px;

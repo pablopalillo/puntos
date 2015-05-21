@@ -6,9 +6,9 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->getBaseUrl().'/js/juego
 
 ?>
 
-<div id="content">
+<div id="content" class="ctn_participar">
     <h2>Participa</h2>
-    <div class="col-lg-12">
+    <div class="texto">
     <?php if (count($preguntas) > 0): ?>
     <p>
         Estas son las preguntas activas hasta el momento al día de hoy.
