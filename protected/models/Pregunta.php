@@ -39,12 +39,16 @@ class Pregunta extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nivel_id, pregunta', 'required'),
+			array('nivel_id, pregunta ,fecha, hora_inicio, hora_fin', 'required'),
 			array('nivel_id, estado', 'numerical', 'integerOnly'=>true),
+			array('fecha', 'date', 'format'=>'yyyy-mm-dd', 'allowEmpty'=>false),
+			array('hora_inicio', 'date', 'format'=>'H:m', 'allowEmpty'=>false),
+			array('hora_fin', 'date', 'format'=>'H:m', 'allowEmpty'=>false),
+
 			array('pregunta', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('p.id, nivel_id, pregunta, estado', 'safe', 'on'=>'search'),
+			array('p.id, nivel_id, pregunta, estado, fecha, hora_inicio,hora_fin','safe', 'on'=>'search'),
 		);
 	}
 
@@ -72,6 +76,9 @@ class Pregunta extends CActiveRecord
 			'nivel_id' => 'Nivel',
 			'pregunta' => 'Pregunta',
 			'estado' => 'Estado',
+			'fecha' => 'Fecha',
+			'hora_inicio'=> 'Hora Inicio',
+			'hora_fin'=> 'Hora Fin',
 		);
 	}
 
@@ -90,9 +97,15 @@ class Pregunta extends CActiveRecord
 		$criteria->compare('nivel_id',$this->nivel_id);
 		$criteria->compare('pregunta',$this->pregunta);
 		$criteria->compare('estado',$this->estado);
+		$criteria->compare('fecha',$this->fecha);
+		$criteria->compare('hora_inicio',$this->hora_inicio);
+		$criteria->compare('hora_fin',$this->hora_fin);
 
 		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
+			'criteria' => $criteria,
+			'sort'=>array(
+						'defaultOrder'=>'fecha DESC',
+				),
 		));
 	}
 

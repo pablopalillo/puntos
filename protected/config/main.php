@@ -50,7 +50,7 @@ return array(
 			'urlFormat'=>'path',
 			'showScriptName'=>false,
 			'rules'=>array(
-			//	'participar'	=>'site/login',
+				'participar'	=>'site/login',
 				'cerrar-sesion'		=>'site/logout',
 				'como-jugar'		=>'site/page/view/instrucciones',
 				'premio'			=>'site/page/view/premio',

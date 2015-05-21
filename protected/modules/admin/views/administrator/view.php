@@ -8,7 +8,9 @@
 				'attributes'=>array(
 					'nivel.nombre',
 					'pregunta',
-					'estado',
+					'fecha',
+					'hora_inicio',
+					'hora_fin',
 				),
 
 			));
@@ -19,9 +21,6 @@
 
 		<?php	$this->widget('zii.widgets.CListView', array(
 				'dataProvider'=>$dataProvider,
-				'sortableAttributes'=>array(
-					'estado',
-					),
 				'itemView'=>'_view',
 			));
 		 ?>
