@@ -53,7 +53,7 @@ a{
 	-o-border-radius: 60px;
 	border-radius: 60px;
 	background-color: $naranja;
-	border: solid 5px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.3);
 	margin-right: auto;
 	margin-left: auto;
 	transition: all ease 0.2s;
@@ -62,7 +62,7 @@ a{
 	font-size: 30px;
 	padding: 30px 0;
 	text-align: center;
-	&:hover{
+	&:hover, &:active, &:focus{
 		background-color: #FEA20F;
 		text-decoration: none;
 		color: #ffffff;
@@ -559,6 +559,14 @@ a.btn-jugar:hover {
 		text-decoration: none;
 	}
 }
+.btn-general_md{
+	@extend .btn-general_lg;
+	font-size: 24px !important;
+	min-width: 180px;
+	max-width: 180px;
+	text-align: center;
+	padding: 10px;
+}
 
 /*-------------------- REGISTRO --------------*/
 
@@ -588,6 +596,70 @@ a.btn-jugar:hover {
 	}
 }
 
+/*------------------- PERFIL ----------------*/
+.ctn_perfil{
+	padding: 30px;
+	overflow: auto;
+}
+.ctn_estadisticas{
+	background-color: $verde;
+	@include sombra;
+	@include bordes-redondos;
+	position: relative;
+	margin-top: 75px;
+	padding-top: 90px;
+	padding-bottom: 15px;
+	.btnParticipar{
+		position: absolute;
+		top: -80px;
+		right: 0;
+		left: 0;
+		width: 150px;
+		height: 150px;
+		-webkit-border-radius: 75px;
+		-moz-border-radius: 75px;
+		-ms-border-radius: 75px;
+		-o-border-radius: 75px;
+		border-radius: 75px;
+		padding-top: 44px;
+		font-size: 40px;
+	}
+}
+.ctn_puntajes{
+	padding: 5px 10px;
+	background-color: $azul;
+	font-family: $fprincipal;
+	color: #ffffff;
+	margin-bottom: 15px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	text-align: center;
+	overflow: auto;
+}
+.ctn_datos{
+	.btn-general_md{
+		margin-top: 30px;
+		float: left;
+	}
+}
+.puntaje-label{
+	font-size: 20px;
+	display: block;
+}
+.puntaje{
+	font-size: 80px;
+	display: block;
+	line-height: 90px;
+}
+.titulos{
+	@include titulos;
+}
+.subtitulos{
+	@include subtitulos;
+}
 /* ------------------ Juego -----------------*/
 #juego-content {
 	width: 905px;

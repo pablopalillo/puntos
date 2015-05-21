@@ -9,3 +9,15 @@
 	-ms-border-radius: 10px;
 	-o-border-radius: 10px;
 }
+@mixin titulos{
+	font-family: "Economica", sans-serif;
+	color: #E88A2C;
+	font-size: 46px;
+	text-align: center;
+}
+@mixin subtitulos{
+	font-family: "Economica", sans-serif;
+	color: #E88A2C;
+	font-size: 24px;
+	text-align: left;
+}

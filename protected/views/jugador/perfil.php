@@ -1,79 +1,62 @@
 <?php
 /* @var $this JugadorController */
 ?>
-
-<div id="estadisticas" class="col-sm-4">
-	<header>
-		<?php echo CHtml::link( 'PARTICIPA', array('/jugar'), array('class' => 'btn btn-primary btn-lg btn-block' ) ); ?>
-		<h1>Estadísticas</h1>
-	</header>
-	<section class="col-sm-12" id="estadisticas-content">
-
-		<div class="col-sm-11">
-			<span> Posicion actual</span>
-			<h3> 15 </h3>
-		</div>
-
-		<div class="col-sm-11">
-			<span> Puntaje del mes actual  </span>
-			<h3> 16 </h3>
-		</div>
-		<div class="col-sm-11">
-			<span>Puntaje acomulado del año</span>
-			<h3> 1500 </h3>
-		</div>
-
-		<div class="col-sm-11">
-			<span> Puntaje total</span>
-			<h3> <?php echo $jugador->puntaje ?> </h3>
-		</div>
-
-	<!-- 	<p> Rondas jugadas <span> <?php //echo $estadisticas['rondas'] ?> </span></p> -->
-	<!--	<p>Tiempo total de juego <span> <?php //echo $estadisticas['tiempo'] ?> </span></p> -->
-<!--		<p>Total de preguntas resueltas <span> <?php //echo $estadisticas['preguntas'] ?> </span></p> -->
-
-	<!--	<p>Fecha última ronda <span><?php //echo $estadisticas['fecha_ultima'] ?></span></p>
-		<p>Puntaje última ronda <span><?php //echo $estadisticas['puntos_ultima'] ?></span></p>
-		<p>Tiempo última ronda <span><?php //echo $estadisticas['tiempo_ultima'] ?></span></p>
-		<p>Preguntas última ronda <span><?php //echo $estadisticas['preguntas_ultima'] ?></span></p> -->
-
-	</section>
-
-</div>
-
-
-<div id="perfil" class="col-sm-8">
-
-	<header>
-		<h1>Perfil</h1>
-	</header>
-
-	<section id="perfil-content">
+<div class="ctn_perfil">
+	<div id="estadisticas" class="col-sm-6 ctn_estadisticas">
 		<header>
-			<strong>Datos de acceso</strong>
-			<p>Correo: <?php echo $jugador->usuario->correo ?> </p>
-			<p>Nombre: <?php echo $jugador->nombre_adulto ?></p>
+			<?php echo CHtml::link( 'Participa', array('/jugar'), array('class' => 'btnParticipar' ) ); ?>
 		</header>
+		<section class="col-sm-12" id="estadisticas-content">
+			<div class="ctn_puntaje-mes ctn_puntajes">
+				<span class="puntaje-label">Puntaje del mes actual</span>
+				<span class="puntaje"> 15 </span>
+			</div>
+			<div class="ctn_puntaje-ano ctn_puntajes">
+				<span class="puntaje-label">Puntaje acumulado del año</span>
+				<span class="puntaje"> 16 </span>
+			</div>
+			<div class="ctn_puntaje-posicion ctn_puntajes">
+				<span class="puntaje-label">Posición actual</span>
+				<div class="row-fluid">
+					<div class="col-xs-6">
+						<span class="puntaje"> 15 </span>
+						<span class="puntaje-posicion_label">Mes actual</span>
+					</div>
+					<div class="col-xs-6">
+						<span class="puntaje"> 15 </span>
+						<span class="puntaje-posicion_label">Año actual</span>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div><!-- /ctn_estadisticas -->
 
-		<strong>Datos personales</strong>
+	<div id="perfil" class="col-sm-6 ctn_datos">
+		<header>
+			<h1 class="titulos">Perfil</h1>
+		</header>
+		<section id="perfil-content">
+			<header>
+				<h2 class="subtitulos">Datos de acceso</h2>
+				<p>Correo: <?php echo $jugador->usuario->correo ?> </p>
+				<p>Nombre: <?php echo $jugador->nombre_adulto ?></p>
+			</header>
+			<h2 class="subtitulos">Datos personales</h2>
+			<p>Nombre: <?php echo $jugador->nombre ?> </p>
+			<p>Edad : <?php echo $jugador->getEdad() ?> </p>
+			<p>Documento Identidad: <?php echo $jugador->documento ?></p>
+			<p>Telefono fijo: <?php echo $jugador->telefono ?> </p>
 
-		<p>Nombre: <?php echo $jugador->nombre ?> </p>
-		<p>Edad : <?php echo $jugador->getEdad() ?> </p>
-		<p>Documento Identidad: <?php echo $jugador->documento ?></p>
-		<p>Telefono fijo: <?php echo $jugador->telefono ?> </p>
+			<?php if( ! empty($jugador->correo_adulto) ): ?>
+				<h2 class="subtitulos">Adulto responsable </h2>
 
-		<?php if( ! empty($jugador->correo_adulto) ): ?>
-			<strong>Adulto responsable </strong>
+				<p>Correo: <?php echo $jugador->correo_adulto ?></p>
+				<p>Documento: <?php echo $jugador->documento_adulto ?></p>
+			<?php endif; ?>
 
-			<p>Correo: <?php echo $jugador->correo_adulto ?></p>
-			<p>Documento: <?php echo $jugador->documento_adulto ?></p>
-		<?php endif; ?>
-
-		<div >
-			<?php echo CHtml::link( 'Editar Información', Yii::app()->request->baseUrl . '/editar-perfil', array('class'=>'btn btn-primary') ); ?>
-		</div>
-	</section>
-
-
-
-</div>
+			<div >
+				<?php echo CHtml::link( 'Editar Información', Yii::app()->request->baseUrl . '/editar-perfil', array('class'=>'btn-general_md') ); ?>
+			</div>
+		</section>
+	</div><!-- /ctn_datos -->
+</div><!-- /ctn_perfil -->

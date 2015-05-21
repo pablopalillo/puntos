@@ -46,7 +46,7 @@ a {
   -o-border-radius: 60px;
   border-radius: 60px;
   background-color: #E88A2C;
-  border: solid 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.3);
   margin-right: auto;
   margin-left: auto;
   transition: all ease 0.2s;
@@ -55,7 +55,7 @@ a {
   font-size: 30px;
   padding: 30px 0;
   text-align: center; }
-  .btnParticipar:hover {
+  .btnParticipar:hover, .btnParticipar:active, .btnParticipar:focus {
     background-color: #FEA20F;
     text-decoration: none;
     color: #ffffff; }
@@ -523,7 +523,7 @@ a.btn-jugar:hover {
   margin-top: 50px;
   margin-bottom: 50px; }
 
-.btn-general_lg {
+.btn-general_lg, .btn-general_md {
   background-color: #E88A2C;
   font-family: "Economica", sans-serif;
   font-size: 36px !important;
@@ -537,10 +537,17 @@ a.btn-jugar:hover {
   width: 100%;
   margin: 0 auto;
   display: block; }
-  .btn-general_lg:hover, .btn-general_lg:active, .btn-general_lg:focus {
+  .btn-general_lg:hover, .btn-general_md:hover, .btn-general_lg:active, .btn-general_md:active, .btn-general_lg:focus, .btn-general_md:focus {
     background-color: #cb7116;
     color: #ffffff;
     text-decoration: none; }
+
+.btn-general_md {
+  font-size: 24px !important;
+  min-width: 180px;
+  max-width: 180px;
+  text-align: center;
+  padding: 10px; }
 
 /*-------------------- REGISTRO --------------*/
 .ctn_formulario-registro {
@@ -552,7 +559,7 @@ a.btn-jugar:hover {
   .ctn_formulario-registro input {
     font-size: 24px;
     height: 45px; }
-  .ctn_formulario-registro .btn-general_lg {
+  .ctn_formulario-registro .btn-general_lg, .ctn_formulario-registro .btn-general_md {
     height: auto; }
 
 .ctn_grupo-formulario {
@@ -562,6 +569,78 @@ a.btn-jugar:hover {
   font-family: "Economica", sans-serif;
   color: #E88A2C;
   font-size: 36px; }
+
+/*------------------- PERFIL ----------------*/
+.ctn_perfil {
+  padding: 30px;
+  overflow: auto; }
+
+.ctn_estadisticas {
+  background-color: #ACD618;
+  -moz-box-shadow: 6px 7px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 6px 7px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 6px 7px 0px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  position: relative;
+  margin-top: 75px;
+  padding-top: 90px;
+  padding-bottom: 15px; }
+  .ctn_estadisticas .btnParticipar {
+    position: absolute;
+    top: -80px;
+    right: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    -webkit-border-radius: 75px;
+    -moz-border-radius: 75px;
+    -ms-border-radius: 75px;
+    -o-border-radius: 75px;
+    border-radius: 75px;
+    padding-top: 44px;
+    font-size: 40px; }
+
+.ctn_puntajes {
+  padding: 5px 10px;
+  background-color: #078EC3;
+  font-family: "Economica", sans-serif;
+  color: #ffffff;
+  margin-bottom: 15px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  text-align: center;
+  overflow: auto; }
+
+.ctn_datos .btn-general_md {
+  margin-top: 30px;
+  float: left; }
+
+.puntaje-label {
+  font-size: 20px;
+  display: block; }
+
+.puntaje {
+  font-size: 80px;
+  display: block;
+  line-height: 90px; }
+
+.titulos {
+  font-family: "Economica", sans-serif;
+  color: #E88A2C;
+  font-size: 46px;
+  text-align: center; }
+
+.subtitulos {
+  font-family: "Economica", sans-serif;
+  color: #E88A2C;
+  font-size: 24px;
+  text-align: left; }
 
 /* ------------------ Juego -----------------*/
 #juego-content {
@@ -970,7 +1049,13 @@ div.flash-success a {
     margin-top: 0px; }
 
   .ctn_iniciar-sesion {
-    border-right: solid 3px #ACD618; } }
+    border-right: solid 3px #ACD618; }
+
+  .ctn_datos {
+    padding: 0px 35px; }
+
+  .ctn_estadisticas .btnParticipar {
+    top: -178px; } }
 @media (min-width: 992px) {
   #logo img {
     width: 82%; }
@@ -984,14 +1069,20 @@ div.flash-success a {
   #mainmenu ul li a {
     padding: 10px 20px; }
 
-  .btn-general_lg {
+  .btn-general_lg, .btn-general_md {
     width: 70%; }
 
   .ctn_formulario-registro {
     width: 45%; }
     .ctn_formulario-registro input {
       font-size: 16px;
-      height: auto; } }
+      height: auto; }
+
+  .ctn_datos {
+    padding: 0px 50px; }
+
+  .ctn_estadisticas .btnParticipar {
+    top: -194px; } }
 @media (min-width: 1200px) {
   .btnParticipar {
     width: 120px;
