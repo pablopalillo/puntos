@@ -35,6 +35,7 @@ $this->pageTitle = Yii::app()->name;
 							'hora_fin',
 							array(
 									'class'=>'CButtonColumn',
+									'template' => '{view}{delete}',
 								),
 						),
 

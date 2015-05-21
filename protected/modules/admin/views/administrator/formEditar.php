@@ -1,7 +1,7 @@
 <?php
 /**
 * @author telemedellin
-* Administration form / add Pregunta
+* Administration form / edit Pregunta
 *
 **/
 
@@ -9,7 +9,7 @@
 <div class="col-sm-6" >
   <div class="form">
     <div id="titulo-pregunta" class="well well-lg">
-      <h2>Nueva pregunta</h2>
+      <h2>Editar pregunta <?php echo $pregunta->id ?></h2>
     </div>
 
 
@@ -21,7 +21,7 @@
     ));
     ?>
 
-    <?php echo  $activeform->errorSummary( array($pregunta,$respuesta), '', '', array('class' => 'flash-notice')); ?>
+    <?php echo  $activeform->errorSummary( array($pregunta), '', '', array('class' => 'flash-notice')); ?>
 
     <div class="form-group">
       <?php echo $activeform->label($pregunta,'pregunta'); ?>
@@ -44,37 +44,20 @@
 
     <div class="form-group">
       <?php echo $activeform->label($pregunta,'hora_inicio' ); ?>
-      <?php echo CHtml::label('( 24hora:minuto )','formatoh'); ?>
+      <?php echo CHtml::label('( 24Hora:minuto )','hora1'); ?>
       <?php echo $activeform->timeField($pregunta,'hora_inicio',array('class' => 'form-control')); ?>
       <?php echo $activeform->error($pregunta,'hora_inicio'); ?>
     </div>
 
     <div class="form-group">
       <?php echo $activeform->label($pregunta,'hora_fin' ); ?>
-      <?php echo CHtml::label('( 24hora/minuto )','formatoh2'); ?>
+      <?php echo CHtml::label('( 24Hora:minuto )','hora2'); ?>
       <?php echo $activeform->timeField($pregunta,'hora_fin',array('class' => 'form-control')); ?>
       <?php echo $activeform->error($pregunta,'hora_fin'); ?>
     </div>
 
-
-  <?php for( $i=0 ; $i <= 3 ; $i++ ): ?>
-    <div class="well">
-      <div class="form-group">
-        <?php echo CHtml::label('respuesta '.($i+1),'respuesta'); ?>
-        <?php echo CHtml::textField('respuesta[]','', array('class' => 'form-control','maxlength'=>255)); ?>
-      </div>
-
-      <div class="radio">
-        <label>
-          <?php echo CHtml::radioButton('es_correcta',false,array('value' => "$i" )); ?>
-          <?php echo CHtml::label('correcta','correcta'); ?>
-        </label>
-      </div>
-    </div>
-  <?php endfor; ?>
-
     <div class="form-group">
-      <?php echo CHtml::submitButton('Guardar', array('class'=>'btn btn-success')); ?>
+      <?php echo CHtml::submitButton('Actualizar', array('class'=>'btn btn-success')); ?>
     </div>
 
   <?php $this->endWidget(); ?>
