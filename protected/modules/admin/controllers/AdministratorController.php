@@ -13,7 +13,7 @@ class AdministratorController extends Controller
 	{
 		return array(
 			array('allow',
-			 'actions'=>array('index','view','create','update','admin','delete'),
+			 'actions'=>array('index','view','create','editPregunta','editRespuesta','delete'),
 				'users'=>array('*'),
 			),
 		);
@@ -107,6 +107,68 @@ class AdministratorController extends Controller
 		// render - 1. vista 2. array con los objetos de tipo CActiveReord
 		$this->render('view', array('pregunta'=>$pregunta, 'dataProvider'=>$respuestas));
 	}
+
+
+
+	public function actionEditPregunta($id)
+	{
+			$pregunta 	= Pregunta::model()->findByPk($id);
+
+
+				if( !empty($_POST['Pregunta'] ) )
+				{
+
+						$pregunta->attributes 	= $_POST['Pregunta'];
+						$pregunta->estado 	= 1;
+
+						$this->performAjaxValidation($pregunta);
+
+						if( $pregunta->save() )
+						{
+							$this->redirect(array('view', 'id'=>$pregunta->id));
+						}
+						else
+						{
+							Yii::app()->user->setFlash('error', "Error al guardar pregunta.");
+						}
+				}
+
+				$this->render('formEditar', array('pregunta'=>$pregunta));
+		}
+
+		public function actionEditRespuesta($id)
+		{
+				$respuesta 	= Respuesta::model()->findByPk($id);
+
+					if( !empty($_POST['Respuesta'] ) )
+					{
+							$find = Respuesta::model()->find('es_correcta = 1 AND id = '.$respuesta->pregunta_id);
+							if(!$find)
+							{
+								Yii::app()->user->setFlash('error', "No puede crear o modificar preguntas con multiples respuestas, para seleccionar esta como correcta primero tiene que quitar las respuestas verdaderas y volver a editar esta respuesta.");
+							}
+							else
+							{
+									$respuesta->attributes 	= $_POST['Respuesta'];
+
+									$this->performAjaxValidation($respuesta);
+
+									if( $respuesta->save() )
+									{
+										$this->redirect(array('view', 'id'=>$respuesta->pregunta_id));
+									}
+									else
+									{
+										Yii::app()->user->setFlash('error', "Error al guardar respuesta.");
+									}
+							}
+
+					}
+
+					$this->render('formEditarRespuesta', array('respuesta'=>$respuesta));
+		}
+
+
 
 	protected function performAjaxValidation($model)
 	{
