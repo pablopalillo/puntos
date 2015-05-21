@@ -13125,3 +13125,14 @@ Stack trace:
 #21 {main}
 REQUEST_URI=/puntos/participar
 ---
+2015/05/21 18:41:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "update" solicitada.' in C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(270): CController->missingAction('update')
+#1 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(282): CController->run('update')
+#2 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/administr...')
+#3 C:\xampp\htdocs\yii-1.1.16\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\puntos\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/puntos/admin/administrator/update/id/200
+HTTP_REFERER=http://localhost/puntos/admin/administrator
+---

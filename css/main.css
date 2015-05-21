@@ -1,7 +1,8 @@
 @charset "UTF-8";
 body {
   background: #ACD618 url("../images/bg-foot.png") no-repeat fixed bottom;
-  background-size: contain; }
+  background-size: contain;
+  font-family: 'Raleway', sans-serif; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
   display: block; }
@@ -14,6 +15,13 @@ a {
 /*------------------ADMIN---------------*/
 .correcta div.well {
   background-color: #ACD618 !important; }
+
+.header-admin .btn-general_md {
+  min-width: 100px;
+  max-width: 130px; }
+
+#admin {
+  clear: both; }
 
 /*------------- Registro Form --------*/
 #registro-form #responsable {
@@ -842,6 +850,22 @@ div.flash-success a {
 
 .correcto {
   background-color: #ACD618; }
+
+/*-------------MEC├üNICA----------------*/
+#instrucciones {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto; }
+  #instrucciones h1 {
+    font-family: "Economica", sans-serif;
+    color: #E88A2C;
+    font-size: 46px;
+    text-align: center; }
+  #instrucciones h2 {
+    font-family: "Economica", sans-serif;
+    color: #E88A2C;
+    font-size: 24px;
+    text-align: left; }
 
 @media (min-width: 768px) {
   header {

@@ -88,7 +88,7 @@ class ParticiparController extends CController
         switch (($respuesta->es_correcta == 1))
         {
             case true:
-                $r['message'] = 'Felicitaciones, su respuesta ha sido correcta.';
+                $r['message'] = 'Felicitaciones, tu respuesta es correcta.';
                 $r['status'] = 'success';
                 break;
             case false:
