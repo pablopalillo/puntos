@@ -8,7 +8,7 @@ $this->pageTitle= 'Participar - ' .Yii::app()->name;
 ?>
 
 <div class="form col-sm-6 ctn_iniciar-sesion">
-  <div class="iniciar-sesion_title">
+  <div class="pagina_title">
     <h1>Iniciar sesión</h1>
     <p>Si ya estás registrado, inicia sesión en esta opción</p>
   </div>
@@ -57,7 +57,7 @@ $this->pageTitle= 'Participar - ' .Yii::app()->name;
 
 <div class="col-sm-6">
   <div class="ctn_registro">
-    <div class="iniciar-sesion_title">
+    <div class="pagina_title">
       <h1>Registrarse</h1>
       <p>Si es la primera vez que vas a participar, debes registrarte </p>
     </div>

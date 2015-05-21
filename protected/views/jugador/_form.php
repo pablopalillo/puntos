@@ -3,7 +3,7 @@
 
 		<div class="form">
 			<div id="titulo-registro">
-				<h1>Editar Informacion</h1>
+				<h1 class="titulos">Editar Informacion</h1>
 				<p class="note">Recuerda que estos datos deben ser reales, porque serán los que se solicitarán al momento de reclamar alguno de los premios.</p>
 			</div>
 
@@ -16,8 +16,8 @@
 
 		<?php echo $activeform->errorSummary(array($model), '', '', array('class' => 'flash-notice')); ?>
 
-		<div class="well well-lg">
-			<h2>Datos personales</h2>
+		<div>
+			<h2 class="subtitulos">Datos personales</h2>
 			<p>Estos son los datos basicos que utilizaremos para contactarte.</p>
 		</div>
 
@@ -29,7 +29,7 @@
 
 
 		<div class="form-group">
-				<?php echo CHtml::submitButton('Editar', array('class'=>'btn btn-default')); ?>
+				<?php echo CHtml::submitButton('Guardar', array('class'=>'btn-general_md')); ?>
 		</div>
 
 		<?php $this->endWidget(); ?>

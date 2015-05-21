@@ -43,10 +43,10 @@ class AdministratorController extends Controller
 		{
 
 			$pregunta->attributes 	= $_POST['Pregunta'];
-			$pregunta->estado 			= 1;
+			$pregunta->estado 	= 1;
 
 
-		if( !empty( $_POST['respuesta'] ) && count($_POST['respuesta']) > 1 )
+			if( !empty( $_POST['respuesta'] ) && count($_POST['respuesta']) > 1 )
 			{
 
 				if( $pregunta->save() )
@@ -81,7 +81,8 @@ class AdministratorController extends Controller
 
 		}
 
-		$this->render('form',array('pregunta'=>$pregunta, 'respuesta'=>$respuestas));
+		$this->render('form', array('pregunta'=>$pregunta, 'respuesta'=>$respuestas));
+
 	}
 
 
@@ -115,6 +116,24 @@ class AdministratorController extends Controller
 	        Yii::app()->end();
 	    }
 	}
+
+/**
+* funcion en desarrollo para formatear las fechas
+* d/m/Y
+*
+*/
+	protected function formatearFecha($fecha)
+	{
+		$splitDate  = explode('/', $fecha);
+		$newDate 		= date('Y-m-d', mktime(0, 0, 0, $splitDate[1], $splitDate[0], $splitDate[2]) );
+
+		return $newDate;
+
+
+	}
+
+
+
 
 
 
