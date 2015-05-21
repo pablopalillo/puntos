@@ -11,6 +11,10 @@ a {
   font-family: Arial, sans-serif;
   text-decoration: none; }
 
+/*------------------ADMIN---------------*/
+.correcta div.well {
+  background-color: #ACD618 !important; }
+
 /*------------- Registro Form --------*/
 #registro-form #responsable {
   display: none; }
@@ -46,7 +50,7 @@ a {
   -o-border-radius: 60px;
   border-radius: 60px;
   background-color: #E88A2C;
-  border: solid 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.3);
   margin-right: auto;
   margin-left: auto;
   transition: all ease 0.2s;
@@ -55,7 +59,7 @@ a {
   font-size: 30px;
   padding: 30px 0;
   text-align: center; }
-  .btnParticipar:hover {
+  .btnParticipar:hover, .btnParticipar:active, .btnParticipar:focus {
     background-color: #FEA20F;
     text-decoration: none;
     color: #ffffff; }
@@ -523,7 +527,7 @@ a.btn-jugar:hover {
   margin-top: 50px;
   margin-bottom: 50px; }
 
-.btn-general_lg {
+.btn-general_lg, .btn-general_md {
   background-color: #E88A2C;
   font-family: "Economica", sans-serif;
   font-size: 36px !important;
@@ -537,10 +541,17 @@ a.btn-jugar:hover {
   width: 100%;
   margin: 0 auto;
   display: block; }
-  .btn-general_lg:hover, .btn-general_lg:active, .btn-general_lg:focus {
+  .btn-general_lg:hover, .btn-general_md:hover, .btn-general_lg:active, .btn-general_md:active, .btn-general_lg:focus, .btn-general_md:focus {
     background-color: #cb7116;
     color: #ffffff;
     text-decoration: none; }
+
+.btn-general_md {
+  font-size: 24px !important;
+  min-width: 180px;
+  max-width: 180px;
+  text-align: center;
+  padding: 10px; }
 
 /*-------------------- REGISTRO --------------*/
 .ctn_formulario-registro {
@@ -552,7 +563,7 @@ a.btn-jugar:hover {
   .ctn_formulario-registro input {
     font-size: 24px;
     height: 45px; }
-  .ctn_formulario-registro .btn-general_lg {
+  .ctn_formulario-registro .btn-general_lg, .ctn_formulario-registro .btn-general_md {
     height: auto; }
 
 .ctn_grupo-formulario {
@@ -563,191 +574,112 @@ a.btn-jugar:hover {
   color: #E88A2C;
   font-size: 36px; }
 
-/* ------------------ Juego -----------------*/
-#juego-content {
-  width: 905px;
-  margin-right: auto;
-  margin-left: auto;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
-  background-color: #2c7cad;
-  position: relative;
-  margin-top: 30px;
-  overflow: auto;
-  margin-bottom: 25px; }
+/*------------------- PERFIL ----------------*/
+.ctn_perfil {
+  padding: 30px;
+  overflow: auto; }
 
-#estado {
-  background-image: url("../images/bg-panel.png");
-  width: 905px;
-  height: 66px;
-  font-family: 'Gochi Hand';
-  color: #fff;
-  z-index: 2;
-  position: absolute;
-  top: 35px;
-  left: 27px; }
-
-#estado span.nivel {
-  font-size: 60px;
-  padding-top: 3px;
-  padding-left: 50px;
-  float: left; }
-
-#estado span.pregunta {
-  font-size: 25px;
-  padding-left: 95px;
-  padding-bottom: 12px;
-  display: block;
-  padding-top: 20px;
-  float: left; }
-
-#estado span.puntos {
-  font-size: 20px;
-  padding-left: 10px;
-  padding-bottom: 12px;
-  display: block;
-  padding-top: 20px;
-  float: left; }
-
-#estado span#puntos {
-  font-family: "Impact", sans-serif;
-  font-weight: bold;
-  font-size: 50px;
-  float: left;
-  padding-left: 80px; }
-
-p.puntaje-general {
-  font-family: 'Gochi Hand', sans-serif;
-  color: #fff;
-  font-size: 20px;
-  line-height: 18px;
-  width: 115px;
-  height: 91px;
-  padding-top: 10px;
-  background-color: #af2a57;
-  position: absolute;
-  right: 73px;
-  top: -9px;
-  display: block;
-  -webkit-border-top-left-radius: 10px;
-  -webkit-border-top-right-radius: 10px;
-  -moz-border-radius-topleft: 10px;
-  -moz-border-radius-topright: 10px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  text-align: center;
-  z-index: 3; }
-
-#content span#total_puntos {
-  font-family: "Impact", sans-serif;
-  font-weight: bold;
-  font-size: 40px;
-  display: block;
-  padding-top: 20px; }
-
-#mensaje {
-  width: 530px;
-  font-family: 'Gochi Hand', sans-serif;
-  height: auto;
-  color: #fff;
-  background: #3d4e56;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  float: left;
-  padding: 20px;
-  margin-top: 110px;
-  margin-left: 25px;
-  text-align: center; }
-
-#mensaje div {
-  border-bottom: 2px dotted #fff;
-  margin-bottom: 25px; }
-
-#mensaje h3 {
-  font-size: 1.6em;
-  margin: .5em; }
-
-#mensaje p {
-  font-family: Verdana, sans-serif; }
-
-#mensaje li {
-  font-size: 1.3em;
-  list-style-image: url("../images/star-tip.png");
-  text-align: left; }
-
-#mensaje a {
-  background: #5da6b4;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  color: #FFF;
-  padding: 10px;
-  text-decoration: none; }
-
-#mensaje a:hover {
-  background: #135184; }
-
-#pregunta {
-  width: 625px;
-  height: auto;
-  background-image: url("../images/spark.png"), url("../images/bg_1.gif");
-  background-repeat: no-repeat, no-repeat;
-  background-position: center 82% , left bottom;
-  float: left;
-  padding-top: 85px; }
-
-#pregunta p.tiempo {
-  width: 85px;
-  height: 65px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 0px;
-  padding-top: 5px;
-  background-color: #af2a57;
-  font-family: 'Gochi Hand', sans-serif;
-  font-size: 20px;
-  color: #fff;
-  text-align: center;
-  -webkit-border-top-left-radius: 10px;
-  -webkit-border-top-right-radius: 10px;
-  -moz-border-radius-topleft: 10px;
-  -moz-border-radius-topright: 10px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px; }
-
-#pregunta #tiempo {
-  font-family: "Impact", sans-serif;
-  font-weight: bold;
-  font-size: 30px;
-  display: block; }
-
-#pregunta p.pregunta {
-  width: 545px;
-  height: auto;
-  padding: 10px;
+.ctn_estadisticas {
+  background-color: #ACD618;
+  -moz-box-shadow: 6px 7px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 6px 7px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 6px 7px 0px rgba(0, 0, 0, 0.3);
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  border-radius: 10px;
-  margin-top: 0px;
-  margin-right: auto;
-  margin-left: auto;
-  background-color: #3c4647;
-  font-family: 'Gochi Hand', sans-serif;
-  text-align: center;
-  color: #fff;
-  font-size: 20px; }
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  position: relative;
+  margin-top: 75px;
+  padding-top: 90px;
+  padding-bottom: 15px; }
+  .ctn_estadisticas .btnParticipar {
+    position: absolute;
+    top: -80px;
+    right: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    -webkit-border-radius: 75px;
+    -moz-border-radius: 75px;
+    -ms-border-radius: 75px;
+    -o-border-radius: 75px;
+    border-radius: 75px;
+    padding-top: 44px;
+    font-size: 40px; }
 
-#pregunta a {
-  width: 260px;
-  height: 90px;
-  padding-top: 32px;
-  font-family: 'Gochi Hand', sans-serif;
+.ctn_puntajes {
+  padding: 5px 10px;
+  background-color: #078EC3;
+  font-family: "Economica", sans-serif;
+  color: #ffffff;
+  margin-bottom: 15px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  text-align: center;
+  overflow: auto; }
+
+.ctn_datos .btn-general_md {
+  margin-top: 30px;
+  float: left; }
+
+.puntaje-label {
   font-size: 20px;
-  color: #fff;
-  text-decoration: none;
-  letter-spacing: 1px; }
+  display: block; }
+
+.puntaje {
+  font-size: 80px;
+  display: block;
+  line-height: 90px; }
+
+.titulos, .juego_pregunta h3, .texto-cargando {
+  font-family: "Economica", sans-serif;
+  color: #E88A2C;
+  font-size: 46px;
+  text-align: center; }
+
+.subtitulos, .pregunta {
+  font-family: "Economica", sans-serif;
+  color: #E88A2C;
+  font-size: 24px;
+  text-align: left; }
+
+/* ------------------ Juego -----------------*/
+/*Juego Puntos TM*/
+.ctn_participar p {
+  color: #078EC3;
+  text-align: center; }
+
+.ctn_pregunta {
+  background-color: #078EC3;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  margin-bottom: 30px;
+  overflow: auto;
+  padding: 10px 15px; }
+  .ctn_pregunta .btn-general_md {
+    min-width: 150px; }
+    .ctn_pregunta .btn-general_md.btn-disable {
+      background-color: #007EB2;
+      color: #25A8DD; }
+
+.pregunta {
+  color: #ffffff;
+  text-align: center; }
+
+p.pregunta-descripcion {
+  color: #ffffff;
+  text-align: center; }
+
+.juego_pregunta h3 {
+  font-size: 46px; }
+
+#clock .btn-general_md {
+  margin-top: 40px; }
 
 a#ra {
   float: left;
@@ -970,7 +902,19 @@ div.flash-success a {
     margin-top: 0px; }
 
   .ctn_iniciar-sesion {
-    border-right: solid 3px #ACD618; } }
+    border-right: solid 3px #ACD618; }
+
+  .ctn_datos {
+    padding: 0px 35px; }
+
+  .ctn_estadisticas .btnParticipar {
+    top: -178px; }
+
+  .pregunta {
+    text-align: left; }
+
+  p.pregunta-descripcion {
+    text-align: left; } }
 @media (min-width: 992px) {
   #logo img {
     width: 82%; }
@@ -984,14 +928,20 @@ div.flash-success a {
   #mainmenu ul li a {
     padding: 10px 20px; }
 
-  .btn-general_lg {
+  .btn-general_lg, .btn-general_md {
     width: 70%; }
 
   .ctn_formulario-registro {
     width: 45%; }
     .ctn_formulario-registro input {
       font-size: 16px;
-      height: auto; } }
+      height: auto; }
+
+  .ctn_datos {
+    padding: 0px 50px; }
+
+  .ctn_estadisticas .btnParticipar {
+    top: -194px; } }
 @media (min-width: 1200px) {
   .btnParticipar {
     width: 120px;

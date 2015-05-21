@@ -69,6 +69,18 @@
 	.ctn_iniciar-sesion{
 		border-right: solid 3px #ACD618;
 	}
+	.ctn_datos{
+		padding: 0px 35px;
+	}
+	.ctn_estadisticas .btnParticipar{
+		top: -178px;
+	}
+	.pregunta{
+		text-align: left;
+	}
+	p.pregunta-descripcion{
+		text-align: left;
+	}
 }
 @media (min-width:992px) {
 	#logo img {
@@ -98,6 +110,12 @@
 			font-size: 16px;
 			height: auto;
 		}
+	}
+	.ctn_datos{
+		padding: 0px 50px;
+	}
+	.ctn_estadisticas .btnParticipar{
+		top: -194px;
 	}
 }
 @media (min-width:1200px){

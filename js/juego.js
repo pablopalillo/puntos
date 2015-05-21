@@ -314,8 +314,8 @@ $(function() {
 
         $('#content-page').hide();
 
-        $('#progress').html($('<h4/>').text('En un momento listaremos las respuestas disponibles...').prepend($('<img>', {
-            'src': '/images/loading.gif'
+        $('#progress').html($('<h4/>', {'class': 'texto-cargando'}).text('En un momento listaremos las respuestas disponibles...').prepend($('<img>', {
+            'src': 'images/loading.gif',
         }).css({
             'width': '58',
             'float': 'right'
@@ -351,8 +351,8 @@ $(function() {
 
         $('#content-page').hide();
 
-        $('#progress').html($('<h4/>').text('En el momento estamos analizando tu respuesta...').prepend($('<img>', {
-            'src': '/images/loading.gif'
+        $('#progress').html($('<h4/>', {'class': 'texto-cargando'}).text('En el momento estamos analizando tu respuesta...').prepend($('<img>', {
+            'src': 'images/loading.gif',
         }).css({
             'width': '58',
             'float': 'right'
@@ -362,7 +362,8 @@ $(function() {
             'padding-top': '14%',
             'text-transform':'uppercase',
             'font-size': '30px',
-            'text-align': 'center'
+            'text-align': 'center',
+            'class': 'texto-cargando'
         })).css({
             'height':'300px',
             'text-align':'center'
@@ -378,14 +379,11 @@ $(function() {
                 var h4 = $('#progress').children();
                 var img = $('#progress').children().children();
 
-                img.attr('src','/images/' + r.status + '.png');
+                img.attr('src','images/' + r.status + '.png');
                 $('#progress').html(h4.text(r.message).prepend(img));
                 $('.ctn_main').append($('<span id="clock"></span>'));
-                $('#clock').append('En 5<label id="secs" style="display:none;"></label> segundos sera redirigido al listado de preguntas.&nbsp;' +
-                '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;');
+                $('#clock').append('<a href="" class="btn-general_md">Volver</a>');
                 $('#clock').appendTo('#progress');
-
-                conteo(1);
             }
         });
 
@@ -405,20 +403,20 @@ $(function() {
             data: {mes:mes},
             success: function(data)
             {
-                var data = data.r;
-                var ul = $('#total-mes > ul');
-                ul.html('');
-                $.each(data, function(k, v) {
-                    var indice = (k+1);
-                    ul.append('<li id="jugador-' + indice + '"></li>');
-                    var li = $('#jugador-' + indice);
-                    li.append('<span class="lugar">' + indice + '</span>');
-                    li.append(v.jugador);
-                    li.append('<span class="total">' + v.puntaje + '</span>');
-                });
+                 var data = data.r;
+                 var ul = $('#total-mes > ul');
+                 ul.html('');
+                 $.each(data, function(k, v) {
+                     var indice = (k+1);
+                     ul.append('<li id="jugador-' + indice + '"></li>');
+                     var li = $('#jugador-' + indice);
+                     li.append('<span class="lugar">' + indice + '</span>');
+                     li.append(v.jugador);
+                     li.append('<span class="total">' + v.puntaje + '</span>');
+                 });
 
-                if (ul.is(':empty'))
-                    ul.append('<li style="text-align:center;">No se han encontrado resultados.</li>');
+                 if (ul.is(':empty'))
+                     ul.append('<li style="text-align:center;">No se han encontrado resultados.</li>');
             }
         });
         evt.preventDefault();
@@ -432,19 +430,6 @@ $(function() {
         $('#meses').val(month);
     });
 });
-
-function conteo(second)
-{
-    var secs = $('#secs');
-    count = parseInt(secs.text() == "" ? 0 : secs.text()) + second;
-
-    secs.text(toSt(count%60));
-
-    if (secs.text() < 5)
-        setTimeout("conteo(1)",1000);
-    else
-        window.location = "/participar";
-}
 
 function toSt(n) {
     s=""

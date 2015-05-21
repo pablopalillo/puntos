@@ -78,7 +78,7 @@ class ParticiparController extends CController
         $respuestaJugador->pregunta_id = $respuesta->pregunta->id;
         $respuestaJugador->respuesta_id = $id;
         $respuestaJugador->jugador_id = Yii::app()->session['jugador_id'];
-        $respuestaJugador->fecha = date('Y-m-d');
+        $respuestaJugador->fecha = date('Y-m-d G:i:s');
         $respuestaJugador->save();
 
         $respuesta = Respuesta::model()->find('id = ?', array(0 => $id));
@@ -92,7 +92,7 @@ class ParticiparController extends CController
                 $r['status'] = 'success';
                 break;
             case false:
-                $r['message'] = 'Lo sentimos, siguelo intentando como dicen las tapas.';
+                $r['message'] = 'Esa no era la respuesta, lo sentimos :(';
                 $r['status'] = 'error';
                 break;
         }
@@ -126,11 +126,11 @@ class ParticiparController extends CController
                     $preguntas[$key]->estado = 1;
                 else
                     $preguntas[$key]->estado = 0;
+
+                $preguntas[$key]->save();
             }
             else
                 $preguntas[$key]->estado = 2;
-
-            $preguntas[$key]->save();
         }
     }
 }
