@@ -175,13 +175,15 @@ class Jugador extends CActiveRecord
     public function rankingMes($mes = null)
     {
         $mes = is_null($mes) ? date('m') : $mes;
-        $sql = "SELECT jugador.nombre as jugador, SUM(nivel.puntos) as puntaje
+        $sql = "SELECT jugador.nombre as jugador, SUM(nivel.puntos) as puntaje, SUM(DATE_FORMAT(respuesta_x_jugador.fecha, '%d%m%Y%k%i%s')) as fecha_sum
                 FROM nivel
                 INNER JOIN pregunta ON nivel.id = pregunta.nivel_id
                 INNER JOIN respuesta ON pregunta.id = respuesta.pregunta_id
                 INNER JOIN respuesta_x_jugador ON respuesta.id = respuesta_x_jugador.respuesta_id
                 INNER JOIN jugador ON respuesta_x_jugador.jugador_id = jugador.id
-                WHERE respuesta.es_correcta = 1 AND MONTH(respuesta_x_jugador.fecha) = " . $mes . " GROUP BY jugador.id";
+                WHERE respuesta.es_correcta = 1 AND MONTH(respuesta_x_jugador.fecha) = " . $mes . " 
+                GROUP BY jugador.id
+                ORDER BY SUM(nivel.puntos) DESC, fecha_sum ASC";
 
         $dataProvider = new CSqlDataProvider($sql);
         return  $dataProvider->getData();
@@ -190,13 +192,15 @@ class Jugador extends CActiveRecord
     public function rankingAnho($anho = null)
     {
         $anho = is_null($anho) ? date('Y') : $anho;
-        $sql = "SELECT jugador.nombre as jugador, SUM(nivel.puntos) as puntaje
+        $sql = "SELECT jugador.nombre as jugador, SUM(nivel.puntos) as puntaje, SUM(DATE_FORMAT(respuesta_x_jugador.fecha, '%d%m%Y%k%i%s')) as fecha_sum
                 FROM nivel
                 INNER JOIN pregunta ON nivel.id = pregunta.nivel_id
                 INNER JOIN respuesta ON pregunta.id = respuesta.pregunta_id
                 INNER JOIN respuesta_x_jugador ON respuesta.id = respuesta_x_jugador.respuesta_id
                 INNER JOIN jugador ON respuesta_x_jugador.jugador_id = jugador.id
-                WHERE respuesta.es_correcta = 1 AND YEAR(respuesta_x_jugador.fecha) = " . $anho . " GROUP BY jugador.id";
+                WHERE respuesta.es_correcta = 1 AND YEAR(respuesta_x_jugador.fecha) = " . $anho . " 
+                GROUP BY jugador.id
+                ORDER BY SUM(nivel.puntos) DESC, fecha_sum ASC";
 
         $dataProvider = new CSqlDataProvider($sql);
         return  $dataProvider->getData();

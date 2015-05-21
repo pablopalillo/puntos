@@ -50,17 +50,15 @@ return array(
 			'urlFormat'=>'path',
 			'showScriptName'=>false,
 			'rules'=>array(
-			//	'participar'	=>'site/login',
+			    //'participar'	=>'site/login',
 				'cerrar-sesion'		=>'site/logout',
 				'como-jugar'		=>'site/page/view/instrucciones',
 				'premio'			=>'site/page/view/premio',
 				'perfil'			=>'jugador/perfil',
-        'participar'                  =>'participar/participar',
+                'participar'        =>'participar/participar',
 				'editar-perfil' =>'jugador/update',
-
 				'puntajes'			=>'site/puntajes',
-        'consultar-ranking'   =>'site/consultar',
-
+                'consultar-ranking'   =>'site/consultar',
 				'ranking'			=>'site/puntajes',
                 'consultar-ranking'            =>'site/consultar',
 				'registro'			=>'site/registro',
@@ -79,10 +77,10 @@ return array(
 		),*/
 		// uncomment the following to use a MySQL database
 		'db'=>array(
-			'connectionString' => 'mysql:host=192.168.2.79;dbname=puntos',
+			'connectionString' => 'mysql:host=localhost;dbname=puntos',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => 'mysql',/*V14j4a5v1z4***/
+			'password' => '',/*V14j4a5v1z4***/
 			'charset' => 'utf8',
 			//'enableProfiling'=>true,
 		),
