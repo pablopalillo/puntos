@@ -707,7 +707,11 @@ p.pregunta-descripcion{
 .texto-cargando{
 	@extend .titulos;
 }
-
+#clock{
+	.btn-general_md{
+		margin-top: 40px;
+	}
+}
 
 a#ra {
 	float: left;

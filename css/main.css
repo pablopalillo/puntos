@@ -678,6 +678,9 @@ p.pregunta-descripcion {
 .juego_pregunta h3 {
   font-size: 46px; }
 
+#clock .btn-general_md {
+  margin-top: 40px; }
+
 a#ra {
   float: left;
   background-image: url("../images/left-resp.png");

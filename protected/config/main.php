@@ -76,10 +76,10 @@ return array(
 		),*/
 		// uncomment the following to use a MySQL database
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=puntos',
+			'connectionString' => 'mysql:host=192.168.2.79;dbname=puntos',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => '',/*V14j4a5v1z4***/
+			'password' => 'mysql',
 			'charset' => 'utf8',
 			//'enableProfiling'=>true,
 		),
