@@ -9,21 +9,21 @@
 		<section class="col-sm-12" id="estadisticas-content">
 			<div class="ctn_puntaje-mes ctn_puntajes">
 				<span class="puntaje-label">Puntaje del mes actual</span>
-				<span class="puntaje"> 15 </span>
+                <span class="puntaje"> <?php echo $puntaje_mes; ?></span>
 			</div>
 			<div class="ctn_puntaje-ano ctn_puntajes">
 				<span class="puntaje-label">Puntaje acumulado del año</span>
-				<span class="puntaje"> 16 </span>
+                <span class="puntaje"> <?php echo $puntaje_anho; ?></span>
 			</div>
 			<div class="ctn_puntaje-posicion ctn_puntajes">
 				<span class="puntaje-label">Posición actual</span>
 				<div class="row-fluid">
 					<div class="col-xs-6">
-						<span class="puntaje"> 15 </span>
+                        <span class="puntaje"> <?php echo $ranking_mes; ?></span>
 						<span class="puntaje-posicion_label">Mes actual</span>
 					</div>
 					<div class="col-xs-6">
-						<span class="puntaje"> 15 </span>
+                        <span class="puntaje"> <?php echo $ranking_anho; ?></span>
 						<span class="puntaje-posicion_label">Año actual</span>
 					</div>
 				</div>

@@ -139,8 +139,8 @@ class SiteController extends Controller
 	{
 		//$ranking = Jugador::model()->getRanking();
 
-        $total_mes = Jugador::model()->rankingMes();
-        $total_anho = Jugador::model()->rankingAnho();
+        $total_mes = Jugador::model()->getRanking('mes',null,true);
+        $total_anho = Jugador::model()->getRanking('anho',null,true);
 
 		$this->render('ranking', array(
                 'total_mes' => $total_mes,
@@ -240,7 +240,7 @@ class SiteController extends Controller
         if (!Yii::app()->request->isAjaxRequest) throw new CHttpException('403', 'Forbidden access.');
 
         $mes = Yii::app()->request->restParams['mes'];
-        $ranking = Jugador::model()->rankingMes($mes);
+        $ranking = Jugador::model()->getRanking('mes',$mes,true,null);
 
         header('Content-Type: application/json; charset="UTF-8"');
         $r = array('r' => $ranking);

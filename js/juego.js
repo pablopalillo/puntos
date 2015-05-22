@@ -406,10 +406,9 @@ $(function() {
                  var ul = $('#total-mes > ul');
                  ul.html('');
                  $.each(data, function(k, v) {
-                     var indice = (k+1);
-                     ul.append('<li id="jugador-' + indice + '"></li>');
-                     var li = $('#jugador-' + indice);
-                     li.append('<span class="lugar">' + indice + '</span>');
+                     ul.append('<li id="jugador-' + v.top + '"></li>');
+                     var li = $('#jugador-' + v.top);
+                     li.append('<span class="lugar">' + v.top + '</span>');
                      li.append(v.jugador);
                      li.append('<span class="total">' + v.puntaje + '</span>');
                  });

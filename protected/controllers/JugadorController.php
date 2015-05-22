@@ -39,8 +39,37 @@ class JugadorController extends Controller
 	{
 		$usuario_id = Yii::app()->user->id;
 		$jugador = Jugador::model()->with('usuario', 'parentesco')->findByAttributes(array('usuario_id' => $usuario_id));
+        
+        $mes = date('m');
+        $anho = date('Y');
 
-		$this->render('perfil', array('jugador' => $jugador));
+        $ranking_mes = Jugador::model()->getRanking('mes',$mes,false);
+        $ranking_anho = Jugador::model()->getRanking('anho',$anho,false);
+        
+        $p_m = 0;
+        $p_a = 0;
+        $r_m = 0;
+        $r_a = 0;
+
+        foreach ($ranking_mes as $mes)
+        {
+            if ($mes['id'] == $usuario_id)
+            {
+                $p_m = $mes['puntaje'];
+                $r_m = $mes['top'];
+            }
+        }
+
+        foreach ($ranking_anho as $anho)
+        {
+            if ($anho['id'] == $usuario_id)
+            {
+                $p_a = $anho['puntaje'];
+                $r_a = $anho['top']; 
+            }
+        }
+
+		$this->render('perfil', array('jugador' => $jugador, 'ranking_mes' => $r_m, 'ranking_anho' => $r_a, 'puntaje_mes' => $p_m, 'puntaje_anho' => $p_a));
 	}
 
 

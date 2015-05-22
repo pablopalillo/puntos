@@ -158,7 +158,7 @@ class Jugador extends CActiveRecord
 			return false;
 	}
 
-	public function getRanking()
+	/*public function getRanking()
 	{
 
 		 $c = new CDbCriteria;
@@ -170,40 +170,47 @@ class Jugador extends CActiveRecord
 		 $resultado = array('ninos' => $ninos, 'ninas' => $ninas);
 		 return $resultado;
 
-	}
+	}*/
 
-    public function rankingMes($mes = null)
+    public function getRanking($tipo = 'mes', $q = null, $l = true)
     {
-        $mes = is_null($mes) ? date('m') : $mes;
-        $sql = "SELECT jugador.nombre as jugador, SUM(nivel.puntos) as puntaje, SUM(DATE_FORMAT(respuesta_x_jugador.fecha, '%d%m%Y%k%i%s')) as fecha_sum
-                FROM nivel
-                INNER JOIN pregunta ON nivel.id = pregunta.nivel_id
-                INNER JOIN respuesta ON pregunta.id = respuesta.pregunta_id
-                INNER JOIN respuesta_x_jugador ON respuesta.id = respuesta_x_jugador.respuesta_id
-                INNER JOIN jugador ON respuesta_x_jugador.jugador_id = jugador.id
-                WHERE respuesta.es_correcta = 1 AND MONTH(respuesta_x_jugador.fecha) = " . $mes . " 
-                GROUP BY jugador.id
-                ORDER BY SUM(nivel.puntos) DESC, fecha_sum ASC";
+        $w = null;
+        $connection = Yii::app()->db;
 
-        $dataProvider = new CSqlDataProvider($sql);
-        return  $dataProvider->getData();
-    }
+        switch ($tipo)
+        {
+            case 'mes':
+                $q = is_null($q) ? date('m') : $q;
+                $w = "WHERE r.es_correcta = 1 AND MONTH(rj.fecha) = '" . $q . "'";
+                break;
+            case 'anho':
+                $q = is_null($q) ? date('Y') : $q;
+                $w = "WHERE r.es_correcta = 1 AND YEAR(rj.fecha) = " . $q;
+                break;
+        }
 
-    public function rankingAnho($anho = null)
-    {
-        $anho = is_null($anho) ? date('Y') : $anho;
-        $sql = "SELECT jugador.nombre as jugador, SUM(nivel.puntos) as puntaje, SUM(DATE_FORMAT(respuesta_x_jugador.fecha, '%d%m%Y%k%i%s')) as fecha_sum
-                FROM nivel
-                INNER JOIN pregunta ON nivel.id = pregunta.nivel_id
-                INNER JOIN respuesta ON pregunta.id = respuesta.pregunta_id
-                INNER JOIN respuesta_x_jugador ON respuesta.id = respuesta_x_jugador.respuesta_id
-                INNER JOIN jugador ON respuesta_x_jugador.jugador_id = jugador.id
-                WHERE respuesta.es_correcta = 1 AND YEAR(respuesta_x_jugador.fecha) = " . $anho . " 
-                GROUP BY jugador.id
-                ORDER BY SUM(nivel.puntos) DESC, fecha_sum ASC";
+        $l = ($l == true) ? 'LIMIT 10' : 'LIMIT 1';
 
-        $dataProvider = new CSqlDataProvider($sql);
-        return  $dataProvider->getData();
+        $sql = "SELECT *
+                FROM (
+                    SELECT query.id, (@cnt := @cnt+1) as top, query.jugador, query.puntaje, query.fecha
+                    FROM jugador, (
+                        SELECT j.id as id, j.nombre as jugador, SUM(n.puntos) as puntaje, SUM(DATE_FORMAT(rj.fecha, '%d%m%Y%k%i%s')) as fecha
+                        FROM nivel n
+                        INNER JOIN pregunta p ON n.id = p.nivel_id
+                        INNER JOIN respuesta r ON p.id = r.pregunta_id
+                        INNER JOIN respuesta_x_jugador rj ON r.id = rj.respuesta_id
+                        INNER JOIN jugador j ON rj.jugador_id = j.id
+                        $w
+                        GROUP BY j.id
+                        ORDER BY puntaje DESC, fecha ASC
+                    ) query, (SELECT @cnt:=0) AS t
+                    WHERE jugador.id = query.id
+                ) query;";
+
+        $command = $connection->createCommand($sql);
+
+        return  $command->query();
     }
 
 	protected function beforeSave()
