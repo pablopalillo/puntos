@@ -36,7 +36,7 @@
 								'items'=>array(
 									array('label'=>'Inicio', 'url'=>array('/admin/administrator/'), 'linkOptions' => array('class' => 'item1')),
 									array('label'=>'Nuevo', 'url'=>array('/admin/administrator/create/'), 'linkOptions' => array('class' => 'item1')),
-									array('label'=>'Ranking', 'url'=>array('/ranking'), 'linkOptions' => array('class' => 'item1')),
+									array('label'=>'Salir', 'url'=>array('/site/logout/'), 'linkOptions' => array('class' => 'item1')),
 								),
 							)); ?>
 						</div>

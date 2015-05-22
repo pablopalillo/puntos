@@ -23,7 +23,7 @@
 	<header>
 		<div class="row">
 			<div class="col-sm-7 col-md-7">
-				<div id="logo"><?php echo CHtml::link( CHtml::image(Yii::app()->request->baseUrl . '/images/logo.png', 'Viaja a Suiza con Medellín 2018'), CHtml::normalizeUrl('/') ); ?></div>
+				<div id="logo"><?php echo CHtml::link( CHtml::image(Yii::app()->request->baseUrl . '/images/logo.png', 'Puntos TM'), Yii::app()->request->baseUrl ); ?></div>
 			</div>
 			<div class="col-sm-5 col-md-5">
 				<div class="row">
@@ -34,7 +34,7 @@
 						<div id="mainmenu">
 							<?php $this->widget('zii.widgets.CMenu',array(
 								'items'=>array(
-                                    array('label'=>'Perfil', 'url'=>array('/perfil'), 'linkOptions' => array('class' => 'perfil'), 'visible'=>!Yii::app()->user->isGuest),
+                  array('label'=>'Perfil', 'url'=>array('/perfil'), 'linkOptions' => array('class' => 'perfil'), 'visible'=>!Yii::app()->user->isGuest),
 									array('label'=>'Mecánica', 'url'=>array('/como-jugar'), 'linkOptions' => array('class' => 'item1')),
 									array('label'=>'Premios', 'url'=>array('/premio'), 'linkOptions' => array('class' => 'item1')),
 									array('label'=>'Ranking', 'url'=>array('/ranking'), 'linkOptions' => array('class' => 'item1')),
@@ -45,23 +45,6 @@
 				</div>
 			</div>
 		</div>
-		<!-- <div id="share">
-			<ul>
-				<li><div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true" data-action="recommend"></div></li>
-				<li><a href="https://twitter.com/share" class="twitter-share-button" data-text="Estoy concursando por un viaje a Suiza con @Medellin2018yog ¡y tú también puedes participar!" data-hashtags="Medellín2018" data-dnt="true">Tweet</a>
-				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
-			</ul>
-		</div>
-		<div id="usermenu">
-			<?php $this->widget('zii.widgets.CMenu',array(
-				'items'=>array(
-					array('label'=>'Ingresa a tu perfil', 'url'=>array('/participar'), 'linkOptions' => array('class' => 'perfil'), 'visible'=>Yii::app()->user->isGuest),
-					array('label'=>'Registro', 'url'=>array('/registro'), 'linkOptions' => array('class' => 'perfil'), 'visible'=>Yii::app()->user->isGuest),
-					array('label'=>'Perfil', 'url'=>array('/perfil'), 'linkOptions' => array('class' => 'perfil'), 'visible'=>!Yii::app()->user->isGuest),
-					array('label'=>'Salir', 'url'=>array('/cerrar-sesion'), 'linkOptions' => array('class' => 'sesion'), 'visible'=>!Yii::app()->user->isGuest),
-				),
-			)); ?>
-		</div> -->
 	</header>
 	<div class="ctn_main">
         <div id="content-page">

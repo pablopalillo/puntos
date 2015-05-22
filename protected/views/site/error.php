@@ -7,9 +7,13 @@ $this->breadcrumbs=array(
 	'Error',
 );
 ?>
-
-<h2>Error <?php echo $code; ?></h2>
-
-<div class="error">
-<?php echo CHtml::encode($message); ?>
+<div id="content">
+	<article class="row">
+		<header>
+				<h2>Error <?php echo $code; ?></h2>
+			</header>
+			<section class="col-sm-7 error">
+				<?php echo CHtml::encode($message); ?>
+			</section>
+	</article>
 </div>
