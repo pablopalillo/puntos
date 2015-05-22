@@ -855,20 +855,23 @@ div.flash-success a {
   background-color: #ACD618; }
 
 /*-------------MEC├üNICA----------------*/
-#instrucciones {
+#instrucciones, .ctn_contenido {
   width: 80%;
   margin-right: auto;
   margin-left: auto; }
-  #instrucciones h1 {
+  #instrucciones h1, .ctn_contenido h1 {
     font-family: "Economica", sans-serif;
     color: #E88A2C;
     font-size: 46px;
     text-align: center; }
-  #instrucciones h2 {
+  #instrucciones h2, .ctn_contenido h2 {
     font-family: "Economica", sans-serif;
     color: #E88A2C;
     font-size: 24px;
     text-align: left; }
+
+.verificar-correo {
+  width: 80%; }
 
 @media (min-width: 768px) {
   header {

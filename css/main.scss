@@ -910,7 +910,7 @@ div.flash-success a
 	background-color: $verde
 }
 /*-------------MECÁNICA----------------*/
-#instrucciones{
+#instrucciones, .ctn_contenido{
 	width: 80%;
 	margin-right: auto;
 	margin-left: auto;
@@ -920,5 +920,8 @@ div.flash-success a
 	h2{
 		@include subtitulos;
 	}
+}
+.verificar-correo{
+	width: 80%;
 }
 @import "media";
