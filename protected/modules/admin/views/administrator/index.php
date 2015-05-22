@@ -1,8 +1,8 @@
 <?php
-/* @var $this Administrator */
 
 $this->pageTitle = Yii::app()->name;
 ?>
+
 <div class="header-admin">
 
 	<div class="col-sm-9 admin-info">
@@ -40,6 +40,10 @@ $this->pageTitle = Yii::app()->name;
 							array(
 									'class'=>'CButtonColumn',
 									'template' => '{view}{delete}',
+									'deleteConfirmation' =>
+'¿Esta seguro de que desea eliminar esta pregunta?.
+Al eliminar esta pregunta se borraran automaticamente las respuestas asociadas a esta , tambien se eliminaran las rondas de todos los usuarios asociados por lo tanto se pierden los punto obtenidos en este momento.',
+
 								),
 						),
 
