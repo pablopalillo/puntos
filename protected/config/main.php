@@ -98,6 +98,7 @@ return array(
 
 				array(
 					'class'=>'CWebLogRoute',
+                    'enabled'=> false,
 				),
 
 			),

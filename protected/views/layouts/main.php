@@ -22,10 +22,10 @@
 <div class="container">
 	<header>
 		<div class="row">
-			<div class="col-sm-8 col-md-8">
+			<div class="col-sm-7 col-md-7">
 				<div id="logo"><?php echo CHtml::link( CHtml::image(Yii::app()->request->baseUrl . '/images/logo.png', 'Viaja a Suiza con Medellín 2018'), CHtml::normalizeUrl('/') ); ?></div>
 			</div>
-			<div class="col-sm-4 col-md-4">
+			<div class="col-sm-5 col-md-5">
 				<div class="row">
 					<div class="ctn-btnParticipar col-sm-12 col-xs-6">
 						<a href="./participar" class="btnParticipar">Participa</a>
@@ -34,6 +34,7 @@
 						<div id="mainmenu">
 							<?php $this->widget('zii.widgets.CMenu',array(
 								'items'=>array(
+                                    array('label'=>'Perfil', 'url'=>array('/perfil'), 'linkOptions' => array('class' => 'perfil'), 'visible'=>!Yii::app()->user->isGuest),
 									array('label'=>'Mecánica', 'url'=>array('/como-jugar'), 'linkOptions' => array('class' => 'item1')),
 									array('label'=>'Premios', 'url'=>array('/premio'), 'linkOptions' => array('class' => 'item1')),
 									array('label'=>'Ranking', 'url'=>array('/ranking'), 'linkOptions' => array('class' => 'item1')),
