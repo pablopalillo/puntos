@@ -71,8 +71,9 @@ class ParticiparController extends CController
 
         $respuesta = Respuesta::model()->find('id = ?', array(0 => $id));
         $pregunta = Pregunta::model()->find('id = ?', array(0 => $respuesta->pregunta->id));
-        $pregunta->estado = 0;
-        $pregunta->save();
+        $puntos = $respuesta->pregunta->nivel->puntos;
+        //$pregunta->estado = 0;
+        //$pregunta->save();
 
         $respuestaJugador = new RespuestaXJugador();
         $respuestaJugador->pregunta_id = $respuesta->pregunta->id;
@@ -88,7 +89,7 @@ class ParticiparController extends CController
         switch (($respuesta->es_correcta == 1))
         {
             case true:
-                $r['message'] = 'Felicitaciones, su respuesta ha sido correcta.';
+                $r['message'] = 'Felicitaciones, tu respuesta es correcta.';
                 $r['status'] = 'success';
                 break;
             case false:
@@ -96,6 +97,8 @@ class ParticiparController extends CController
                 $r['status'] = 'error';
                 break;
         }
+
+        $r['puntos'] = $puntos;
 
         header('Content-Type: application/json; charset="UTF-8"');
         echo CJSON::encode($r);

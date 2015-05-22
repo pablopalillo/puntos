@@ -38,11 +38,7 @@ class JugadorController extends Controller
 	public function actionPerfil()
 	{
 		$usuario_id = Yii::app()->user->id;
-		$jugador 		= Jugador::model()->with('usuario', 'parentesco')->findByAttributes(array('usuario_id' => $usuario_id));
-
-		// pa' despuesito
-		//	$estadisticas = Ronda::model()->obtener_estadisticas($jugador->id);
-		//$this->render('perfil', array('jugador' => $jugador, 'estadisticas' => $estadisticas));
+		$jugador = Jugador::model()->with('usuario', 'parentesco')->findByAttributes(array('usuario_id' => $usuario_id));
 
 		$this->render('perfil', array('jugador' => $jugador));
 	}

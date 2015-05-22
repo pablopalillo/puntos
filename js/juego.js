@@ -365,7 +365,6 @@ $(function() {
             'text-align': 'center',
             'class': 'texto-cargando'
         })).css({
-            'height':'300px',
             'text-align':'center'
         }).show('clip');
 
@@ -380,7 +379,7 @@ $(function() {
                 var img = $('#progress').children().children();
 
                 img.attr('src','images/' + r.status + '.png');
-                $('#progress').html(h4.text(r.message).prepend(img));
+                $('#progress').html(h4.text(r.message).append('<p>Has ganado ' + r.puntos + ' puntos.').prepend(img));
                 $('.ctn_main').append($('<span id="clock"></span>'));
                 $('#clock').append('<a href="" class="btn-general_md">Volver</a>');
                 $('#clock').appendTo('#progress');

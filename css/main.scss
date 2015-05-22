@@ -4,6 +4,7 @@
 body{
 	background:  $verde url("../images/bg-foot.png") no-repeat fixed bottom;
 	background-size: contain;
+	font-family: 'Raleway', sans-serif;
 }
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{
 	display:block
@@ -20,6 +21,15 @@ a{
 			background-color: $verde !important;
 		}
 	}
+}
+.header-admin{
+	.btn-general_md{
+		min-width: 100px;
+		max-width: 130px;
+	}
+}
+#admin{
+	clear: both;
 }
 
 /*------------- Registro Form --------*/
@@ -895,5 +905,17 @@ div.flash-success a
 }
 .correcto{
 	background-color: $verde
+}
+/*-------------MECÁNICA----------------*/
+#instrucciones{
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+	h1{
+		@include titulos;
+	}
+	h2{
+		@include subtitulos;
+	}
 }
 @import "media";

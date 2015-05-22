@@ -4,25 +4,21 @@ $this->pageTitle = Yii::app()->name;
 ?>
 
 <div class="header-admin">
-
-	<div class="col-sm-9 admin-info">
-		<h2> Hola, admin </h2>
-		<p>
-			Puedes programar tus preguntas desde este lugar y crear una en cualquier momento.
-		</p>
-		<p>
-			Las preguntas estan ordenadas por fecha de creacion, que apareceran
-			desde la mas actuales hasta las mas antiguas.
-		</p>
+	<div class="row-fluid">
+		<div class="col-sm-9 admin-info">
+			<h2> Hola, admin </h2>
+			<p>
+				Puedes programar tus preguntas desde este lugar y crear una en cualquier momento.
+			</p>
+			<p>
+				Las preguntas estan ordenadas por fecha de creacion, que apareceran
+				desde la mas actuales hasta las mas antiguas.</p>
+		</div>
+		<div class="col-sm-3">
+			<?php echo CHtml::link('Nueva','administrator/create', array('class'=>'btn-general_md')); ?>
+		</div>
 	</div>
-
-	<div class="col-sm-3">
-		<?php echo CHtml::link('Nuevo','administrator/create', array('class'=>'btn-lg btn-primary')); ?>
-	</div>
-</div>
-
-
-
+</div><!-- /header-admin -->
 <div id="admin">
 
 	<div >
