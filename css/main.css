@@ -654,6 +654,9 @@ a.btn-jugar:hover {
   font-size: 24px;
   text-align: left; }
 
+.ctn_btn-cerrar-sesion {
+  clear: both; }
+
 /* ------------------ Juego -----------------*/
 /*Juego Puntos TM*/
 .ctn_participar p {

@@ -29,9 +29,7 @@
 				</div>
 			</div>
 		</section>
-        <div class="col-sm-12">
-            <?php echo CHtml::link( 'Cerrar session', array('/cerrar-sesion'), array('class' => 'btn-general_md' ) ); ?>
-        </div>
+        
 	</div><!-- /ctn_estadisticas -->
 
 	<div id="perfil" class="col-sm-6 ctn_datos">
@@ -60,6 +58,9 @@
 			<div >
 				<?php echo CHtml::link( 'Editar Información', Yii::app()->request->baseUrl . '/editar-perfil', array('class'=>'btn-general_md') ); ?>
 			</div>
+			<div class="ctn_btn-cerrar-sesion">
+	            <?php echo CHtml::link( 'Cerrar session', array('/cerrar-sesion'), array('class' => 'btn-general_md' ) ); ?>
+	        </div>
 		</section>
 	</div><!-- /ctn_datos -->
 </div><!-- /ctn_perfil -->

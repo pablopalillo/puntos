@@ -25,14 +25,13 @@ class UserIdentity extends CUserIdentity
 	{
 		$this->correo 	= $correo;
 		$this->password = $password;
-
 	}
 
 	public function authenticate()
 	{
 		$correo = strtolower($this->correo);
 		$usuario = Usuario::model()->find('LOWER(correo)=?',array($correo));
-
+		//print_r($usuario->estado);
 		if($usuario === null)
             $this->errorCode=self::ERROR_USERNAME_INVALID;
         else if(!$usuario->validatePassword($this->password))
@@ -45,17 +44,8 @@ class UserIdentity extends CUserIdentity
             $this->correo 	= $usuario->correo;
             $this->es_admin	= $usuario->es_admin;
             $this->errorCode = self::ERROR_NONE;
-
-						Yii::app()->user->setState('es_admin', $usuario->es_admin);
-
-						if( $usuario->es_admin == 1)
-						{
-							Yii::app()->user->setState('user_type','Admin');
-						}
-
         }
         return $this->errorCode == self::ERROR_NONE;
-
 	}
 
 	public function getId()
