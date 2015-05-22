@@ -44,7 +44,6 @@ class UserIdentity extends CUserIdentity
             $this->correo 	= $usuario->correo;
             $this->es_admin	= $usuario->es_admin;
             $this->errorCode = self::ERROR_NONE;
-						Yii::app()->session['usuario']['i'] = 0;
         }
         return $this->errorCode == self::ERROR_NONE;
 	}
@@ -59,8 +58,5 @@ class UserIdentity extends CUserIdentity
       return $this->correo;
   }
 
-	public function getIsAdmin()
-	{
-		 return ( $this->es_admin == 1 )? true : false;
-	}
+
 }
