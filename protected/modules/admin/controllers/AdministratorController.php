@@ -11,12 +11,16 @@ class AdministratorController extends Controller
 		 */
 	public function accessRules()
 	{
+
 		return array(
-			array('allow',
-			 'actions'=>array('index','view','create','editPregunta','editRespuesta','delete'),
-				'users'=>array('*'),
-			),
-		);
+							array('allow', //si es admin es un tipo usuario configurado en UserIdentitty
+							'actions'=>array('index','view','create','editPregunta','editRespuesta','delete'),
+							'users'=>array('Admin'),
+						),
+						array('deny',  // deny all users
+						'users'=>array('*'),
+						),
+					);
 	}
 
 
