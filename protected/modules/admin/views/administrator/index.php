@@ -1,6 +1,8 @@
 <?php
 
+
 $this->pageTitle = Yii::app()->name;
+
 ?>
 
 <div class="header-admin">
