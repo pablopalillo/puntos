@@ -15,7 +15,7 @@ $this->pageTitle = Yii::app()->name;
 				desde la mas actuales hasta las mas antiguas.</p>
 		</div>
 		<div class="col-sm-3">
-			<?php echo CHtml::link('Nueva','administrator/create', array('class'=>'btn-general_md')); ?>
+			<?php echo CHtml::link('Nueva',Yii::app()->request->baseUrl . '/admin/administrator/create', array('class'=>'btn-general_md')); ?>
 		</div>
 	</div>
 </div><!-- /header-admin -->
