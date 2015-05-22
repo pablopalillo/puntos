@@ -29,7 +29,7 @@
 				</div>
 			</div>
 		</section>
-        
+
 	</div><!-- /ctn_estadisticas -->
 
 	<div id="perfil" class="col-sm-6 ctn_datos">

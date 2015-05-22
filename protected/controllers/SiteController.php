@@ -93,6 +93,7 @@ class SiteController extends Controller
 
 			$jugador->colegio 	 				= '';
 			$jugador->parentesco_id 		= '7';
+			$jugador->nombre_adulto = '';
 
 			$valid = false;
 
@@ -108,20 +109,28 @@ class SiteController extends Controller
 				$jugador->usuario_id = $usuario->id;
 				$jugador->save(false);
 
-				$datos = array(	'nombre' 			=> $jugador->nombre,
-				'nombre_adulto'		=> $jugador->nombre_adulto,
-				'correo' 			=> $usuario->correo,
-				'correo_adulto'		=> $jugador->correo_adulto,
-				'llave_activacion' 	=> $usuario->llave_activacion
-				);
-
-
+				if( $jugador->nombre_adulto )
+				{
 					$datos = array(	'nombre' 			=> $jugador->nombre,
-					'correo' => $usuario->correo,
+					'nombre_adulto'		=> $jugador->nombre_adulto,
+					'correo' 			=> $usuario->correo,
+					'correo_adulto'		=> $jugador->correo_adulto,
 					'llave_activacion' 	=> $usuario->llave_activacion
 					);
 
+					$this->verificarCorreoAdulto($datos);
+				}
+				else
+				{
+						$datos = array(	'nombre' 	=> $jugador->nombre,
+						'correo' => $usuario->correo,
+						'llave_activacion' 	=> $usuario->llave_activacion
+					);
+
 					$this->verificarCorreo($datos);
+				}
+
+
 
 					Yii::app()->end();
 				}
@@ -211,29 +220,39 @@ class SiteController extends Controller
 	private function verificarCorreo($datos)
     {
 
-			$mnino             = new YiiMailer();
+				$mnino    = new YiiMailer();
         $mnino->setView('verificar-correo');
         $mnino->setData( array('datos' => $datos) );
         $mnino->render();
-				$mnino->Subject    = 'Verifica tu registro en el concurso Viaja a Suiza con Medellín 2018';
+				$mnino->Subject    = 'Verifica tu registro en Puntos Telemedellín';
         $mnino->AddAddress($datos['correo']);
-        $mnino->From = 'contacto@concursomedellin2018.com';
-        $mnino->FromName = 'Concurso Medellín 2018';
+        $mnino->From = 'puntos@telemedellín.tv';
+        $mnino->FromName = 'Puntos Telemedellín';
         $mnino->Send();
 
-  			$madulto           = new YiiMailer();
-        $madulto->setView('notificacion-adulto');
-        $madulto->setData( array('datos' => $datos) );
-        $madulto->render();
-        $madulto->Subject  = strtok($datos['nombre'], ' ') . ' te inscribió como adulto responsable en el concurso Viaja a Suiza con Medellín 2018';
-        $madulto->AddAddress($datos['correo_adulto']);
-        $madulto->From = 'contacto@concursomedellin2018.com';
-        $madulto->FromName = 'Concurso Medellín 2018';
-        $madulto->Send();
+				$this->render('verificar_correo', array('datos' => $datos) );
 
-        $this->render('verificar_correo', array('datos' => $datos) );
 
     }
+
+
+		private function verificarCorreoAdulto($datos)
+		{
+
+			$madulto    = new YiiMailer();
+			$madulto->setView('notificacion-adulto');
+			$madulto->setData( array('datos' => $datos) );
+			$madulto->render();
+			$madulto->Subject  = strtok($datos['nombre'], ' ') . ' te inscribió como adulto responsable en el concurso Viaja a Suiza con Medellín 2018';
+			$madulto->AddAddress($datos['correo_adulto']);
+			$madulto->From = 'puntos@telemedellín.tv';
+			$madulto->FromName = 'Puntos Telemedellín';
+			$madulto->Send();
+
+			$this->render('verificar_correo', array('datos' => $datos) );
+
+		}
+
 
     public function actionConsultar()
     {

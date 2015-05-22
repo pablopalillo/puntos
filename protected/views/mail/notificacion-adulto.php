@@ -16,7 +16,7 @@
 			<td>
 				<center>
 				<table style="display: inline-table; margin:0 auto" border="0" cellpadding="0" cellspacing="0" width="500">
-					<h3>¿Qué tal <?php echo strtok($datos['nombre_adulto'], ' '); ?>?, </h3>
+					<h3>¿Qué tal  <?php echo strtok($datos['nombre_adulto'], ' '); ?> , </h3>
 					<p><?php echo $datos['nombre']; ?> se acaba de inscribir en el juego que lo puede llevar hasta Suiza para presenciar la aceptación de Medellín como sede de los Juegos Olímpicos de la Juventud 2018.</p>
 					<p>Para poder participar en este juego fue necesario que él nos indicara el nombre de un adulto responsable que avala la participación en dicho concurso.</p>
 					<p>Te agradecemos su autorización para participar y esperamos que él sea uno de los ganadores.</p>

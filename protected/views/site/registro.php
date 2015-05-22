@@ -103,11 +103,6 @@ Yii::app()->clientScript->registerScript('datepicker',
 							<?php echo $activeform->emailField($jugador,'correo_adulto',array('class' => 'form-control','size'=>60,'maxlength'=>100, 'placeholder' => 'Correo responsable')); ?>
 						</div>
 
-						<div class="form-group">
-							<?php echo $activeform->label($jugador,'telefono'); ?>
-							<?php echo $activeform->textField($jugador,'telefono',array('class' => 'form-control','size'=>45,'maxlength'=>45)); ?>
-						</div>
-
 				</div>
 			</div>
 

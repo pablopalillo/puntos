@@ -28,7 +28,7 @@
 			<div class="col-sm-5 col-md-5">
 				<div class="row">
 					<div class="ctn-btnParticipar col-sm-12 col-xs-6">
-						<a href="./participar" class="btnParticipar">Participa</a>
+						<a href="./participar" class="btnParticipar">Juega Aquí</a>
 					</div>
 					<div class="ctn_mainmenu col-sm-12 col-xs-6">
 						<div id="mainmenu">

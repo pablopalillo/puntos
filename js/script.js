@@ -16,8 +16,6 @@ jQuery(document).ready(function() {
           $("#Jugador_documento_adulto").attr('disabled',false);
           $("#Jugador_parentesco_id").attr('disabled',false);
           $("#Jugador_correo_adulto").attr('disabled',false);
-          $("#Jugador_telefono").attr('disabled',false);
-
         }
         else
         {
@@ -25,8 +23,6 @@ jQuery(document).ready(function() {
           $("#Jugador_documento_adulto").attr('disabled',true);
           $("#Jugador_parentesco_id").attr('disabled',true);
           $("#Jugador_correo_adulto").attr('disabled',true);
-          $("#Jugador_telefono").attr('disabled',true);
-
 
           $("#responsable").hide();
 
