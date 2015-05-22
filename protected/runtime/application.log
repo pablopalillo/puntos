@@ -952,6 +952,7 @@ Stack trace:
 #20 C:\xampp\htdocs\puntos\index.php(13): CApplication->run()
 #21 {main}
 REQUEST_URI=/puntos/participar
+<<<<<<< HEAD
 2015/05/21 21:01:09 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder.
 ' in C:\xampp\htdocs\Yii\db\CDbConnection.php:399
 Stack trace:
@@ -1473,3 +1474,20 @@ Stack trace:
 REQUEST_URI=/ranking
 HTTP_REFERER=http://puntos.dllo/perfil
 ---
+=======
+<<<<<<< HEAD
+---
+2015/05/21 18:41:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acciÃ³n "update" solicitada.' in C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.16\framework\web\CController.php(270): CController->missingAction('update')
+#1 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(282): CController->run('update')
+#2 C:\xampp\htdocs\yii-1.1.16\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/administr...')
+#3 C:\xampp\htdocs\yii-1.1.16\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\puntos\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/puntos/admin/administrator/update/id/200
+HTTP_REFERER=http://localhost/puntos/admin/administrator
+---
+=======
+>>>>>>> 7cb08c7ab57f99105abdaf19936fc4f1032007bf
+>>>>>>> 3e4edd0b67be684d564addf044d041083fbc6d43

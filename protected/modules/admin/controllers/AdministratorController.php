@@ -169,6 +169,27 @@ class AdministratorController extends Controller
 		}
 
 
+		public function actionDelete($id)
+		{
+				$prx = new PreguntaXRonda;
+				$rxj = new RespuestaXJugador;
+				$res = new Respuesta;
+				$pre = new Pregunta;
+
+
+				$criteria = new CDbCriteria;
+				$criteria->join = 'inner join pregunta p ON respuesta_x_jugador.pregunta_id = p.id';
+				$criteria->condition = 'p.id='.$id;
+
+				$prx->deleteAll("pregunta_id = $id");
+				$rxj->deleteAll($criteria);
+				$res->deleteAll("pregunta_id = $id");
+				$pre->deleteAll("id = $id");
+
+
+				$this->redirect(array('index'));
+		}
+
 
 	protected function performAjaxValidation($model)
 	{

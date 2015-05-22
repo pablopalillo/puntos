@@ -14,7 +14,10 @@
 				<?php $this->widget('zii.widgets.CDetailView', array(
 					'data'=>$pregunta,
 					'attributes'=>array(
-						'nivel.nombre',
+						array(
+						 'label'=>'Nivel',
+						 'value' => $pregunta->nivel->nombre,
+						),
 						'pregunta',
 						'fecha',
 						'hora_inicio',
