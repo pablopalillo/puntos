@@ -4,31 +4,34 @@
 <div class="ctn_perfil">
 	<div id="estadisticas" class="col-sm-6 ctn_estadisticas">
 		<header>
-			<?php echo CHtml::link( 'Participa', array('/jugar'), array('class' => 'btnParticipar' ) ); ?>
+			<?php echo CHtml::link( 'Participa', array('/participar'), array('class' => 'btnParticipar' ) ); ?>
 		</header>
 		<section class="col-sm-12" id="estadisticas-content">
 			<div class="ctn_puntaje-mes ctn_puntajes">
 				<span class="puntaje-label">Puntaje del mes actual</span>
-				<span class="puntaje"> 15 </span>
+                <span class="puntaje"> <?php echo $puntaje_mes; ?></span>
 			</div>
 			<div class="ctn_puntaje-ano ctn_puntajes">
 				<span class="puntaje-label">Puntaje acumulado del año</span>
-				<span class="puntaje"> 16 </span>
+                <span class="puntaje"> <?php echo $puntaje_anho; ?></span>
 			</div>
 			<div class="ctn_puntaje-posicion ctn_puntajes">
 				<span class="puntaje-label">Posición actual</span>
 				<div class="row-fluid">
 					<div class="col-xs-6">
-						<span class="puntaje"> 15 </span>
+                        <span class="puntaje"> <?php echo $ranking_mes; ?></span>
 						<span class="puntaje-posicion_label">Mes actual</span>
 					</div>
 					<div class="col-xs-6">
-						<span class="puntaje"> 15 </span>
+                        <span class="puntaje"> <?php echo $ranking_anho; ?></span>
 						<span class="puntaje-posicion_label">Año actual</span>
 					</div>
 				</div>
 			</div>
 		</section>
+        <div class="col-sm-12">
+            <?php echo CHtml::link( 'Cerrar session', array('/cerrar-sesion'), array('class' => 'btn-general_md' ) ); ?>
+        </div>
 	</div><!-- /ctn_estadisticas -->
 
 	<div id="perfil" class="col-sm-6 ctn_datos">

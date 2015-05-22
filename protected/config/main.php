@@ -79,7 +79,7 @@ return array(
 			'connectionString' => 'mysql:host=localhost;dbname=puntos',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => 'mysql',
+			'password' => '',
 			'charset' => 'utf8',
 			//'enableProfiling'=>true,
 		),
@@ -98,6 +98,7 @@ return array(
 
 				array(
 					'class'=>'CWebLogRoute',
+                    'enabled'=> false,
 				),
 
 			),
