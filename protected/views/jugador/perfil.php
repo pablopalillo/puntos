@@ -40,17 +40,17 @@
 			<header>
 				<h2 class="subtitulos">Datos de acceso</h2>
 				<p>Correo: <?php echo $jugador->usuario->correo ?> </p>
-				<p>Nombre: <?php echo $jugador->nombre_adulto ?></p>
+				<p>Nombre: <?php echo $jugador->nombre ?> </p>
 			</header>
 			<h2 class="subtitulos">Datos personales</h2>
-			<p>Nombre: <?php echo $jugador->nombre ?> </p>
+
 			<p>Edad : <?php echo $jugador->getEdad() ?> </p>
 			<p>Documento Identidad: <?php echo $jugador->documento ?></p>
 			<p>Telefono fijo: <?php echo $jugador->telefono ?> </p>
 
 			<?php if( ! empty($jugador->correo_adulto) ): ?>
 				<h2 class="subtitulos">Adulto responsable </h2>
-
+				<p>Nombre: <?php echo $jugador->nombre_adulto ?> </p>
 				<p>Correo: <?php echo $jugador->correo_adulto ?></p>
 				<p>Documento: <?php echo $jugador->documento_adulto ?></p>
 			<?php endif; ?>
