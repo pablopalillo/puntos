@@ -20,7 +20,7 @@
 					<p><?php echo $datos['nombre']; ?> se acaba de inscribir en el juego que lo puede llevar hasta Suiza para presenciar la aceptación de Medellín como sede de los Juegos Olímpicos de la Juventud 2018.</p>
 					<p>Para poder participar en este juego fue necesario que él nos indicara el nombre de un adulto responsable que avala la participación en dicho concurso.</p>
 					<p>Te agradecemos su autorización para participar y esperamos que él sea uno de los ganadores.</p>
-					<p>Para mayor información visita <?php echo CHtml::link('http://www.concursomedellin2018.com', CHtml::normalizeUrl('http://www.concursomedellin2018.com') ); ?></p>
+					<p>Para mayor información visita <?php echo CHtml::link('http://www.concursomedellin2018.com/puntos', CHtml::normalizeUrl('http://www.concursomedellin2018.com/puntos') ); ?></p>
 				</table>
 				</center>
 			</td>

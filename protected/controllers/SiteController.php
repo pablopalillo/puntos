@@ -221,14 +221,28 @@ class SiteController extends Controller
     {
 
 				$mnino    = new YiiMailer();
+				$mnino->IsSendmail();
         $mnino->setView('verificar-correo');
         $mnino->setData( array('datos' => $datos) );
+
         $mnino->render();
+
 				$mnino->Subject    = 'Verifica tu registro en Puntos Telemedellín';
         $mnino->AddAddress($datos['correo']);
         $mnino->From = 'puntos@telemedellín.tv';
         $mnino->FromName = 'Puntos Telemedellín';
         $mnino->Send();
+
+				if ($mnino->Send())
+				{
+					$mnino->ClearAddresses();
+					Yii::app()->user->setFlash('contact','Thank you for contacting us. We will respond to you as soon as possible.');
+
+				} else {
+					Yii::app()->user->setFlash('error','Error while sending email: '.$mnino->ErrorInfo);
+
+				}
+
 
 				$this->render('verificar_correo', array('datos' => $datos) );
 
@@ -240,6 +254,7 @@ class SiteController extends Controller
 		{
 
 			$madulto    = new YiiMailer();
+			$madulto->IsSendmail();
 			$madulto->setView('notificacion-adulto');
 			$madulto->setData( array('datos' => $datos) );
 			$madulto->render();
@@ -247,12 +262,21 @@ class SiteController extends Controller
 			$madulto->AddAddress($datos['correo_adulto']);
 			$madulto->From = 'puntos@telemedellín.tv';
 			$madulto->FromName = 'Puntos Telemedellín';
-			$madulto->Send();
+
+			if ($madulto->Send())
+			{
+				$madulto->ClearAddresses();
+				Yii::app()->user->setFlash('contact','Thank you for contacting us. We will respond to you as soon as possible.');
+
+			} else {
+				Yii::app()->user->setFlash('error','Error while sending email: '.$madulto->ErrorInfo);
+			}
 
 			$this->render('verificar_correo', array('datos' => $datos) );
 
 		}
-
+:app()->request->restParams['mes'];
+        $ranking = Jugador::mode
 
     public function actionConsultar()
     {

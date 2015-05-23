@@ -17,7 +17,7 @@
 				<center>
 				<table style="display: inline-table; margin:0 auto" border="0" cellpadding="0" cellspacing="0" width="500">
 					<p>Has pedido recuperar tu contraseña, por favor sigue el siguiente enlace para hacerlo: </p>
-					<p><?php echo CHtml::link('http://www.concursomedellin2018.com/validar-identidad/' . $token, CHtml::normalizeUrl('http://www.concursomedellin2018.com/validar-identidad/' . $token ) ); ?></p>
+					<p><?php echo CHtml::link(Yii::app()->request->baseUrl.'/validar-identidad/' . $token, CHtml::normalizeUrl('http://www.concursomedellin2018.com/validar-identidad/' . $token ) ); ?></p>
 				</table>
 				</center>
 			</td>
