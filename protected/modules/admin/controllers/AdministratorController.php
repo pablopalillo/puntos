@@ -150,7 +150,6 @@ class AdministratorController extends Controller
 													 ."AND pregunta_id = $respuesta->pregunta_id";
 
 							$find = Respuesta::model()->find($condicion);
-print_r($_POST['Respuesta']);
 							if($find && !empty($_POST['Respuesta']['es_correcta']))
 							{
 								Yii::app()->user->setFlash('error', "No puede crear o modificar preguntas con multiples respuestas, para seleccionar esta como correcta primero tiene que quitar las respuestas verdaderas y volver a editar esta respuesta.");
