@@ -15,7 +15,7 @@ class AdministratorController extends Controller
 		return array(
 							array('allow', //si es admin es un tipo usuario configurado en UserIdentitty
 							'actions'=>array('index','view','create','editPregunta','editRespuesta','delete'),
-							'users'=>array('Admin'),
+							'users'=>array('@'),
 						),
 						array('deny',  // deny all users
 						'users'=>array('*'),
@@ -146,15 +146,18 @@ class AdministratorController extends Controller
 
 					if( !empty($_POST['Respuesta'] ) )
 					{
-							$find = Respuesta::model()->find('es_correcta = 1 AND id = '.$respuesta->pregunta_id);
-							if(!$find)
+							$condicion = "( es_correcta = 1 AND id != $id) "
+													 ."AND pregunta_id = $respuesta->pregunta_id";
+
+							$find = Respuesta::model()->find($condicion);
+print_r($_POST['Respuesta']);
+							if($find && !empty($_POST['Respuesta']['es_correcta']))
 							{
 								Yii::app()->user->setFlash('error', "No puede crear o modificar preguntas con multiples respuestas, para seleccionar esta como correcta primero tiene que quitar las respuestas verdaderas y volver a editar esta respuesta.");
 							}
 							else
 							{
 									$respuesta->attributes 	= $_POST['Respuesta'];
-
 									$this->performAjaxValidation($respuesta);
 
 									if( $respuesta->save() )
