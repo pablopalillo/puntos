@@ -17,7 +17,7 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->getBaseUrl().'/js/juego
             <div class="row-fluid">
                 <div class="col-sm-9">
                     <h4 class="pregunta"><?php echo $value->pregunta; ?></h4>
-                    <p class="pregunta-descripcion">Hola, soy la descripción <?php echo $value->descripcion; ?></p>
+                    <p class="pregunta-descripcion"><?php echo $value->descripcion; ?></p>
                 </div>
                 <div class="col-sm-3">
                     <input type="hidden" id="id" name="id[]" value="<?php echo $value->id; ?>">
