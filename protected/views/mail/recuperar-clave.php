@@ -24,7 +24,7 @@
 		</tr>
 		<tr>
 			<td>
-				<img src="http://concursomedellin2018.com/images/mail/footer-mail.jpg" width="605" height="113" />
+				<p style="font-size: 11px; color: gray"><a style="color: gray; text-decorarion: underline" href="#">PuntosTm</a> es un producto de <a style="color: gray; text-decorarion: underline" href="#">Telemedellín</a></p>
 			</td>
 		</tr>
 	</table>

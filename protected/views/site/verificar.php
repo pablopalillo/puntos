@@ -1,9 +1,13 @@
 <div id="content" class="row">
   <div class="ctn_contenido verificar-correo">
 		<?php if($mensaje == 'correcto'): ?>
-			<h2>¡Listo!</h2>
-			<p>Nos hemos dado cuenta que ya estás listo para empezar a jugar y poder ganar el premio de un viaje a Suiza para comprobar que Medellín puede ser la sede de los Juegos Olímpicos de la Juventud 2018</p>
-			<p>Para empezar a jugar y acumular puntos da clic en el siguiente enlace <?php echo CHtml::link( 'Jugar', array('/jugar') ); ?></p>
+			<h2>¡Genial!</h2>
+			<p>Ya estás listo para empezar a acumular Puntos TM</p>
+			<p>¡Bienvenido!</p>
+			<p>¡Nos ves y ganas!</p>
+			<div class="ctn_btnParticipar">
+				<a href="./participar" class="btnParticipar">Juega Aquí</a>
+			</div>
 		<?php else: ?>
 			Falló
 		<?php endif; ?>
