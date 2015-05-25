@@ -2,7 +2,7 @@
 
 
 $this->pageTitle = Yii::app()->name;
-
+echo 'sizas'.Yii::app()->user->getState('es_admin');
 ?>
 
 <div class="header-admin">

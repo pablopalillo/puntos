@@ -18,7 +18,7 @@
 				<table style="display: inline-table; margin:0 auto" border="0" cellpadding="0" cellspacing="0" width="500">
 					<h3>Hola <?php echo $datos['nombre']; ?>, </h3>
 					<p>Acabas de inscribirte para participar en el juego que te puede llevar hasta Suiza gracias a los Juegos Olímpicos de la Juventud Medellín 2018, ahora sólo debes dar click en el siguiente enlace y empezar a divertirte: </p>
-					<p><?php echo CHtml::link( Yii::app()->request->baseUrl.'/verificar/' . $datos['llave_activacion'], CHtml::normalizeUrl( Yii::app()->request->baseUrl.'/verificar/' . $datos['llave_activacion'] ) ); ?></p>
+					<p><?php echo CHtml::link( Yii::app()->request->baseUrl.'/verificar/'.$datos['llave_activacion'], Yii::app()->request->baseUrl.'/verificar/'.$datos['llave_activacion'] ); ?></p>
 					<p>Recuerda que el adulto que inscribiste como responsable también será informado de tu participación en el juego.</p>
 				</table>
 				</center>
