@@ -256,7 +256,7 @@ class SiteController extends Controller
 
 			$madulto    = new YiiMailer();
 			$madulto->IsSendmail();
-			$mnino->SMTPDebug = 2;
+			$madulto->SMTPDebug = 2;
 			$madulto->setView('notificacion-adulto');
 			$madulto->setData( array('datos' => $datos) );
 			$madulto->render();
