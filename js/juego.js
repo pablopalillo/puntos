@@ -397,25 +397,26 @@ $(function() {
     $('#meses').on('change', function(evt) {
         var mes = $(this).val();
         $('#total-mes > ul').html('');
-        $('</div>', {
-            'id': 'top-loading'
-        }).css({
+        $('#total-mes').append('<div id="top-loading"></div>');
+        $('#top-loading').css({
             'opacity': '0.2',
             'background-color': 'aliceblue',
             'width': '100%',
             'height': '70px',
             'border-radius': '5px'
-        }).add($('</p>').css({
+        });
+
+        $('#top-loading').append('<p></p>');
+        
+        $('#top-loading p').css({
             'color': 'black',
             'width': '100%',
             'font-family': '"Economica", sans-serif',
             'font-size': '44px',
             'text-align': 'center'
-        }).add($('</img>', {
-            'src':'images/loading.gif'
-        }).css({
-            'height': '60px'
-        })));
+        }).text('Cargando...');
+
+        $('#top-loading p').append('<img src="images/loading.gif" style="height:60px">');
 
         $.ajax({
             url: 'consultar-ranking',
