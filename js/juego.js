@@ -116,32 +116,32 @@ $(function() {
         ocultar_pregunta();
         switch (caso) {
             case 1:
-                mp.html('<h3>Para poder iniciar el juego necesitas recordar esto:</h3><ul><li>Tienes solo dos oportunidades para jugar diariamente.</li><li>Acumulas puntos por cada respuesta correcta que tengas.</li><li>Las preguntas son sobre: Medellín, los deportes de los Juegos Olímpicos Juveniles y la importancia de la convivencia.</li><!--<li>Si la pregunta está muy difícil puedes utilizar 3 ayudas: cambiar la pregunta, pedir 10 segundos más para responderla o eliminar dos de las posibles respuestas.</li>--><li>El tiempo de la primera pregunta empieza a correr cuando presiones el botón “jugar”.</li></ul>');
+                mp.html('<h3>Para poder iniciar el juego necesitas recordar esto:</h3><ul><li>Tienes solo dos oportunidades para jugar diariamente.</li><li>Acumulas puntos por cada respuesta correcta que tengas.</li><li>Las preguntas son sobre: MedellÃ­n, los deportes de los Juegos OlÃ­mpicos Juveniles y la importancia de la convivencia.</li><!--<li>Si la pregunta estÃ¡ muy difÃ­cil puedes utilizar 3 ayudas: cambiar la pregunta, pedir 10 segundos mÃ¡s para responderla o eliminar dos de las posibles respuestas.</li>--><li>El tiempo de la primera pregunta empieza a correr cuando presiones el botÃ³n âjugarâ.</li></ul>');
                 mb.text('Jugar');
                 mb.addClass('mb-cp');
                 break;
             case 3:
-                mp.html('<h3>¡La respuesta es correcta!</h3>');
+                mp.html('<h3>Â¡La respuesta es correcta!</h3>');
                 mb.text('Ir a la siguiente pregunta');
                 mb.addClass('mb-cp');
                 break;
             case 4:
-                mp.html('<h3>¡Esta no era la respuesta!</h3><p>Ha terminado esta ronda</p>');
+                mp.html('<h3>Â¡Esta no era la respuesta!</h3><p>Ha terminado esta ronda</p>');
                 mb.text('Salir de esta ronda');
                 mb.attr('href', 'puntajes');
                 break;
             case 5:
-                mp.html('<h3>¡La respuesta es correcta, además avanzas al siguiente nivel!</h3>');
+                mp.html('<h3>Â¡La respuesta es correcta, ademÃ¡s avanzas al siguiente nivel!</h3>');
                 mb.text('Ir a la pregunta del siguiente nivel');
                 mb.addClass('mb-cp');
                 break;
             case 6:
-                mp.html('<h3>¡Felicitaciones, has terminado esta ronda!</h3>');
+                mp.html('<h3>Â¡Felicitaciones, has terminado esta ronda!</h3>');
                 mb.text('Ver la tabla de puntajes');
                 mb.attr('href', 'puntajes').removeAttr('class');
                 break;
             case 7:
-                mp.html('<h3>Se agotó el tiempo, ha finalizado esta ronda</h3>');
+                mp.html('<h3>Se agotÃ³ el tiempo, ha finalizado esta ronda</h3>');
                 mb.text('Ver la tabla de puntajes');
                 mb.attr('href', 'puntajes').removeAttr('class');
                 break
@@ -390,21 +390,43 @@ $(function() {
     });
 
     $('#goBack').on('click', function(evt) {
-        window.location = '/participar';
+        window.location = 'participar';
         evt.preventDefault();
     });
 
     $('#meses').on('change', function(evt) {
         var mes = $(this).val();
+        $('#total-mes > ul').html('');
+        $('</div>', {
+            'id': 'top-loading'
+        }).css({
+            'opacity': '0.2',
+            'background-color': 'aliceblue',
+            'width': '100%',
+            'height': '70px',
+            'border-radius': '5px'
+        }).add($('</p>').css({
+            'color': 'black',
+            'width': '100%',
+            'font-family': '"Economica", sans-serif',
+            'font-size': '44px',
+            'text-align': 'center'
+        }).add($('</img>', {
+            'src':'images/loading.gif'
+        }).css({
+            'height': '60px'
+        })));
+
         $.ajax({
-            url: '/consultar-ranking',
+            url: 'consultar-ranking',
             method: 'POST',
             data: {mes:mes},
             success: function(data)
             {
                  var data = data.r;
                  var ul = $('#total-mes > ul');
-                 ul.html('');
+                 $('#top-loading').remove();
+
                  $.each(data, function(k, v) {
                      ul.append('<li id="jugador-' + v.top + '"></li>');
                      var li = $('#jugador-' + v.top);
