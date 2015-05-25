@@ -368,6 +368,8 @@ $(function() {
             'text-align':'center'
         }).show('clip');
 
+        $('.ctn_main').css({'min-height':'370px'});
+
         $.ajax({
             url: 'participar/respuesta',
             method: 'POST',

@@ -121,7 +121,7 @@ class ParticiparController extends CController
             $hora_actual = explode(':', $hora_actual);
             $hora_actual = join('', $hora_actual);
 
-            $respuesta = RespuestaXJugador::model()->findAll('pregunta_id = ? AND jugador_id', array(0 => $value->id, 1 => Yii::app()->session['jugador_id']));
+            $respuesta = RespuestaXJugador::model()->findAll('pregunta_id = ? AND jugador_id = ?', array(0 => $value->id, 1 => Yii::app()->session['jugador_id']));
 
             if (count($respuesta) == 0)
             {
