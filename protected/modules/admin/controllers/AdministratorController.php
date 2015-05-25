@@ -4,6 +4,14 @@ class AdministratorController extends Controller
 {
 	public $layout='//layouts/admin';
 
+
+	public function filters()
+	{
+		return array(
+			'accessControl', // perform access control for CRUD operations
+		);
+	}
+
 		/**
 		 * Specifies the access control rules.
 		 * This method is used by the 'accessControl' filter.
@@ -15,7 +23,7 @@ class AdministratorController extends Controller
 		return array(
 							array('allow', //si es admin es un tipo usuario configurado en UserIdentitty
 							'actions'=> array('index','view','create','editPregunta','editRespuesta','delete'),
-							'expression'=>'Yii::app()->user->es_admin == 1',
+							'expression'=>'( Yii::app()->user->es_admin == 1 )',
 						),
 						array('deny',  // deny all users
 						'users'=>array('*'),
@@ -38,7 +46,7 @@ class AdministratorController extends Controller
 	{
 
 		$pregunta 	= new Pregunta ;
-		$respuestas = new Respuesta;
+		$respuestas = null;
 
 		// Ajax validation
 		$this->performAjaxValidation($pregunta);
@@ -49,11 +57,17 @@ class AdministratorController extends Controller
 			$pregunta->attributes 	= $_POST['Pregunta'];
 			$pregunta->estado 	= 1;
 
+			foreach( $_POST['respuesta'] as $key => $value )
+			{
+				$correcta = ($key == $_POST['es_correcta'])?1:0;
+				$respuestas[] = array('respuesta' => $value, 'es_correcta' => $correcta);
+			}
+
 
 			if( !empty( $_POST['respuesta'] ) && count($_POST['respuesta']) > 1 )
 			{
 
-				if( $pregunta->save() )
+				if( $pregunta->save('save') )
 				{
 
 						foreach( $_POST['respuesta'] as $key => $value )
@@ -85,7 +99,7 @@ class AdministratorController extends Controller
 
 		}
 
-		$this->render('form', array('pregunta'=>$pregunta, 'respuesta'=>$respuestas));
+	$this->render('form', array('pregunta'=>$pregunta, 'respuestas'=>$respuestas));
 
 	}
 
@@ -127,7 +141,7 @@ class AdministratorController extends Controller
 
 						$this->performAjaxValidation($pregunta);
 
-						if( $pregunta->save() )
+						if( $pregunta->save('update') )
 						{
 							$this->redirect(array('view', 'id'=>$pregunta->id));
 						}

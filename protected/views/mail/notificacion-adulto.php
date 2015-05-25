@@ -20,7 +20,7 @@
 					<p><?php echo $datos['nombre']; ?> se inscribió en Puntos TM, La estrategia de fidelización de Telemedellín que premia la sintonía de nuestros televidentes</p>
 					<p>Para participar en este juego fue necesario que él nos indicara el nombre de un adulto responsable que avalara su participación en dicho concurso, y por eso te llega este mensaje. </p>
 					<p>Si tienes alguna inquietud o estás en desacuerdo, puedes escribirnos a <a mailto="puntostm@telemedellin.tv"></a>puntostm@telemedellin.tv</p>
-					<p>Para mayor información visita <?php echo CHtml::link( Yii::app()->request->baseUrl, CHtml::normalizeUrl( Yii::app()->request->baseUrl) ); ?></p>
+					<p>Para mayor información visita <?php echo CHtml::link( CHtml::normalizeUrl(Yii::app()->request->baseUrl), CHtml::normalizeUrl( Yii::app()->request->baseUrl) ); ?></p>
 				</table>
 				</center>
 			</td>

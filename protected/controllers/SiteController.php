@@ -22,10 +22,19 @@ class SiteController extends Controller
 	 */
 	public function actionIndex()
 	{
-		// renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
+			// renders the view file 'protected/views/site/index.php'
+			// using the default layout 'protected/views/layouts/main.php'
+		if(	isset(Yii::app()->user->es_admin) )
+		{
+			if( Yii::app()->user->es_admin == 1)
+			{
+				$this->redirect(array('admin/administrator'));
+			}
+
+		}
 
 		$this->render('index');
+
 	}
 
 	/**

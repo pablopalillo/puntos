@@ -1,8 +1,7 @@
 <?php
 
-
 $this->pageTitle = Yii::app()->name;
-echo 'sizas'.Yii::app()->user->getState('es_admin');
+//echo 'sizas'.Yii::app()->user->getState('es_admin');
 ?>
 
 <div class="header-admin">
@@ -13,8 +12,16 @@ echo 'sizas'.Yii::app()->user->getState('es_admin');
 				Puedes programar tus preguntas desde este lugar y crear una en cualquier momento.
 			</p>
 			<p>
-				Las preguntas estan ordenadas por fecha de creacion, que apareceran
+				Las preguntas estan ordenadas por fecha de creación, que aparecerán
 				desde la mas actuales hasta las mas antiguas.</p>
+			<p> Recuerda que los niveles corresponden a la cantidad de puntos que se
+				pueden lograr en caso de responder esta pregunta correctamente.<p>
+			<ul>
+				<li><strong>Nivel 1</strong> 10 puntos </strong></li>
+				<li><strong>Nivel 2</strong> 20 puntos </strong></li>
+				<li><strong>Nivel 3</strong> 30 puntos </strong></li>
+				<li><strong>Nivel 4</strong> 40 puntos </strong></li>
+			</ul>
 		</div>
 		<div class="col-sm-3">
 			<?php echo CHtml::link('Nueva',Yii::app()->request->baseUrl . '/admin/administrator/create', array('class'=>'btn-general_md')); ?>
