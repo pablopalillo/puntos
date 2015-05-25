@@ -9,9 +9,6 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->getBaseUrl().'/js/juego
 ?>
 <div id="content-ranking">
 	<h1>Puntajes</h1>
-	<?php if( Yii::app()->user->hasFlash('error') ):?>
-		<div class="flash-notice"><?php echo Yii::app()->user->getFlash('error'); ?></div>
-	<?php endif;?>
     <div class="col-md-6">
 	    <div id="total-mes">
             <div class="col-md-8">
