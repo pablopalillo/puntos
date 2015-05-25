@@ -232,7 +232,6 @@ class SiteController extends Controller
         $mnino->AddAddress($datos['correo']);
         $mnino->From = 'contacto@concursomedellin2018.com';
         $mnino->FromName = 'Puntos Telemedellín';
-        $mnino->Send();
 
 				if ($mnino->Send())
 				{
