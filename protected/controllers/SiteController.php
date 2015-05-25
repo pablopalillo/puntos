@@ -232,7 +232,6 @@ class SiteController extends Controller
         $mnino->AddAddress($datos['correo']);
         $mnino->From = 'contacto@concursomedellin2018.com';
         $mnino->FromName = 'Puntos Telemedellín';
-        $mnino->Send();
 
 				if ($mnino->Send())
 				{
@@ -256,7 +255,7 @@ class SiteController extends Controller
 
 			$madulto    = new YiiMailer();
 			$madulto->IsSendmail();
-			$mnino->SMTPDebug = 2;
+			$madulto->SMTPDebug = 2;
 			$madulto->setView('notificacion-adulto');
 			$madulto->setData( array('datos' => $datos) );
 			$madulto->render();

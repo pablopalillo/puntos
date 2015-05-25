@@ -16,18 +16,18 @@
 			<td>
 				<center>
 				<table style="display: inline-table; margin:0 auto" border="0" cellpadding="0" cellspacing="0" width="500">
-					<h3>¿Qué tal  <?php echo strtok($datos['nombre_adulto'], ' '); ?> , </h3>
-					<p><?php echo $datos['nombre']; ?> se acaba de inscribir en el juego que lo puede llevar hasta Suiza para presenciar la aceptación de Medellín como sede de los Juegos Olímpicos de la Juventud 2018.</p>
-					<p>Para poder participar en este juego fue necesario que él nos indicara el nombre de un adulto responsable que avala la participación en dicho concurso.</p>
-					<p>Te agradecemos su autorización para participar y esperamos que él sea uno de los ganadores.</p>
-					<p>Para mayor información visita <?php echo CHtml::link('http://www.concursomedellin2018.com/puntos', CHtml::normalizeUrl('http://www.concursomedellin2018.com/puntos') ); ?></p>
+					<h3>Hola,  <?php echo strtok($datos['nombre_adulto'], ' '); ?> , </h3>
+					<p><?php echo $datos['nombre']; ?> se inscribió en Puntos TM, La estrategia de fidelización de Telemedellín que premia la sintonía de nuestros televidentes</p>
+					<p>Para participar en este juego fue necesario que él nos indicara el nombre de un adulto responsable que avalara su participación en dicho concurso, y por eso te llega este mensaje. </p>
+					<p>Si tienes alguna inquietud o estás en desacuerdo, puedes escribirnos a <a mailto="puntostm@telemedellin.tv"></a>puntostm@telemedellin.tv</p>
+					<p>Para mayor información visita <?php echo CHtml::link( Yii::app()->request->baseUrl, CHtml::normalizeUrl( Yii::app()->request->baseUrl) ); ?></p>
 				</table>
 				</center>
 			</td>
 		</tr>
 		<tr>
 			<td>
-				<img src="http://concursomedellin2018.com/images/mail/footer-mail.jpg" width="605" height="113" />
+				<p style="font-size: 11px; color: gray"><a style="color: gray; text-decorarion: underline" href="#">PuntosTm</a> es un producto de <a style="color: gray; text-decorarion: underline" href="#">Telemedellín</a></p>
 			</td>
 		</tr>
 	</table>

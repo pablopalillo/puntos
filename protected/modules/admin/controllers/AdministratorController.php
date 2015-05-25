@@ -14,8 +14,8 @@ class AdministratorController extends Controller
 
 		return array(
 							array('allow', //si es admin es un tipo usuario configurado en UserIdentitty
-							'actions'=>array('index','view','create','editPregunta','editRespuesta','delete'),
-							'users'=>array('@'),
+							'actions'=> array('index','view','create','editPregunta','editRespuesta','delete'),
+							'expression'=>'Yii::app()->user->es_admin == 1',
 						),
 						array('deny',  // deny all users
 						'users'=>array('*'),

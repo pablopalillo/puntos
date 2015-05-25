@@ -37,7 +37,7 @@
 
     <div class="form-group">
       <?php echo $activeform->label($pregunta,'fecha' ); ?>
-      <?php echo CHtml::label('( año/mes/dia )','formato'); ?>
+      <?php echo CHtml::label('( año-mes-dia )','formato'); ?>
       <?php echo $activeform->textField($pregunta,'fecha',array('class' => 'form-control')); ?>
       <?php echo $activeform->error($pregunta,'fecha'); ?>
     </div>

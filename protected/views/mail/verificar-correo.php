@@ -17,16 +17,18 @@
 				<center>
 				<table style="display: inline-table; margin:0 auto" border="0" cellpadding="0" cellspacing="0" width="500">
 					<h3>Hola <?php echo $datos['nombre']; ?>, </h3>
-					<p>Acabas de inscribirte para participar en el juego que te puede llevar hasta Suiza gracias a los Juegos Olímpicos de la Juventud Medellín 2018, ahora sólo debes dar click en el siguiente enlace y empezar a divertirte: </p>
-					<p><?php echo CHtml::link( Yii::app()->request->baseUrl.'/verificar/' . $datos['llave_activacion'], CHtml::normalizeUrl( Yii::app()->request->baseUrl.'/verificar/' . $datos['llave_activacion'] ) ); ?></p>
-					<p>Recuerda que el adulto que inscribiste como responsable también será informado de tu participación en el juego.</p>
+					<p>Acabas de inscribirte para participar en Puntos TM </p>
+					<p>Ingresa al siguiente link para que comiences a acumular puntos y ganar con Telemedellín:</p>
+					<p><?php echo CHtml::link( Yii::app()->request->baseUrl.'/verificar/'.$datos['llave_activacion'], Yii::app()->request->baseUrl.'/verificar/'.$datos['llave_activacion'] ); ?></p>
+					<p><strong>(Observación solo para menores de edad)</strong></p>
+					<p>Recuerda que el adulto que inscribiste como responsable, también será informado a través de correo electrónico de tu participación.</p>
 				</table>
 				</center>
 			</td>
 		</tr>
 		<tr>
-			<td>
-				<img src="http://concursomedellin2018.com/images/mail/footer-mail.jpg" width="605" height="113" />
+			<td align="center">
+				<p style="font-size: 11px; color: gray"><a style="color: gray; text-decorarion: underline" href="#">PuntosTm</a> es un producto de <a style="color: gray; text-decorarion: underline" href="#">Telemedellín</a></p>
 			</td>
 		</tr>
 	</table>
