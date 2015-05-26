@@ -248,7 +248,7 @@ class SiteController extends Controller
 
 				$mnino->Subject    = 'Verifica tu registro en Puntos Telemedellín';
         $mnino->AddAddress($datos['correo']);
-        $mnino->From = 'contacto@concursomedellin2018.com';
+        $mnino->From = 'contacto@puntos.telemedellin.tv';
         $mnino->FromName = 'Puntos Telemedellín';
 
 				if ($mnino->Send())
@@ -276,7 +276,7 @@ class SiteController extends Controller
 			$madulto->render();
 			$madulto->Subject  = strtok($datos['nombre'], ' ') . ' te inscribió como adulto responsable en el concurso Viaja a Suiza con Medellín 2018';
 			$madulto->AddAddress($datos['correo_adulto']);
-			$madulto->From = 'contacto@concursomedellin2018.com';
+			$madulto->From = 'contacto@puntos.telemedellin.tv';
 			$madulto->FromName = 'Puntos Telemedellín';
 
 			if ($madulto->Send())
