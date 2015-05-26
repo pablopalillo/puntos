@@ -381,7 +381,11 @@ $(function() {
                 var img = $('#progress').children().children();
 
                 img.attr('src','images/' + r.status + '.png');
-                $('#progress').html(h4.text(r.message).append('<p>Has ganado ' + r.puntos + ' puntos.').prepend(img));
+                if(r.status == 'success')
+                {
+                  $('#progress').html(h4.text(r.message).append('<p>Has ganado ' + r.puntos + ' puntos.').prepend(img));
+                }
+
                 $('.ctn_main').append($('<span id="clock"></span>'));
                 $('#clock').append('<a href="" class="btn-general_md">Volver</a>');
                 $('#clock').appendTo('#progress');
@@ -409,7 +413,7 @@ $(function() {
         });
 
         $('#top-loading').append('<p></p>');
-        
+
         $('#top-loading p').css({
             'color': 'black',
             'width': '100%',
@@ -455,7 +459,8 @@ $(function() {
 });
 
 function toSt(n) {
-    s=""
-    if(n<10) s+="0"
+    var s="";
+    if(n<10)
+    s+="0";
     return s+n.toString();
 }
