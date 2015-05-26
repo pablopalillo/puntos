@@ -102,7 +102,6 @@ class SiteController extends Controller
 
 			$jugador->colegio 	 				= '';
 			$jugador->parentesco_id 		= '7';
-			$jugador->nombre_adulto = '';
 
 			$valid = false;
 
@@ -118,16 +117,25 @@ class SiteController extends Controller
 				$jugador->usuario_id = $usuario->id;
 				$jugador->save(false);
 
-				if( $jugador->nombre_adulto )
+				if( !empty($jugador->nombre_adulto) )
 				{
-					$datos = array(	'nombre' 			=> $jugador->nombre,
-					'nombre_adulto'		=> $jugador->nombre_adulto,
-					'correo' 			=> $usuario->correo,
-					'correo_adulto'		=> $jugador->correo_adulto,
-					'llave_activacion' 	=> $usuario->llave_activacion
+						$datos = array(	'nombre' 			=> $jugador->nombre,
+						'nombre_adulto'		=> $jugador->nombre_adulto,
+						'correo' 			=> $usuario->correo,
+						'correo_adulto'		=> $jugador->correo_adulto,
+						'llave_activacion' 	=> $usuario->llave_activacion
+						);
+
+						$this->verificarCorreoAdulto($datos);
+
+						$datos = array(	'nombre' 	=> $jugador->nombre,
+						'correo' => $usuario->correo,
+						'llave_activacion' 	=> $usuario->llave_activacion
 					);
 
-					$this->verificarCorreoAdulto($datos);
+					$this->verificarCorreo($datos);
+					$this->render('verificar_correo', array('datos' => $datos) );
+
 				}
 				else
 				{
@@ -137,6 +145,7 @@ class SiteController extends Controller
 					);
 
 					$this->verificarCorreo($datos);
+					$this->render('verificar_correo', array('datos' => $datos) );
 				}
 
 
@@ -253,9 +262,6 @@ class SiteController extends Controller
 				}
 
 
-				$this->render('verificar_correo', array('datos' => $datos) );
-
-
     }
 
 
@@ -281,9 +287,6 @@ class SiteController extends Controller
 			} else {
 				Yii::app()->user->setFlash('error','Error while sending email: '.$madulto->ErrorInfo);
 			}
-
-
-			$this->render('verificar_correo', array('datos' => $datos) );
 
 		}
 

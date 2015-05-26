@@ -23,12 +23,12 @@
 	<header>
 		<div class="row">
 			<div class="col-sm-7 col-md-7">
-				<div id="logo"><?php echo CHtml::link( CHtml::image(Yii::app()->request->baseUrl . '/images/logo.png', 'Puntos TM'), Yii::app()->request->baseUrl ); ?></div>
+				<div id="logo"><?php echo CHtml::link( CHtml::image(Yii::app()->request->baseUrl . '/images/logo.png', 'Puntos TM'), CHtml::normalizeUrl(Yii::app()->request->baseUrl) ); ?></div>
 			</div>
 			<div class="col-sm-5 col-md-5">
 				<div class="row">
 					<div class="ctn-btnParticipar col-sm-12 col-xs-6">
-						<a href="./participar" class="btnParticipar">Juega Aquí</a>
+						<a href="<?php echo Yii::app()->request->baseUrl.'/participar' ?>" class="btnParticipar">Juega Aquí</a>
 					</div>
 					<div class="ctn_mainmenu col-sm-12 col-xs-6">
 						<div id="mainmenu">
@@ -56,7 +56,7 @@
 	<footer class="container-fluid ctn_footer">
 		<div  class="row">
 			<a class="tm" href="http://www.telemedellin.tv" target="_blank">Telemedellín</a>
-			<?php echo CHtml::link( 'Términos y condiciones', array('/terminos-y-condiciones'), array('class' => 'terminos' ) ); ?> <span>contacto@concursomedellin2018.com</span>
+			<?php echo CHtml::link( 'Términos y condiciones', array('/terminos-y-condiciones'), array('class' => 'terminos' ) ); ?> <span>Puntos Telemedellín</span>
 		</div>
 	</footer>
 </div>
