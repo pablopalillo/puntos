@@ -385,6 +385,10 @@ $(function() {
                 {
                   $('#progress').html(h4.text(r.message).append('<p>Has ganado ' + r.puntos + ' puntos.').prepend(img));
                 }
+                else
+                {
+                  $('#progress').html(h4.text(r.message).prepend(img));
+                }
 
                 $('.ctn_main').append($('<span id="clock"></span>'));
                 $('#clock').append('<a href="" class="btn-general_md">Volver</a>');
