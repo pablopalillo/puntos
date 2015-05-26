@@ -4,16 +4,34 @@
 $this->pageTitle=Yii::app()->name . ' - Términos y condiciones del concurso';
 ?>
 <div id="terminos">
-<h1>TERMINOS Y CONDICIONES DEL CONCURSO “VIAJA A SUIZA CON MEDELLIN 2018” </h1>
+	<h1>TERMINOS Y CONDICIONES</h1>
+	<h2>Quipenes pueden participar</h2>
+	<p>Habitantes de Medellín y el Área Metropolitana. Podrán concursar personas de otras ciudades del país, sin embargo, el envío de los premios estará sujeto a las posibilidades de la empresa de envíos, de los contrario la persona deberá recogerlo en las instalaciones del canal o enviar a una persona con la autorización respectiva. </p>
+	<p>Personas por fuera del país podrán concursar, pero el envío de los premios deberá ser pagado contraentrega o enviar a una persona a la sede Caribe de Telemedellín, con la autorización respectiva y fotocopia de documento de identidad del ganador. </p>
+	<p>Pueden participar menores de edad, avalados por un adulto que debe completar sus datos en el formulario de inscripción y hacerse responsable del menor. Además, será la persona encargada de recibir el premio en caso de que resulte ganador.</p>
+	<h2>Gandores</h2>
+	<h3>Mensuales</h3>
+	<p>Se premiarán los primeros tres usuarios con más puntaje acumulado en cada mes bajo las siguientes condiciones:</p>
+	<p>El puntaje acumulado de cada mes no le servirá para el mes siguiente, pero sí para el puntaje acumulado a final de año. </p>
+	<h3>Anual</h3>
+	<p>Habrá un ganador anual que será quien tenga el mayor puntaje acumulado a través de los meses del año. El corte será el 30 noviembre del año en curso, para premiarlo en nuestra celebración de los 18 años. </p>
+	<h2>Obtención de puntos</h2>
+	<p>Los puntos se obtendrán a través de preguntas de selección múltiple, cuyas respuestas aparecerán en la programación habitual del canal. Las preguntas estarán activas desde el momento en que la respuesta se visualice en la programación hasta las 11:59 p.m de ese mismo día.</p>
+	<ul>
+		<li>Cada usuario podrá responder la pregunta una sola vez.</li>
+		<li>Si selecciona la respuesta equivocada, no acumulará puntos es día, ni le restará puntos.</li>
+		<li>Si responde correctamente, acumulará puntos de acuerdo al valor asignado a la pregunta.</li>
+	</ul>
+	<p>Las preguntas estarán compuestas por dos temáticas: La ciudad. Y la historia y actualidad del canal.,  </p>
+	<p>El usuario podrá conocer las respuestas a las preguntas a través de:</p>
+	<h3>Televisión:</h3>
+	<p>Durante la programación de Telemedellín, aparecerá en la pantalla por un tiempo de 20 segundos la respuesta a la pregunta. El usuario deberá ingresar el sitio web puntos.telemedellin.tv y contestar la pregunta correctamente. Tendrá hasta las 11:59 del mismo día para participar.</p>
 
-<p>Los menores que pretendan inscribirse en el concurso “Viaja a Suiza con Medellín 2018” (en adelante el “concurso”) deberán contar con la autorización de uno de sus padres o tutor para poder participar en el concurso, esta autorización, se entiende prestada con el diligenciamiento de los datos en el formulario de inscripción. Los padres o tutores asumen la responsabilidad por la participación de los menores y las acciones que estos realicen durante el concurso. </p>
-<p>Cada menor podrá registrarse solamente una vez, la persona que autorice su participación será responsable por la veracidad de los datos personales  consignados, pudiendo la organización del concurso descalificarlo cuando existan datos inexactos, incorrectos o que no cumplan con los requisitos establecidos en el concurso.</p>
-<p>Los representantes de los concursantes ganadores deberán otorgar autorización por medio de la suscripción de documento respectivo donde autoriza la utilización de imágenes, nombre y voz del menor ganador, sin derecho a compensación alguna, la divulgación de los datos e imágenes de los menores se hace con fines publicitarios, respetando lo preceptuado en el articulo 47 de la ley 1098 de 2006 (código de infancia y adolescencia.)</p>
-<p>Si el representante del ganador no es quien viajará con el menor, deberá entonces suscribir documento donde designe y autorice a un mayor responsable para viajar con el ganador del premio.</p>
-<p>La Candidatura de Medellín a los Juegos Olímpicos de la Juventud 2018 correrá con los gastos de visado, seguro de viaje, tiquetes aéreos ida y regreso (Medellín -Ginebra-Medellín), transporte interno en Suiza, alimentación y hospedaje para cada menor ganador y un acompañante mayor de edad. (No se asumirán gastos adicionales a los enunciados).</p>
-<p>Los participantes por medio de su representante, que son aquellos que figuren en el formulario de inscripción, aceptan expresamente todas y cada una de las políticas, así como estos términos y condiciones, lo cual es condición esencial para la participación en el presente concurso.</p>
-<p>En caso de que se presente un empate en los puntajes finales tanto en la elección del niño como de la niña ganadores este se decidirá por sorteo con balota.</p>
-<p>Si por cualquier circunstancia el niño o niña ganadora no hicieran uso del premio este será entregado al segundo puesto en la categoría respectiva, ya que el premio es personal e intransferible, por lo tanto no podrá ser cedido. </p>
-<p>Cuando ocurran circunstancias imprevistas que constituyan caso fortuito, fuerza mayor o similar que los justifiquen, la organización del concurso podrá suspender, cancelar o modificar parcialmente los presentes términos y condiciones sin necesidad de previo aviso de tal circunstancia a los participantes; en ningún caso el ejercicio de tal derecho por parte de la organización del concurso dará derecho a los participantes o sus representantes a reclamación alguna.</p>
-<p>El plazo del concurso será desde las 00:00 horas del 21 de mayo hasta el 10 de junio de 2013 a las 11:59 p.m.</p>
+	<p>el cual el usuario deberá ingresar en el sitio web de Telemedellín antes de que finalice el día y después de haber visualizado la respuesta en el TV para participar.</p>
+	<p>Los horarios en los que se pueden programar los códigos son: </p>
+	<ul>
+		<li>Lunes a viernes de 7:00 a.m. a 11:00 p.m. </li>
+		<li>Fines de semana de 8:00 am. A 11:00 p.m. </li>
+	</ul>
+
 </div>
