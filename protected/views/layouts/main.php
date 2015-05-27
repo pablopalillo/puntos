@@ -23,12 +23,12 @@
 	<header>
 		<div class="row">
 			<div class="col-sm-7 col-md-7">
-				<div id="logo"><?php echo CHtml::link( CHtml::image(Yii::app()->getBaseUrl() . '/images/logo.png', 'Puntos TM'), Yii::app()->getBaseUrl() ); ?></div>
+				<div id="logo"><?php echo CHtml::link( CHtml::image(Yii::app()->getBaseUrl() . '/images/logo.png', 'Puntos TM'), Yii::app()->getBaseUrl(true) ); ?></div>
 			</div>
 			<div class="col-sm-5 col-md-5">
 				<div class="row">
 					<div class="ctn-btnParticipar col-sm-12 col-xs-6">
-						<a href="<?php echo Yii::app()->getBaseUrl().'/participar' ?>" class="btnParticipar">Juega Aquí</a>
+						<a href="<?php echo Yii::app()->getBaseUrl(true).'/participar' ?>" class="btnParticipar">Juega Aquí</a>
 					</div>
 					<div class="ctn_mainmenu col-sm-12 col-xs-6">
 						<div id="mainmenu">
