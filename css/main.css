@@ -176,7 +176,7 @@ a {
   -moz-box-shadow: 6px 7px 0px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 6px 7px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 6px 7px 0px rgba(0, 0, 0, 0.3);
-  overflow: auto; }
+  overflow: hidden; }
 
 #page {
   margin-top: -30px;

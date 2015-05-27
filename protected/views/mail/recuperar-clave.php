@@ -9,7 +9,7 @@
 	<table  bgcolor="#fff" style="display: inline-table; margin:0 auto" border="0" cellpadding="0" cellspacing="0" width="605">
 		<tr>
 			<td>
-				<img src="<?php echo Yii::app()->getBaseUrl(true).'/images/mail/header-mail.jpg' ?>" width="605" height="154" />
+				<img src="<?php echo Yii::app()->getBaseUrl(true).'/images/mail/header-mail.jpg' ?>" width="605" height="154" style="width: 100%; height: auto;" />
 			</td>
 		</tr>
 		<tr>
