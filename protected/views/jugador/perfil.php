@@ -55,9 +55,9 @@
 				<p>Documento: <?php echo $jugador->documento_adulto ?></p>
 			<?php endif; ?>
 
-			<div >
+			<!--<div >
 				<?php echo CHtml::link( 'Editar Información', Yii::app()->request->baseUrl . '/editar-perfil', array('class'=>'btn-general_md') ); ?>
-			</div>
+			</div>-->
 			<div class="ctn_btn-cerrar-sesion">
 	            <?php echo CHtml::link( 'Cerrar session', array('/cerrar-sesion'), array('class' => 'btn-general_md' ) ); ?>
 	        </div>
