@@ -11,7 +11,7 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->getBaseUrl().'/js/juego
         <div class="juego_pregunta">
             <h3><?php echo $pregunta; ?></h3>
         </div>
-        <p>Selecciona con cuidado, sólo tienes una oportunidad</p>
+        <p>Selecciona con cuidado, solo tienes una oportunidad</p>
         <div class="panel-body">
             <div class="row">
                 <?php foreach ($respuestas as $key => $value): ?>

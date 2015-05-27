@@ -92,7 +92,7 @@ class ParticiparController extends CController
                 $r['status'] = 'success';
                 break;
             case false:
-                $r['message'] = 'Esa no era la respuesta, lo sentimos :(';
+                $r['message'] = '¡Lo sentimos! Tu respuesta fue incorrecta.';
                 $r['status'] = 'error';
                 break;
         }
