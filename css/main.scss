@@ -189,7 +189,7 @@ a{
 	border-radius: 10px;
 	padding: 10px;
 	@include sombra;
-	overflow: auto;
+	overflow: hidden;
 }
 
 #page {
