@@ -50,9 +50,13 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->getBaseUrl().'/js/juego
             <p>Nombre</p>
             <p class="puntaje">Puntaje</p>
             <ul>
+            <?php if (count($total_anho) > 0): ?>
             <?php $i = 1; foreach($total_anho as $anho): ?>
                 <li><span class="lugar"><?php echo $i; $i++?></span> <?php echo $anho['jugador'] ?> <span class="total"><?php echo $anho['puntaje'] ?></span></li>
             <?php endforeach; ?>
+            <?php else: ?>
+                <li style="text-align:center;">No se han encontrado resultados.</li>
+            <?php endif; ?>
             </ul>
         </div>
     </div>
