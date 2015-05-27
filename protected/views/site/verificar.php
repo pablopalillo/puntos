@@ -6,7 +6,7 @@
 			<p>¡Bienvenido!</p>
 			<p>¡Nos ves y ganas!</p>
 			<div class="ctn_btnParticipar">
-				<a href="./participar" class="btnParticipar">Juega Aquí</a>
+				<a href="<?php echo Yii::app()->getBaseUrl(true).'/participar' ?>" class="btnParticipar">Juega Aquí</a>
 			</div>
 		<?php else: ?>
 			Falló
