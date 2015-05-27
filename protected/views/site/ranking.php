@@ -33,9 +33,13 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->getBaseUrl().'/js/juego
 		    <p>Nombre</p>
 		    <p class="puntaje">Puntaje</p>
 		    <ul>
+            <?php if (count($total_mes) > 0): ?>
 		    <?php $i = 1; foreach($total_mes as $mes): ?>
 			    <li><span class="lugar"><?php echo $i; $i++?></span><?php echo $mes['jugador'] ?><span class="total"><?php echo $mes['puntaje'] ?></span></li>
 		    <?php endforeach; ?>
+            <?php else: ?>
+                <li style="text-align:center;">No se han encontrado resultados.</li>
+            <?php endif; ?>
 		    </ul>
 	    </div>
     </div>
