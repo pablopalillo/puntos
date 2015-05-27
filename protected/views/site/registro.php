@@ -107,7 +107,7 @@ Yii::app()->clientScript->registerScript('datepicker',
 			</div>
 
 				<div class="well well-lg form-group">
-					<p>Al registrarte aceptas haber leído y estar de acuerdo con los <?php echo CHtml::link('términos y condiciones del concurso', array('/terminos-y-condiciones'), array('target' => '_blank'));?>.</p>
+					<p>Al registrarte aceptas haber leído y estar de acuerdo con los <?php echo CHtml::link('términos y condiciones del ', array('/terminos-y-condiciones'), array('target' => '_blank'));?>.</p>
 				</div>
 
 				<div class="form-group">

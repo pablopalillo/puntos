@@ -23,7 +23,7 @@
 	<header>
 		<div class="row">
 			<div class="col-sm-8 col-md-8">
-				<div id="logo"><?php echo CHtml::link( CHtml::image(Yii::app()->request->baseUrl . '/images/logo.png', 'Viaja a Suiza con Medellín 2018'), CHtml::normalizeUrl(Yii::app()->request->baseUrl) ); ?></div>
+				<div id="logo"><?php echo CHtml::link( CHtml::image(Yii::app()->request->baseUrl . '/images/logo.png', 'Puntos TM'), CHtml::normalizeUrl(Yii::app()->getBaseUrl()) ); ?></div>
 			</div>
 			<div class="col-sm-4 col-md-4">
 				<div class="row">
@@ -55,7 +55,7 @@
 	<footer class="container-fluid ctn_footer">
 		<div  class="row">
 			<a class="tm" href="http://www.telemedellin.tv" target="_blank">Telemedellín</a>
-			<?php echo CHtml::link( 'Términos y condiciones', array('/terminos-y-condiciones'), array('class' => 'terminos' ) ); ?> <span>contacto@concursomedellin2018.com</span>
+			<?php echo CHtml::link( 'Términos y condiciones', array('/terminos-y-condiciones'), array('class' => 'terminos' ) ); ?> <span>contacto@medellin2018.com</span>
 		</div>
 	</footer>
 </div>

@@ -5,35 +5,35 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
-  <loc>http://www.concursomedellin2018.com/</loc>
+  <loc>http://www.medellin2018.com/</loc>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://www.concursomedellin2018.com/como-jugar</loc>
+  <loc>http://www.medellin2018.com/como-jugar</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.concursomedellin2018.com/premio</loc>
+  <loc>http://www.medellin2018.com/premio</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.concursomedellin2018.com/puntajes</loc>
+  <loc>http://www.medellin2018.com/puntajes</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.concursomedellin2018.com/iniciar-sesion</loc>
+  <loc>http://www.medellin2018.com/iniciar-sesion</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.concursomedellin2018.com/registro</loc>
+  <loc>http://www.medellin2018.com/registro</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.concursomedellin2018.com/terminos-y-condiciones</loc>
+  <loc>http://www.medellin2018.com/terminos-y-condiciones</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.concursomedellin2018.com/recuperar-contrasena</loc>
+  <loc>http://www.medellin2018.com/recuperar-contrasena</loc>
   <priority>0.64</priority>
 </url>
 </urlset>

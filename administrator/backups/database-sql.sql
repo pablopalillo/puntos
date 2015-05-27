@@ -2,7 +2,7 @@
 # Powered by XCloner Site Backup
 # http://www.xcloner.com
 #
-# Host: concursomedellin2018.com
+# Host: medellin2018.com
 # Generation Time: Aug 11, 2014 at 18:09
 # PHP Version: 5.4.29
 # Mysql Compatibility: 
@@ -3902,7 +3902,7 @@ INSERT INTO `pregunta` VALUES ('178', '1', '¿Si me encuentro una billetera en l
 INSERT INTO `pregunta` VALUES ('179', '1', '¿Cuándo debo subir al Metro?', '1');
 INSERT INTO `pregunta` VALUES ('180', '1', 'Si estás con tus amigos y amigas escuchando música, y un vecino te pide bajarle al volumen porque está alto, tú respondes:', '1');
 INSERT INTO `pregunta` VALUES ('181', '1', 'Si te incomodas porque tu hermano o hermana agarra sin permiso uno de tus juguetes, ¿qué haces?:', '1');
-INSERT INTO `pregunta` VALUES ('182', '1', 'Si pudieras hacer trampa para ganar este concurso, ¿qué harías?:', '1');
+INSERT INTO `pregunta` VALUES ('182', '1', 'Si pudieras hacer trampa para ganar este , ¿qué harías?:', '1');
 INSERT INTO `pregunta` VALUES ('183', '1', 'Estás en el supermercado y hay mucha gente en fila para pagar, tu comportamiento es:', '1');
 INSERT INTO `pregunta` VALUES ('184', '1', 'Si ves que alguien está golpeando a otra persona en la calle, ¿qué debes hacer?:', '1');
 INSERT INTO `pregunta` VALUES ('185', '1', 'Algunas palabras asociadas a Noviolencia son:', '1');

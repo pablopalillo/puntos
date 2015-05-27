@@ -23,12 +23,12 @@
 	<header>
 		<div class="row">
 			<div class="col-sm-7 col-md-7">
-				<div id="logo"><?php echo CHtml::link( CHtml::image(Yii::app()->request->baseUrl . '/images/logo.png', 'Puntos TM'), CHtml::normalizeUrl(Yii::app()->request->baseUrl) ); ?></div>
+				<div id="logo"><?php echo CHtml::link( CHtml::image(Yii::app()->getBaseUrl() . '/images/logo.png', 'Puntos TM'), Yii::app()->getBaseUrl() ); ?></div>
 			</div>
 			<div class="col-sm-5 col-md-5">
 				<div class="row">
 					<div class="ctn-btnParticipar col-sm-12 col-xs-6">
-						<a href="<?php echo Yii::app()->request->baseUrl.'/participar' ?>" class="btnParticipar">Juega Aquí</a>
+						<a href="<?php echo Yii::app()->getBaseUrl().'/participar' ?>" class="btnParticipar">Juega Aquí</a>
 					</div>
 					<div class="ctn_mainmenu col-sm-12 col-xs-6">
 						<div id="mainmenu">
@@ -67,7 +67,7 @@
 <?php Yii::app()->getClientScript()->registerScriptFile( Yii::app()->getBaseUrl().'/js/script.js' , CClientScript::POS_END);?>
 
 <script>
-/*concurso */
+/* */
 /*
 (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -82,7 +82,7 @@
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-41062091-1', 'concursomedellin2018.com');
+  ga('create', 'UA-41062091-1', 'medellin2018.com');
   ga('send', 'pageview');
 */
 </script>

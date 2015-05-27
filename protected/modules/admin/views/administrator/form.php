@@ -44,7 +44,7 @@
     <div class="form-group">
       <?php echo $activeform->label($pregunta,'hora_inicio' ); ?>
       <?php echo CHtml::label('( 24hora:minuto )','formatoh'); ?>
-      <?php echo $activeform->timeField($pregunta,'hora_inicio',array('class' => 'form-control')); ?>
+      <?php echo $activeform->textField($pregunta,'hora_inicio',array('class' => 'form-control')); ?>
       <?php echo $activeform->error($pregunta,'hora_inicio'); ?>
     </div>
 

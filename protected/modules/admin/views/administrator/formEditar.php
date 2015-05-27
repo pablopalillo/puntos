@@ -45,14 +45,14 @@
     <div class="form-group">
       <?php echo $activeform->label($pregunta,'hora_inicio' ); ?>
       <?php echo CHtml::label('( 24Hora:minuto )','hora1'); ?>
-      <?php echo $activeform->timeField($pregunta,'hora_inicio',array('class' => 'form-control')); ?>
+      <?php echo $activeform->textField($pregunta,'hora_inicio',array('class' => 'form-control')); ?>
       <?php echo $activeform->error($pregunta,'hora_inicio'); ?>
     </div>
 
     <div class="form-group">
       <?php echo $activeform->label($pregunta,'hora_fin' ); ?>
       <?php echo CHtml::label('( 24Hora:minuto )','hora2'); ?>
-      <?php echo $activeform->timeField($pregunta,'hora_fin',array('class' => 'form-control')); ?>
+      <?php echo $activeform->textField($pregunta,'hora_fin',array('class' => 'form-control')); ?>
       <?php echo $activeform->error($pregunta,'hora_fin'); ?>
     </div>
 

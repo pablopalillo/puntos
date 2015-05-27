@@ -1,7 +1,7 @@
 <?php
 /* @var $this SiteController */
 
-$this->pageTitle=Yii::app()->name . ' - Términos y condiciones del concurso';
+$this->pageTitle=Yii::app()->name . ' - Términos y condiciones del ';
 ?>
 <div id="terminos">
 	<h1>TERMINOS Y CONDICIONES</h1>

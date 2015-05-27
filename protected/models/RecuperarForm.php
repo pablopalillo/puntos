@@ -41,16 +41,16 @@ class RecuperarForm extends CFormModel
        	);
        	$validar = Usuario::model()->findByAttributes($a);
        	if($validar){
-       		$token = md5( 'tm' . $this->correo . (rand() + time()) . 'joj2018' );
+       		$token = md5( 'tm' . $this->correo . (rand() + time()) . 'TM' );
        		$validar->updateByPk($validar->id, array('llave_activacion' => $token, 'estado' => 3));
        		$mail             = new YiiMailer();
 	        $mail->setView('recuperar-clave');
 	        $mail->setData( array('token' => $token) );
 	        $mail->render();
-			$mail->Subject    = 'Recupera tu contraseña del concurso Viaja a Suiza con Medellín 2018';
+			$mail->Subject    = 'Recupera tu contraseña de puntos TM';
 	        $mail->AddAddress($this->correo);
-	        $mail->From = 'contacto@concursomedellin2018.com';
-	        $mail->FromName = 'Concurso Medellín 2018';  
+	        $mail->From = 'contacto@puntos.telemedellin.tv.com';
+	        $mail->FromName = 'Puntos TM';
 	        $mail->Send();
        	}
        	return true;

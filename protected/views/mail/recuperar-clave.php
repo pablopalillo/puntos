@@ -9,7 +9,7 @@
 	<table  bgcolor="#fff" style="display: inline-table; margin:0 auto" border="0" cellpadding="0" cellspacing="0" width="605">
 		<tr>
 			<td>
-				<img src="http://concursomedellin2018.com/images/mail/header-mail.jpg" width="605" height="154" />
+				<img src="<?php echo Yii::app()->getBaseUrl(true).'/images/mail/header-mail.jpg' ?>" width="605" height="154" />
 			</td>
 		</tr>
 		<tr>
@@ -17,7 +17,7 @@
 				<center>
 				<table style="display: inline-table; margin:0 auto" border="0" cellpadding="0" cellspacing="0" width="500">
 					<p>Has pedido recuperar tu contraseña, por favor sigue el siguiente enlace para hacerlo: </p>
-					<p><?php echo CHtml::link(Yii::app()->request->baseUrl.'/validar-identidad/' . $token, CHtml::normalizeUrl(Yii::app()->request->baseUrl.'/validar-identidad/' . $token ) ); ?></p>
+					<p><?php echo CHtml::link(Yii::app()->getBaseUrl(true).'/validar-identidad/' . $token, CHtml::normalizeUrl(Yii::app()->getBaseUrl(true).'/validar-identidad/' . $token ) ); ?></p>
 				</table>
 				</center>
 			</td>

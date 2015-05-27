@@ -90,6 +90,7 @@ class SiteController extends Controller
 
 	public function actionRegistro()
 	{
+
 		Yii::app()->user->setFlash('error', "Estamos revisando los resultados");
 		//	$this->redirect('puntajes');
 		$usuario = new Usuario;
@@ -141,7 +142,8 @@ class SiteController extends Controller
 				{
 						$datos = array(	'nombre' 	=> $jugador->nombre,
 						'correo' => $usuario->correo,
-						'llave_activacion' 	=> $usuario->llave_activacion
+						'llave_activacion' 	=> $usuario->llave_activacion,
+						'url'=> Yii::app()->getBaseUrl()
 					);
 
 					$this->verificarCorreo($datos);
@@ -239,7 +241,7 @@ class SiteController extends Controller
     {
 
 				$mnino    = new YiiMailer();
-				$mnino->SMTPDebug = 2;
+	//			$mnino->SMTPDebug = 2;
 				$mnino->IsSendmail();
         $mnino->setView('verificar-correo');
         $mnino->setData( array('datos' => $datos) );
@@ -270,11 +272,11 @@ class SiteController extends Controller
 
 			$madulto    = new YiiMailer();
 			$madulto->IsSendmail();
-			$madulto->SMTPDebug = 2;
+//			$madulto->SMTPDebug = 2;
 			$madulto->setView('notificacion-adulto');
 			$madulto->setData( array('datos' => $datos) );
 			$madulto->render();
-			$madulto->Subject  = strtok($datos['nombre'], ' ') . ' te inscribió como adulto responsable en el concurso Viaja a Suiza con Medellín 2018';
+			$madulto->Subject  = strtok($datos['nombre'], ' ') . ' te inscribió como adulto responsable en el  Viaja a Suiza con Medellín 2018';
 			$madulto->AddAddress($datos['correo_adulto']);
 			$madulto->From = 'contacto@puntos.telemedellin.tv';
 			$madulto->FromName = 'Puntos Telemedellín';

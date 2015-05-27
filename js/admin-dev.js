@@ -111,10 +111,10 @@ jQuery(function($) {
     $('#miniatura').addClass('fileupload-processing');
 
     // Initialize the jQuery File Upload widget:
-    $('#imagen_concurso').fileupload({        
+    $('#imagen_').fileupload({        
         // Uncomment the following to send cross-domain cookies:
         //xhrFields: {withCredentials: true},
-        url: PUBLIC_PATH + '/administrador/concursos/imagen',
+        url: PUBLIC_PATH + '/administrador/s/imagen',
         maxNumberOfFiles: 0,
         previewMaxWidth: 200,
         previewMaxHeight: 200,
@@ -131,7 +131,7 @@ jQuery(function($) {
         $('#archivoImagenH').attr('value', data.result.archivoImagen[0].name);
     });
     // Enable iframe cross-domain access via redirect option:
-    $('#imagen_concurso').fileupload(
+    $('#imagen_').fileupload(
         'option',
         'redirect',
         window.location.href.replace(
@@ -141,13 +141,13 @@ jQuery(function($) {
     );
 
     // Load existing files:
-    $('#imagen_concurso').addClass('fileupload-processing');
+    $('#imagen_').addClass('fileupload-processing');
 
     // Initialize the jQuery File Upload widget:
-    $('#imagen_mobile_concurso').fileupload({        
+    $('#imagen_mobile_').fileupload({        
         // Uncomment the following to send cross-domain cookies:
         //xhrFields: {withCredentials: true},
-        url: PUBLIC_PATH + '/administrador/concursos/imagen_mobile',
+        url: PUBLIC_PATH + '/administrador/s/imagen_mobile',
         maxNumberOfFiles: 0,
         previewMaxWidth: 200,
         previewMaxHeight: 200,
@@ -164,7 +164,7 @@ jQuery(function($) {
         $('#archivoImagenMobileH').attr('value', data.result.archivoImagenMobile[0].name);
     });
     // Enable iframe cross-domain access via redirect option:
-    $('#imagen_mobile_concurso').fileupload(
+    $('#imagen_mobile_').fileupload(
         'option',
         'redirect',
         window.location.href.replace(
@@ -174,13 +174,13 @@ jQuery(function($) {
     );
 
     // Load existing files:
-    $('#imagen_mobile_concurso').addClass('fileupload-processing');
+    $('#imagen_mobile_').addClass('fileupload-processing');
 
     // Initialize the jQuery File Upload widget:
-    $('#miniatura_concurso').fileupload({        
+    $('#miniatura_').fileupload({        
         // Uncomment the following to send cross-domain cookies:
         //xhrFields: {withCredentials: true},
-        url: PUBLIC_PATH + '/administrador/concursos/miniatura',
+        url: PUBLIC_PATH + '/administrador/s/miniatura',
         maxNumberOfFiles: 0,
         previewMaxWidth: 200,
         previewMaxHeight: 200,
@@ -197,7 +197,7 @@ jQuery(function($) {
         $('#archivoMiniaturaH').attr('value', 'thumbnail/'+data.result.archivoMiniatura[0].name);
     });
     // Enable iframe cross-domain access via redirect option:
-    $('#miniatura_concurso').fileupload(
+    $('#miniatura_').fileupload(
         'option',
         'redirect',
         window.location.href.replace(
@@ -207,7 +207,7 @@ jQuery(function($) {
     );
 
     // Load existing files:
-    $('#miniatura_concurso').addClass('fileupload-processing');
+    $('#miniatura_').addClass('fileupload-processing');
 
     // Initialize the jQuery File Upload widget:
     $('#imagen_programa').fileupload({        
