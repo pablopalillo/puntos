@@ -35,8 +35,7 @@ class ParticiparController extends CController
     {
         $preguntas = Pregunta::model()->findAll('fecha = ?', array(0 => date('Y-m-d')));
         
-
-        $this->validarTiempo($preguntas);
+        $preguntas = $this->validarTiempo($preguntas);
 
         $this->render('participar', array('preguntas' => $preguntas));
     }
@@ -121,7 +120,7 @@ class ParticiparController extends CController
             $hora_actual = explode(':', $hora_actual);
             $hora_actual = join('', $hora_actual);
 
-            $respuesta = RespuestaXJugador::model()->findAll('pregunta_id = ? AND jugador_id = ?', array(0 => $value->id, 1 => Yii::app()->session['jugador_id']));
+            $respuesta = RespuestaXJugador::model()->findAll('pregunta_id = ? AND jugador_id = ?', array(0 => $value->id, 1 => Yii::app()->user->id));
 
             if (count($respuesta) == 0)
             {
@@ -135,5 +134,7 @@ class ParticiparController extends CController
             else
                 $preguntas[$key]->estado = 2;
         }
+
+        return $preguntas;
     }
 }
