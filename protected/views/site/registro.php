@@ -3,7 +3,7 @@ Yii::app()->getClientScript()->registerCoreScript( 'jquery.ui' );
 Yii::app()->clientScript->registerScriptFile(Yii::app()->getBaseUrl().'/js/i18n/jquery.ui.datepicker-es.js', CClientScript::POS_HEAD);
 Yii::app()->clientScript->registerCssFile(Yii::app()->clientScript->getCoreScriptUrl().'/jui/css/base/jquery-ui.css');
 Yii::app()->clientScript->registerScript('datepicker',
-	'$(".datepicker").datepicker({dateFormat: "yy-mm-dd", yearRange: "1865:2007", minDate: new Date(1865, 1, 1), maxDate: new Date(2007, 1, 1), changeMonth: true, changeYear: true}, $.datepicker.regional[ "es" ]);',
+	'$(".datepicker").datepicker({dateFormat: "yy-mm-dd", yearRange: "1865:2011", minDate: new Date(1865, 1, 1), maxDate: new Date(2011, 0, 0), changeMonth: true, changeYear: true}, $.datepicker.regional[ "es" ]);',
 	CClientScript::POS_READY);
 ?>
 
@@ -58,7 +58,7 @@ Yii::app()->clientScript->registerScript('datepicker',
 					<p class="text-opa">Ingresa estos datos con cuidado, no los podras cambiar</p>
 				</div>
 				<div class="control-group">
-					<?php echo $activeform->label($jugador,'Genero'); ?>
+					<?php echo $activeform->label($jugador,'Género'); ?>
 					<div class="radio" >
 						<label>
 							<?php echo $activeform->radioButtonList($jugador,'sexo', array('M' => 'Masculino', 'F' => 'Femenino') ); ?>

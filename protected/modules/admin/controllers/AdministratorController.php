@@ -19,16 +19,28 @@ class AdministratorController extends Controller
 		 */
 	public function accessRules()
 	{
-
-		return array(
-							array('allow', //si es admin es un tipo usuario configurado en UserIdentitty
+		if ( isset( Yii::app()->user->es_admin ) )
+		{
+			return array(
+								array('allow', //si es admin es un tipo usuario configurado en UserIdentitty
+								'actions'=> array('index','view','create','editPregunta','editRespuesta','delete'),
+								'expression'=>'( Yii::app()->user->es_admin == 1 )',
+							),
+							array('deny',  // deny all users
+							'users'=>array('*'),
+							),
+						);
+		}
+		else
+		{
+			return array(
+							array('deny',  // deny all users
 							'actions'=> array('index','view','create','editPregunta','editRespuesta','delete'),
-							'expression'=>'( Yii::app()->user->es_admin )',
-						),
-						array('deny',  // deny all users
-						'users'=>array('*'),
-						),
-					);
+							'users'=>array('*'),
+							),
+						);
+		}
+
 	}
 
 
