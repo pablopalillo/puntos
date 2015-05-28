@@ -5,7 +5,7 @@ $this->pageTitle=Yii::app()->name . ' - Términos y condiciones del ';
 ?>
 <div id="terminos">
 	<h1>TERMINOS Y CONDICIONES</h1>
-	<h2>Quipenes pueden participar</h2>
+	<h2>Quiénes pueden participar</h2>
 	<p>Habitantes de Medellín y el Área Metropolitana. Podrán concursar personas de otras ciudades del país, sin embargo, el envío de los premios estará sujeto a las posibilidades de la empresa de envíos, de los contrario la persona deberá recogerlo en las instalaciones del canal o enviar a una persona con la autorización respectiva. </p>
 	<p>Personas por fuera del país podrán concursar, pero el envío de los premios deberá ser pagado contraentrega o enviar a una persona a la sede Caribe de Telemedellín, con la autorización respectiva y fotocopia de documento de identidad del ganador. </p>
 	<p>Pueden participar menores de edad, avalados por un adulto que debe completar sus datos en el formulario de inscripción y hacerse responsable del menor. Además, será la persona encargada de recibir el premio en caso de que resulte ganador.</p>
