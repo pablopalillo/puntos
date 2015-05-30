@@ -20,7 +20,6 @@ $this->pageTitle = Yii::app()->name;
 				<li><strong>Nivel 1</strong> 10 puntos </strong></li>
 				<li><strong>Nivel 2</strong> 20 puntos </strong></li>
 				<li><strong>Nivel 3</strong> 30 puntos </strong></li>
-				<li><strong>Nivel 4</strong> 40 puntos </strong></li>
 			</ul>
 		</div>
 		<div class="col-sm-3">
