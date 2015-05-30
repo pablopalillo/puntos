@@ -297,7 +297,7 @@ class SiteController extends Controller
         if (!Yii::app()->request->isAjaxRequest) throw new CHttpException('403', 'Forbidden access.');
 
         $mes = Yii::app()->request->restParams['mes'];
-        $ranking = Jugador::model()->getRanking('mes',$mes,true,null);
+        $ranking = Jugador::model()->getRanking('mes',$mes,true);
 
         header('Content-Type: application/json; charset="UTF-8"');
         $r = array('r' => $ranking);

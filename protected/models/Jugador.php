@@ -189,7 +189,7 @@ class Jugador extends CActiveRecord
                 break;
         }
 
-        $l = ($l == true) ? 'LIMIT 10' : 'LIMIT 1';
+        $l = ($l == true) ? 'LIMIT 10' : '';
 
         $sql = "SELECT *
                 FROM (
@@ -206,7 +206,8 @@ class Jugador extends CActiveRecord
                         ORDER BY puntaje DESC, fecha ASC
                     ) query, (SELECT @cnt:=0) AS t
                     WHERE jugador.id = query.id
-                ) query;";
+                ) query
+				$l;";
 
         $command = $connection->createCommand($sql);
 
