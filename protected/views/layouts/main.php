@@ -56,6 +56,7 @@
 	<footer class="container-fluid ctn_footer">
 		<div  class="row">
 			<a class="tm" href="http://www.telemedellin.tv" target="_blank">Telemedellín</a>
+			<a class="alc" href="https://www.medellin.gov.co/" target="_blank">Telemedellín</a>
 			<?php echo CHtml::link( 'Términos y condiciones', array('/terminos-y-condiciones'), array('class' => 'terminos' ) ); ?> <span>Puntos Telemedellín</span>
 		</div>
 	</footer>

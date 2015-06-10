@@ -267,15 +267,28 @@ footer.ctn_footer {
     color: #ffffff; }
 
 a.tm {
-  background-image: url("../images/telemedellin_pie.png");
-  width: 155px;
-  height: 65px;
-  display: block;
-  text-indent: -9999px;
-  background-size: cover;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 10px; }
+    background-image: url("../images/telemedellin_pie.png");
+    background-size: cover;
+    display: inline-block;
+    height: 110px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-indent: -9999px;
+    width: 200px;
+}
+
+  a.alc {
+    background-image: url("../images/logos-alc.png");
+    background-size: cover;
+    display: inline-block;
+    height: 100px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-indent: -9999px;
+    width: 500px;
+}
 
 a.ol {
   background-image: url("../images/logo-olimpicos-01.jpg");

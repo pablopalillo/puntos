@@ -71,16 +71,28 @@ class AdministratorController extends Controller
 
 			foreach( $_POST['respuesta'] as $key => $value )
 			{
-				$correcta = ($key == $_POST['es_correcta'])?1:0;
+				if( isset($_POST['es_correcta']) )
+				{
+					$correcta = ($key == $_POST['es_correcta'])?1:0;	
+				}
+				else
+				{
+					$correcta = 0;
+				}
 				$respuestas[] = array('respuesta' => $value, 'es_correcta' => $correcta);
 			}
 
-
-			if( !empty( $_POST['respuesta'] ) && count($_POST['respuesta']) > 1 )
+			if( !isset( $_POST['es_correcta'] ) )
 			{
-
-				if( $pregunta->save('save') )
+				Yii::app()->user->setFlash('error', "Seleccione una respesta correcta.");
+			}
+			else
+			{
+				if( !empty( $_POST['respuesta'] ) && count( array_values(array_diff( $_POST['respuesta'], array('') )) ) > 1 )
 				{
+
+					if( $pregunta->save('save') )
+					{
 
 						foreach( $_POST['respuesta'] as $key => $value )
 						{
@@ -97,21 +109,21 @@ class AdministratorController extends Controller
 						}
 
 						$this->redirect(array('view', 'id'=>$pregunta->id));
+					}
+					else
+					{
+						Yii::app()->user->setFlash('error', "Error al guardar pregunta.");
+					}
+
 				}
 				else
 				{
-					Yii::app()->user->setFlash('error', "Error al guardar pregunta.");
+					Yii::app()->user->setFlash('error', "Registre al menos (2) respuestas");
 				}
-
 			}
-			else
-			{
-				Yii::app()->user->setFlash('error', "Registre al menos (2) respuestas");
-			}
-
 		}
 
-	$this->render('form', array('pregunta'=>$pregunta, 'respuestas'=>$respuestas));
+		$this->render('form', array('pregunta'=>$pregunta, 'respuestas'=>$respuestas));
 
 	}
 

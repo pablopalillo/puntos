@@ -19,7 +19,21 @@
       'enableClientValidation'=>true,
     ));
     ?>
+    <?php
+      $flashMessages = Yii::app()->user->getFlashes();
+      if( $flashMessages )
+      {
+        echo '<div class="flash-notice"><ul>';
 
+            foreach($flashMessages as $key => $value ):
+            ?>
+              <li class="<?php echo $key ?>"> <?php echo $value  ?> </li>
+            <?php
+           endforeach;
+        echo '</ul></div>';
+      }
+
+    ?>
     <?php echo  $activeform->errorSummary( array($pregunta), '', '', array('class' => 'flash-notice')); ?>
 
     <div class="form-group">
@@ -51,7 +65,7 @@
     <div class="form-group">
       <?php echo $activeform->label($pregunta,'hora_fin' ); ?>
       <?php echo CHtml::label('( 24hora/minuto )','formatoh2'); ?>
-      <?php echo $activeform->timeField($pregunta,'hora_fin',array('class' => 'form-control')); ?>
+      <?php echo $activeform->textField($pregunta,'hora_fin',array('class' => 'form-control')); ?>
       <?php echo $activeform->error($pregunta,'hora_fin'); ?>
     </div>
 
