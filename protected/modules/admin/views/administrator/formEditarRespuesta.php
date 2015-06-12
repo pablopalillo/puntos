@@ -8,7 +8,7 @@
 ?>
 <div class="col-sm-6" >
   <div class="form">
-    <div id="titulo-respuesta" class="well well-lg">
+    <div id="titulo-respuesta" class="titulo">
       <h2>Editar Respuesta <?php echo $respuesta->id ?></h2>
     </div>
 
@@ -36,7 +36,7 @@
 
     ?>
     <?php echo  $activeform->errorSummary( array($respuesta), '', '', array('class' => 'flash-notice')); ?>
-
+  <div class="form-enc">
     <div class="form-group">
       <?php echo $activeform->label($respuesta,'respuesta'); ?>
       <?php echo $activeform->textField($respuesta,'respuesta',array('class' => 'form-control','maxlength'=>255)); ?>
@@ -53,11 +53,12 @@
         <?php echo $activeform->radioButtonList($respuesta,'es_correcta',array('1'=>'si', '0'=>'no')); ?>
       </label>
     </div>
-
+  </div>
     <div class="form-group">
       <?php echo CHtml::submitButton('Guardar', array('class'=>'btn btn-success')); ?>
     </div>
 
+  
   <?php $this->endWidget(); ?>
   </div> <!-- end form -->
 </div>

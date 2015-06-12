@@ -8,7 +8,7 @@
 ?>
 <div class="col-sm-6" >
   <div class="form">
-    <div id="titulo-pregunta" class="well well-lg">
+    <div id="titulo-pregunta" class="titulo">
       <h2>Editar pregunta <?php echo $pregunta->id ?></h2>
     </div>
 
@@ -22,7 +22,7 @@
     ?>
 
     <?php echo  $activeform->errorSummary( array($pregunta), '', '', array('class' => 'flash-notice')); ?>
-
+  <div class="form-enc">
     <div class="form-group">
       <?php echo $activeform->label($pregunta,'pregunta'); ?>
       <?php echo $activeform->textField($pregunta,'pregunta',array('class' => 'form-control','maxlength'=>255)); ?>
@@ -55,7 +55,7 @@
       <?php echo $activeform->textField($pregunta,'hora_fin',array('class' => 'form-control')); ?>
       <?php echo $activeform->error($pregunta,'hora_fin'); ?>
     </div>
-
+  </div>
     <div class="form-group">
       <?php echo CHtml::submitButton('Actualizar', array('class'=>'btn btn-success')); ?>
     </div>

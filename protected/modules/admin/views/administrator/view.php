@@ -1,10 +1,10 @@
 <div class="view">
 	<header>
 		<div class="row enc-header-pregunta">
-			<div class="col-sm-9">
+			<div class="col-sm-9 titulo">
 					<h1>Pregunta <?php echo $pregunta->id; ?> </h1>
 			</div>
-			<div class="col-sm-3">
+			<div class="col-sm-3 boton-enc">
 				<?php echo CHtml::link('Editar Pregunta',CHtml::normalizeUrl(Yii::app()->request->baseUrl.'/admin/administrator/editPregunta/id/'.$pregunta->id ), array('class'=>'btn-general_md')); ?>
 			</div>
 

@@ -13,9 +13,11 @@ $this->pageTitle = Yii::app()->name;
 			</p>
 			<p>
 				Las preguntas estan ordenadas por fecha de creación, que aparecerán
-				desde la mas actuales hasta las mas antiguas.</p>
-			<p> Recuerda que los niveles corresponden a la cantidad de puntos que se
-				pueden lograr en caso de responder esta pregunta correctamente.<p>
+				desde la mas actuales hasta las mas antiguas.
+				Recuerda que los niveles corresponden a la cantidad de puntos que se
+				pueden lograr en caso de responder esta pregunta correctamente.
+			<p>
+
 			<ul>
 				<li><strong>Nivel 1</strong> 10 puntos </strong></li>
 				<li><strong>Nivel 2</strong> 20 puntos </strong></li>
@@ -35,6 +37,7 @@ $this->pageTitle = Yii::app()->name;
 
 		 $this->widget('zii.widgets.grid.CGridView',
 					array('dataProvider'=> $model->search(),
+						'id' => 'custom-grid',
 						'columns'=>array(
 							'nivel.nombre',
 							'pregunta',

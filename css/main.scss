@@ -32,6 +32,78 @@ a{
 	clear: both;
 }
 
+
+.form, .enc-header-pregunta {
+.titulo {
+	@include titulos;
+	margin-bottom: 40px;
+	}	
+
+ .form-enc {
+		margin-bottom: 40px;
+ 	}
+}
+
+.enc-header-pregunta .boton-enc{
+	margin-top: 10px;
+	margin-bottom: 40px;
+}
+
+.admin-info
+{
+	h2{
+		@include subtitulos;
+	}
+	p{
+		text-align: justify;
+	}
+}
+
+.respuestas .res-detail
+{
+
+	font-size: 24px;	
+	
+}
+
+#btn-res
+{
+	margin-top: 20px;
+}
+
+
+
+/*----------- Components -----------*/
+#custom-grid
+{
+	table.items th {
+	    background: url("../images/bg.gif") repeat-x scroll left top white;
+	    color: white;
+	    text-align: center;
+	}
+
+	table.items tr.odd {
+   	 background: none repeat scroll 0 0 #fdefdd;
+	}
+
+	.pager ul.yiiPager .selected a
+	{
+		background: none repeat scroll 0 0 #E9AE38;
+   		color: #ffffff !important;
+    	font-weight: bold;
+	}
+
+	.pager ul.yiiPager a:link, ul.yiiPager a:visited 
+	{
+	    border: 1px solid black;
+	    color: #E88A2C;
+	    font-weight: bold;
+	    padding: 1px 6px;
+	    text-decoration: none;
+	}
+}
+
+
 /*------------- Registro Form --------*/
 #registro-form #responsable
 {

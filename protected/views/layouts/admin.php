@@ -55,14 +55,14 @@
 	<footer class="container-fluid ctn_footer">
 		<div  class="row">
 			<a class="tm" href="http://www.telemedellin.tv" target="_blank">Telemedellín</a>
-			<?php echo CHtml::link( 'Términos y condiciones', array('/terminos-y-condiciones'), array('class' => 'terminos' ) ); ?> <span>contacto@medellin2018.com</span>
+			<?php echo CHtml::link( 'Términos y condiciones', array('/terminos-y-condiciones'), array('class' => 'terminos' ) ); ?> <span>Puntos Telemedellín version 1.0</span>
 		</div>
 	</footer>
 </div>
 
 <?php Yii::app()->getClientScript()->registerCoreScript('jquery'); ?>
 <?php Yii::app()->getClientScript()->registerScriptFile( Yii::app()->getBaseUrl().'/css/libs/bootstrap/js/bootstrap.min.js' , CClientScript::POS_END);?>
-<?php Yii::app()->getClientScript()->registerScriptFile( Yii::app()->getBaseUrl().'/js/script.js' , CClientScript::POS_END);?>
+<?php Yii::app()->getClientScript()->registerScriptFile( Yii::app()->getBaseUrl().'/js/script-dev.js' , CClientScript::POS_END);?>
 
 
 </body>
