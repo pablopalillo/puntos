@@ -39,9 +39,12 @@ $this->pageTitle = Yii::app()->name;
 					array('dataProvider'=> $model->search(),
 						'id' => 'custom-grid',
 						'columns'=>array(
-							'nivel.nombre',
+							'nivel.puntos',
 							'pregunta',
-							'fecha',
+							 array(           
+           						 'name'=>'fecha',
+           						 'value'=>'date_format(date_create($data->fecha), "d/m/Y")',
+       						 ),
 							'hora_inicio',
 							'hora_fin',
 							array(

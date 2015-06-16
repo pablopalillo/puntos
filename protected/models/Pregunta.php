@@ -74,7 +74,7 @@ class Pregunta extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'nivel_id' => 'Nivel',
+			'nivel_id' => 'Puntos',
 			'pregunta' => 'Pregunta',
 			'estado' => 'Estado',
 			'fecha' => 'Fecha',
