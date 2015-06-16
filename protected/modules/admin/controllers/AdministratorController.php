@@ -60,6 +60,13 @@ class AdministratorController extends Controller
 		$pregunta 	= new Pregunta ;
 		$respuestas = null;
 
+
+		// Fecha con formato de la bd de mysql
+		$formatoFecha = Yii::app()->dateFormatter->format(
+			'yyyy-MM-dd',
+			CDateTimeParser::parse( $pregunta->fecha, 'dd/MM/yyyy')
+			); 
+
 		// Ajax validation
 		$this->performAjaxValidation($pregunta);
 
@@ -91,7 +98,10 @@ class AdministratorController extends Controller
 				if( !empty( $_POST['respuesta'] ) && count( array_values(array_diff( $_POST['respuesta'], array('') )) ) > 1 )
 				{
 
-					if( $pregunta->save('save') )
+					$fechaForm 		 = $pregunta->fecha;
+					$pregunta->fecha = $formatoFecha;
+
+					if( $pregunta->save(false,'save') )
 					{
 
 						foreach( $_POST['respuesta'] as $key => $value )
@@ -112,12 +122,14 @@ class AdministratorController extends Controller
 					}
 					else
 					{
+						$pregunta->fecha = $fechaForm;
 						Yii::app()->user->setFlash('error', "Error al guardar pregunta.");
 					}
 
 				}
 				else
 				{
+					$pregunta->fecha = $fechaForm;
 					Yii::app()->user->setFlash('error', "Registre al menos (2) respuestas");
 				}
 			}

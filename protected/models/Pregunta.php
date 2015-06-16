@@ -41,9 +41,9 @@ class Pregunta extends CActiveRecord
 		return array(
 			array('nivel_id, pregunta ,fecha, hora_inicio, hora_fin', 'required'),
 			array('nivel_id, estado', 'numerical', 'integerOnly'=>true),
-			array('fecha', 'date', 'format'=>'yyyy-mm-dd', 'allowEmpty'=>false),
-			array('hora_inicio', 'date', 'format'=>'H:m', 'on'=>'save'),
-			array('hora_fin', 'date', 'format'=>'H:m', 'on'=>'save'),
+			array('fecha', 'date', 'format'=>'dd/MM/yyyy', 'allowEmpty'=>false),
+			array('hora_inicio', 'date', 'format'=>'HH:m', 'on'=>'save'),
+			array('hora_fin', 'date', 'format'=>'HH:m', 'on'=>'save'),
 			array('hora_inicio, hora_fin', 'date', 'format'=>'H:m:s', 'on' =>'update'),
 
 			array('pregunta', 'length', 'max'=>255),

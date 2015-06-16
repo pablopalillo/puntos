@@ -7,9 +7,6 @@
 Yii::app()->getClientScript()->registerCoreScript( 'jquery.ui' );
 Yii::app()->clientScript->registerScriptFile(Yii::app()->getBaseUrl().'/js/i18n/jquery.ui.datepicker-es.js', CClientScript::POS_HEAD);
 Yii::app()->clientScript->registerCssFile(Yii::app()->clientScript->getCoreScriptUrl().'/jui/css/base/jquery-ui.css');
-Yii::app()->clientScript->registerScript('datepicker',
-  '$(".datepicker").datepicker({dateFormat: "yy-mm-dd", yearRange: "1865:2011", minDate: new Date(1865, 1, 1), maxDate: new Date(2011, 0, 0), changeMonth: true, changeYear: true}, $.datepicker.regional[ "es" ]);',
-  CClientScript::POS_READY);
 ?>
 <div class="col-sm-6" >
   <div class="form">
