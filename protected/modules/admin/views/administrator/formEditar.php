@@ -4,7 +4,9 @@
 * Administration form / edit Pregunta
 *
 **/
-
+Yii::app()->getClientScript()->registerCoreScript( 'jquery.ui' );
+Yii::app()->clientScript->registerScriptFile(Yii::app()->getBaseUrl().'/js/i18n/jquery.ui.datepicker-es.js', CClientScript::POS_HEAD);
+Yii::app()->clientScript->registerCssFile(Yii::app()->clientScript->getCoreScriptUrl().'/jui/css/base/jquery-ui.css');
 ?>
 <div class="col-sm-6" >
   <div class="form">
@@ -37,8 +39,7 @@
 
     <div class="form-group">
       <?php echo $activeform->label($pregunta,'fecha' ); ?>
-      <?php echo CHtml::label('( año-mes-dia )','formato'); ?>
-      <?php echo $activeform->textField($pregunta,'fecha',array('class' => 'form-control')); ?>
+      <?php echo $activeform->textField($pregunta,'fecha',array('class' => 'form-control datepicker')); ?>
       <?php echo $activeform->error($pregunta,'fecha'); ?>
     </div>
 

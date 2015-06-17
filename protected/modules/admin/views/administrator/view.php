@@ -18,7 +18,10 @@
 						 'value' => $pregunta->nivel->nombre,
 						),
 						'pregunta',
-						'fecha',
+							array(           
+   						 'name'=>'fecha',
+   						 'value'=>date_format(date_create($pregunta->fecha), "d/m/Y"),
+       						),
 						'hora_inicio',
 						'hora_fin',
 					),

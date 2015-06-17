@@ -168,16 +168,22 @@ class AdministratorController extends Controller
 	{
 			$pregunta 	= Pregunta::model()->findByPk($id);
 
-
 				if( !empty($_POST['Pregunta'] ) )
 				{
+
+					$fechaForm = $_POST['Pregunta']['fecha'];
+					// Fecha con formato de la bd de mysql
+					$formatoFecha = Yii::app()->dateFormatter->format(
+						'yyyy-MM-dd',
+						CDateTimeParser::parse( $fechaForm, 'dd/MM/yyyy')
+						); 
 
 						$pregunta->attributes 	= $_POST['Pregunta'];
 						$pregunta->estado 	= 1;
 
 						$this->performAjaxValidation($pregunta);
-
-						if( $pregunta->save('update') )
+						$pregunta->fecha = $formatoFecha;
+						if( $pregunta->save(false,'update') )
 						{
 							$this->redirect(array('view', 'id'=>$pregunta->id));
 						}
@@ -187,6 +193,11 @@ class AdministratorController extends Controller
 						}
 				}
 
+							// Fecha con formato de la bd de mysql
+			$pregunta->fecha = Yii::app()->dateFormatter->format(
+				'dd/MM/yyyy',
+				CDateTimeParser::parse( $pregunta->fecha, 'yyyy-MM-dd')
+				); 
 				$this->render('formEditar', array('pregunta'=>$pregunta));
 		}
 
