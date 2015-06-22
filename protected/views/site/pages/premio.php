@@ -3,21 +3,21 @@
 
 $this->pageTitle=Yii::app()->name . ' - ¿Qué incluye el premio?';
 ?>
-<div id="content-premio">
+<div id="content-premio" class="row">
 	<h1>¿Qué te puedes ganar?</h1>
-	<p>Podrás ganarte un viaje a Suiza del 30 junio al 6 de julio</p>
-	<h2>El premio incluye</h2>
-	<ul>
-		<li>Gastos de visado</li>
-		<li>Seguro de viaje</li>
-		<li>Tíquetes aéreos ida y regreso (Medellín - Ginebra - Medellín)</li>
-		<li>Transporte interno en Suiza</li>
-		<li>Alimentación</li>
-		<li>Hospedaje</li>
-	</ul>
-	<h2>No incluye</h2>
-	<ul>
-		<li>Trámites de pasaporte</li>
-		<li>Gastos no especificados</li>
-	</ul>
+
+	<div class="hidden-xs visible-md-10" >
+		<div>
+			<?php echo CHtml::image(Yii::app()->getBaseUrl() . '/images/premio1.jpg', 'Puntos TM'); ?>
+		</div>
+		<div>
+			<?php echo CHtml::image(Yii::app()->getBaseUrl() . '/images/premio2.jpg', 'Puntos TM'); ?>
+		</div>
+	</div>
+
+	<div class="hidden-lg hidden-md visible-xs-10" >
+		<div>
+			<?php echo CHtml::image(Yii::app()->getBaseUrl() . '/images/premios-m.jpg', 'Puntos TM'); ?>
+		</div>
+	</div>
 </div>
