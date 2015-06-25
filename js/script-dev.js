@@ -31,18 +31,29 @@ jQuery(document).ready(function() {
     });
   }
 
-if( $("#pregunta-form").length > 0 )
-{
-  $(".datepicker").datepicker({
-      dateFormat: "dd/mm/yy", 
-      yearRange: "2015:2020", 
-      minDate: new Date(2015, 1, 1),
-      maxDate: new Date(2020, 0, 0),
-      changeMonth: true, changeYear: true},
-      $.datepicker.regional[ "es" ]
-    );  
-}
+  if( $("#pregunta-form").length > 0 )
+  {
+    $(".datepicker").datepicker({
+        dateFormat: "dd/mm/yy", 
+        yearRange: "2015:2020", 
+        minDate: new Date(2015, 1, 1),
+        maxDate: new Date(2020, 0, 0),
+        changeMonth: true, changeYear: true},
+        $.datepicker.regional[ "es" ]
+      );  
+  }
 
+
+  if( $("#contenido-form").length > 0 )
+  {
+      // Replace the <textarea id="Contenido_texto"> with a CKEditor
+      // instance, using default configuration.
+       CKEDITOR.replace( 'Contenido_texto' ,{
+                          language: 'es',
+                          filebrowserBrowseUrl : '/puntos/ckeditor/browse.php',
+                          filebrowserUploadUrl: '/puntos/ckeditor/upload.php'
+                        });
+  }
 
 
 });
