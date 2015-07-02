@@ -31,6 +31,7 @@ class Contenido extends CActiveRecord
 			array('nombre', 'length', 'max'=>40),
 			array('estado', 'length', 'max'=>1),
 			array('texto', 'safe'),
+			array('texto', 'required', 'on' => 'update'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id_contenido, nombre, texto, estado', 'safe', 'on'=>'search'),

@@ -3,7 +3,7 @@
 
 $this->pageTitle=Yii::app()->name . ' - ¿Qué incluye el premio?';
 ?>
-<div id="content-premio" class="row">
+<div id="content-premio" >
 	<h1>¿Qué te puedes ganar?</h1>
 
 	<div class="hidden-xs visible-md-10" >

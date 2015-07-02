@@ -19,6 +19,5 @@ $this->pageTitle=Yii::app()->name . ' - ¿Cómo participar?';
 	<p>Se premiarán los primeros tres usuarios con más puntaje acumulado en cada mes bajo las siguientes condiciones:</p>
 	<p>El puntaje acumulado de cada mes no le servirá para el mes siguiente, pero sí para el puntaje acumulado a final de año. </p>
 	<h2>Anual:</h2>
-	<p>HaHabrá un ganador en el año, que será quien tenga el mayor puntaje acumulado a través de los meses del año. El corte será el 30 noviembre del año en curso. </p>
-	
+	<p>Habrá un ganador en el año, que será quien tenga el mayor puntaje acumulado a través de los meses del año. El corte será el 30 noviembre del año en curso. </p>
 </div>

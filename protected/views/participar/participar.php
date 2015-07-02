@@ -8,9 +8,12 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->getBaseUrl().'/js/juego
 
 <div id="content" class="ctn_participar">
     <h2>Participa</h2>
-    <p>Estas son las preguntas activas hasta el momento.</p>
+ 
     <div class="ctn_preguntas">
     <?php if (count($preguntas) > 0): ?>
+    
+       <p>Estas son las preguntas activas hasta el momento.</p>
+
     <?php foreach ($preguntas as $value): ?>
         <?php if ($value->estado > 0): ?>
         <div class="ctn_pregunta">
@@ -37,7 +40,7 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->getBaseUrl().'/js/juego
     <?php endforeach; ?>
     <?php else: ?>
     <p>
-        Hasta el momento no se encuentran preguntas para responder.
+        En el momento no hay datos por ingresar. Sigue pendiente de nuestra programación.
     </p>
     <?php endif; ?>
     </div>

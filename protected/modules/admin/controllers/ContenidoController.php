@@ -61,12 +61,20 @@ class ContenidoController extends Controller
 			$contenido =  Contenido::model()->findByPk($id);
 		}
 
+		if(isset( $_POST['Contenido'])) 
+		{
+
+			$contenido->texto = $_POST['Contenido']['texto'];
+			$contenido->save('update');
+
+		}
+
 		// render - 1. vista 2. array con los objetos de tipo CActiveReord
 		$this->render('form', array('model'=>$contenido));
 	}
 
 
-	/**public function actionCreate()
+	public function actionCreate()
 	{
 
 		$pregunta 	= new Pregunta ;
@@ -149,7 +157,7 @@ class ContenidoController extends Controller
 
 		$this->render('form', array('pregunta'=>$pregunta, 'respuestas'=>$respuestas));
 
-	}**/
+	}
 
 
 
