@@ -25,12 +25,12 @@
 			<div class="col-sm-8 col-md-8">
 				<div id="logo"><?php echo CHtml::link( CHtml::image(Yii::app()->request->baseUrl . '/images/logo.png', 'Puntos TM'), CHtml::normalizeUrl(Yii::app()->getBaseUrl()) ); ?></div>
 			</div>
-			<div class="col-sm-4 col-md-4">
+			<div id="ctn_panelmenu" class="col-sm-5 col-md-5">
 				<div class="row">
 					<div class="ctn-btnParticipar col-sm-12 col-xs-6">
-						<div class="btnParticipar"> Admin </a>
+						<div class="btnParticipar"> Admin </div>
 					</div>
-					<div class="ctn_mainmenu col-sm-12 col-xs-6">
+					<div class="ctn_mainmenu col-sm-12 col-xs-12">
 						<div id="mainmenu">
 							<?php $this->widget('zii.widgets.CMenu',array(
 								'items'=>array(

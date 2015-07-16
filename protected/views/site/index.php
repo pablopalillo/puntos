@@ -11,7 +11,7 @@ $this->pageTitle = Yii::app()->name;
 			<h2>¿Qué es PuntosTM?</h2>
 			<p>Puntos TM es una estrategia pensada para acercarnos a ti que eres nuestra audiencia, que nos acompañas desde esa primera emisión en diciembre de 1997, que has nacido y crecido con nosotros. Pensada también, en los que apenas llegan a nuestra señal y se conectan desde otras plataformas. </p>
 			<p>En todos los que han creído que, más que un slogan, "Telemedellín, aquí te ves" es una promesa cumplida.</p>
-			<p>Tu eres nuestra razón de ser y por eso queremos premiar tu fidelidad y sintonía.  </p>
+			<p>Tú eres nuestra razón de ser y por eso queremos premiar tu fidelidad y sintonía.  </p>
 		</div>
 	</div>
 </div>
