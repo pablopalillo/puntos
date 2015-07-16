@@ -14,7 +14,7 @@
  * @author Pablo Martínez
  * @version 1.0
  **/
-public class PalilloUpload 
+class PalilloUpload 
 {
 
 	private $path;
@@ -67,6 +67,13 @@ public class PalilloUpload
 		$this->ext = $ext;
 	}
 
+
+
+	public function getStatus()
+	{
+		return $this->status;
+	}
+
 	/**
  	* Funcion que valida si un archivo verdaderamente es una imagen.
 	*
@@ -89,7 +96,7 @@ public class PalilloUpload
 	{
 		$filename = strtolower($this->file["name"]);
 
-		if(!in_array(end(explode('.', $filename)), $this->ext))
+		if(in_array(end(explode('.', $filename)), $this->ext))
 		{
 		    return true;
 		}
@@ -111,9 +118,9 @@ public class PalilloUpload
 		if( $this->validateExt() )
 		{
 			// en caso de que haya preferido opciones de img
-			if($imgVal)
+			if( $imgVal )
 			{
-				if(	!$this->validateImg() )
+				if( $this->validateImg() )
 				{
 					$this->status = "Image no valid.";
 					return false;
@@ -131,7 +138,7 @@ public class PalilloUpload
 				try {
 						if( move_uploaded_file($this->file["tmp_name"],$this->path . $this->file["name"]) )
 						{
-							$this->status = "File Upload ".$file["name"].", Done ";
+							$this->status = "http://localhost/puntos/uploads/".$this->file['name'];
 							return true;
 						}
 										
@@ -145,7 +152,7 @@ public class PalilloUpload
 		}
 		else
 		{
-			$this->status 	= "Image ext no valid.";		
+			$this->status 	= "Format ext no valid.";		
 			return false;		
 		}
 
@@ -154,5 +161,3 @@ public class PalilloUpload
 
 }  
 
-
-?>
