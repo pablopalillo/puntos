@@ -911,16 +911,16 @@ div.flash-success a {
   background-color: #ACD618; }
 
 /*-------------MECÁNICA----------------*/
-#instrucciones, #content-premio, .ctn_contenido {
+#instrucciones, #contenido, .ctn_contenido {
   width: 80%;
   margin-right: auto;
   margin-left: auto; }
-  #instrucciones h1, #content-premio h1, .ctn_contenido h1 {
+  #instrucciones h1, #contenido h1, .ctn_contenido h1 {
     font-family: "Economica", sans-serif;
     color: #E88A2C;
     font-size: 46px;
     text-align: center; }
-  #instrucciones h2, #content-premio h2, .ctn_contenido h2 {
+  #instrucciones h2, #contenido h2, .ctn_contenido h2 {
     font-family: "Economica", sans-serif;
     color: #E88A2C;
     font-size: 24px;

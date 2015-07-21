@@ -38,6 +38,28 @@ class SiteController extends Controller
 	}
 
 	/**
+	* Accion que muestra el contenido de la pagina web.
+	* Gestion de contenidos muy sencilla para mostrar contenido plano.
+	*
+	**/
+
+	public function actionContenido($id)
+	{
+		$contenido = Contenido::model()->find('id_contenido = ? AND estado = ?' ,array(0 => $id, 1 =>"1"));
+		if( $contenido == null) 
+		{
+			$this->render('404');
+		}
+		else
+		{
+			$contenido->texto = str_replace('<img ','<img class="img-responsive" ', $contenido->texto );
+			$this->render('contenido', array('contenido' => $contenido));
+		}
+
+
+	}
+
+	/**
 	 * This is the action to handle external exceptions.
 	 */
 	public function actionError()
