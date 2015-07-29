@@ -65,6 +65,29 @@ class ContenidoController extends Controller
 		{
 
 			$contenido->texto = $_POST['Contenido']['texto'];
+
+			$log                = new Logs();
+
+			try {
+
+				$log->accion            = 'Edito el contenido  de '.$contenido->nombre.' como admin';
+				$log->usuario           =  Yii::app()->user->id;
+				$log->msg               = 'IP: '.$_SERVER['REMOTE_ADDR'].' : '.$_SERVER['REMOTE_PORT'];
+				$log->fecha             = date('Y-m-d G:i:s');
+
+				$log->save();
+
+			} catch (Exception $e) 
+			{
+				$log->accion            = 'Error log';
+				$log->msg               = '';
+				$log->fecha             = '';
+
+				$log->save();
+			}   
+
+
+
 			$contenido->save('update');
 
 		}
@@ -72,93 +95,6 @@ class ContenidoController extends Controller
 		// render - 1. vista 2. array con los objetos de tipo CActiveReord
 		$this->render('form', array('model'=>$contenido));
 	}
-
-
-	public function actionCreate()
-	{
-
-		$pregunta 	= new Pregunta ;
-		$respuestas = null;
-
-
-		// Fecha con formato de la bd de mysql
-		$formatoFecha = Yii::app()->dateFormatter->format(
-			'yyyy-MM-dd',
-			CDateTimeParser::parse( $pregunta->fecha, 'dd/MM/yyyy')
-			); 
-
-		// Ajax validation
-		$this->performAjaxValidation($pregunta);
-
-		if( !empty($_POST['Pregunta'] ) )
-		{
-
-			$pregunta->attributes 	= $_POST['Pregunta'];
-			$pregunta->estado 	= 1;
-
-			foreach( $_POST['respuesta'] as $key => $value )
-			{
-				if( isset($_POST['es_correcta']) )
-				{
-					$correcta = ($key == $_POST['es_correcta'])?1:0;	
-				}
-				else
-				{
-					$correcta = 0;
-				}
-				$respuestas[] = array('respuesta' => $value, 'es_correcta' => $correcta);
-			}
-
-			if( !isset( $_POST['es_correcta'] ) )
-			{
-				Yii::app()->user->setFlash('error', "Seleccione una respesta correcta.");
-			}
-			else
-			{
-				if( !empty( $_POST['respuesta'] ) && count( array_values(array_diff( $_POST['respuesta'], array('') )) ) > 1 )
-				{
-
-					$fechaForm 		 = $pregunta->fecha;
-					$pregunta->fecha = $formatoFecha;
-
-					if( $pregunta->save(false,'save') )
-					{
-
-						foreach( $_POST['respuesta'] as $key => $value )
-						{
-							$respuesta = null ;
-							$respuesta = new Respuesta ;
-							$correcta  = 0;
-
-							$respuesta->respuesta 	= $value;
-							$correcta = ($key == $_POST['es_correcta'])?1:0;
-							$respuesta->es_correcta = $correcta;
-							$respuesta->pregunta_id	=	$pregunta->id;
-
-							$respuesta->save();
-						}
-
-						$this->redirect(array('view', 'id'=>$pregunta->id));
-					}
-					else
-					{
-						$pregunta->fecha = $fechaForm;
-						Yii::app()->user->setFlash('error', "Error al guardar pregunta.");
-					}
-
-				}
-				else
-				{
-					$pregunta->fecha = $fechaForm;
-					Yii::app()->user->setFlash('error', "Registre al menos (2) respuestas");
-				}
-			}
-		}
-
-		$this->render('form', array('pregunta'=>$pregunta, 'respuestas'=>$respuestas));
-
-	}
-
 
 
 	protected function performAjaxValidation($model)

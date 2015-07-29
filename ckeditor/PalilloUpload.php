@@ -138,8 +138,13 @@ class PalilloUpload
 				try {
 						if( move_uploaded_file($this->file["tmp_name"],$this->path . $this->file["name"]) )
 						{
-							$this->status = "http://localhost/puntos/uploads/".$this->file['name'];
+							$this->status = $this->publicUrl.$this->file['name'];
 							return true;
+						}
+						else
+						{
+							$this->status = implode(',', $this->file['error']);
+							return false;
 						}
 										
 				} catch (Exception $e) 

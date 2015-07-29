@@ -41,17 +41,37 @@ class UserIdentity extends CUserIdentity
             $this->errorCode=self::ERROR_STATUS;
         else
         {
-            $this->_id 			= $usuario->id;
+            $this->_id 		= $usuario->id;
             $this->correo 	= $usuario->correo;
             $this->es_admin	= $usuario->es_admin;
             $this->errorCode = self::ERROR_NONE;
 
-						Yii::app()->user->setState('es_admin', $usuario->es_admin);
+			Yii::app()->user->setState('es_admin', $usuario->es_admin);
 
-						if( $usuario->es_admin == 1)
-						{
-							Yii::app()->user->setState('user_type','Admin');
-						}
+			if( $usuario->es_admin == 1)
+			{
+				Yii::app()->user->setState('user_type','Admin');
+
+				$log                = new Logs();
+
+				try {
+
+					$log->accion            = 'Ingreso al sistema como admin';
+					$log->usuario           = 'usuario id'.$usuario->id. ' con '.$usuario->correo;
+					$log->msg               = 'IP: '.$_SERVER['REMOTE_ADDR'].' : '.$_SERVER['REMOTE_PORT'];
+					$log->fecha             = date('Y-m-d G:i:s');
+
+					$log->save();
+
+				} catch (Exception $e) 
+				{
+					$log->accion            = 'Error log';
+					$log->msg               = '';
+					$log->fecha             = '';
+
+					$log->save();
+				}   
+			}
 
         }
         return $this->errorCode == self::ERROR_NONE;

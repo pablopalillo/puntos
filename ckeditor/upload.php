@@ -11,9 +11,10 @@ $ext 	= 	array('jpg', 'png', 'gif', 'jpeg');
 
 
 $palilloUpload = new PalilloUpload();
+$palilloUpload->setPublicUrl('http://puntos.telemedellin.tv/uploads/');
+$palilloUpload->setPath('/home2/ab63348/public_html/puntos/uploads/');
 $palilloUpload->setExt($ext);
 
 $palilloUpload->upload();
 echo $palilloUpload->getStatus();
-
 ?>

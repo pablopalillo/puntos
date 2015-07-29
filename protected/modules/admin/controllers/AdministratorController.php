@@ -118,6 +118,29 @@ class AdministratorController extends Controller
 							$respuesta->save();
 						}
 
+        				$log                = new Logs();
+
+
+						try {
+
+				            $log->accion            = 'Creo una pregunta como admin';
+				            $log->usuario           = 'Admin id: '.Yii::app()->user->id;
+				            $log->msg               = 'IP: '.$_SERVER['REMOTE_ADDR'].' : '.$_SERVER['REMOTE_PORT'];
+				            $log->fecha             = date('Y-m-d G:i:s');
+
+				            $log->save();
+				            
+				        } catch (Exception $e) 
+				        {
+				            $log->accion            = 'Error log';
+				            $log->msg               = '';
+				            $log->fecha             = '';
+
+				            $log->save();
+				        }   
+
+
+
 						$this->redirect(array('view', 'id'=>$pregunta->id));
 					}
 					else
@@ -185,6 +208,29 @@ class AdministratorController extends Controller
 						$pregunta->fecha = $formatoFecha;
 						if( $pregunta->save(false,'update') )
 						{
+
+							$log                = new Logs();
+
+
+							try {
+
+					            $log->accion            = 'Edito la pregunta '.$pregunta->pregunta.' como admin';
+					            $log->usuario           = 'Admin id : '.Yii::app()->user->id;
+					            $log->msg               = 'IP: '.$_SERVER['REMOTE_ADDR'].' : '.$_SERVER['REMOTE_PORT'];
+					            $log->fecha             = date('Y-m-d G:i:s');
+
+					            $log->save();
+					            
+					        } catch (Exception $e) 
+					        {
+					            $log->accion            = 'Error log';
+					            $log->msg               = '';
+					            $log->fecha             = '';
+
+					            $log->save();
+					        }   
+
+
 							$this->redirect(array('view', 'id'=>$pregunta->id));
 						}
 						else
@@ -222,6 +268,27 @@ class AdministratorController extends Controller
 
 									if( $respuesta->save() )
 									{
+
+										$log                = new Logs();
+
+										try {
+
+								            $log->accion            = 'Edito la respuesta '.$respuesta->respuesta.' como admin';
+								            $log->usuario           = Yii::app()->user->id;
+								            $log->msg               = 'IP: '.$_SERVER['REMOTE_ADDR'].' : '.$_SERVER['REMOTE_PORT'];
+								            $log->fecha             = date('Y-m-d G:i:s');
+
+								            $log->save();
+								            
+								        } catch (Exception $e) 
+								        {
+								            $log->accion            = 'Error log';
+								            $log->msg               = '';
+								            $log->fecha             = '';
+
+								            $log->save();
+								        }   
+
 										$this->redirect(array('view', 'id'=>$respuesta->pregunta_id));
 									}
 									else
@@ -252,6 +319,27 @@ class AdministratorController extends Controller
 				$rxj->deleteAll($criteria);
 				$res->deleteAll("pregunta_id = $id");
 				$pre->deleteAll("id = $id");
+
+
+				$log                = new Logs();
+
+				try {
+
+					$log->accion            = 'Elimino la pregunta id #'.$id.' como admin';
+					$log->usuario           =  Yii::app()->user->id;
+					$log->msg               = 'IP: '.$_SERVER['REMOTE_ADDR'].' : '.$_SERVER['REMOTE_PORT'];
+					$log->fecha             = date('Y-m-d G:i:s');
+
+					$log->save();
+
+				} catch (Exception $e) 
+				{
+					$log->accion            = 'Error log';
+					$log->msg               = '';
+					$log->fecha             = '';
+
+					$log->save();
+				}   
 
 
 				$this->redirect(array('index'));

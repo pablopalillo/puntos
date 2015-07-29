@@ -74,11 +74,33 @@ class ParticiparController extends CController
         //$pregunta->estado = 0;
         //$pregunta->save();
 
-        $respuestaJugador = new RespuestaXJugador();
+        $respuestaJugador   = new RespuestaXJugador();
+        $log                = new Logs();
         $respuestaJugador->pregunta_id = $respuesta->pregunta->id;
         $respuestaJugador->respuesta_id = $id;
         $respuestaJugador->jugador_id = Yii::app()->session['jugador_id'];
         $respuestaJugador->fecha = date('Y-m-d G:i:s');
+
+
+     try {
+
+            $log->accion            = 'Contesto Pregunta #'.$respuesta->pregunta->id;
+            $log->usuario           = Yii::app()->session['jugador_id'];
+            $log->msg               = 'IP: '.$_SERVER['REMOTE_ADDR'].' : '.$_SERVER['REMOTE_PORT'];
+            $log->fecha             = date('Y-m-d G:i:s');
+
+            $log->save();
+            
+        } catch (Exception $e) 
+        {
+            $log->accion            = 'Error log';
+            $log->msg               = '';
+            $log->fecha             = '';
+
+            $log->save();
+        }   
+
+
         $respuestaJugador->save();
 
         $respuesta = Respuesta::model()->find('id = ?', array(0 => $id));

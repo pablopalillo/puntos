@@ -46,12 +46,13 @@ jQuery(document).ready(function() {
 
   if( $("#contenido-form").length > 0 )
   {
+    var url = window.location.hostname;
       // Replace the <textarea id="Contenido_texto"> with a CKEditor
       // instance, using default configuration.
        CKEDITOR.replace( 'Contenido_texto' ,{
                           language: 'es',
-                          filebrowserBrowseUrl : '/puntos/ckeditor/browse.php',
-                          filebrowserUploadUrl: '/puntos/ckeditor/upload.php'
+                          filebrowserBrowseUrl : '/ckeditor/browse.php',
+                          filebrowserUploadUrl: '/ckeditor/upload.php'
                         });
   }
 
