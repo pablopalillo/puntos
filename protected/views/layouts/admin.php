@@ -63,7 +63,7 @@
 
 <?php Yii::app()->getClientScript()->registerCoreScript('jquery'); ?>
 <?php Yii::app()->getClientScript()->registerScriptFile( Yii::app()->getBaseUrl().'/css/libs/bootstrap/js/bootstrap.min.js' , CClientScript::POS_END);?>
-<?php Yii::app()->getClientScript()->registerScriptFile( Yii::app()->getBaseUrl().'/js/script-dev.js' , CClientScript::POS_END);?>
+<?php Yii::app()->getClientScript()->registerScriptFile( Yii::app()->getBaseUrl().'/js/script.min.js' , CClientScript::POS_END);?>
 
 
 </body>

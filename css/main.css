@@ -1,6 +1,6 @@
 @charset "UTF-8";
 body {
-  background: #ACD618 url("../images/bg-foot.png") no-repeat fixed bottom;
+  background-color: #ACD618;
   background-size: contain;
   font-family: 'Raleway', sans-serif; }
 

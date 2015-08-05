@@ -26,24 +26,24 @@ module.exports = function(grunt) {
     },
 
     imagemin: {                        
-        static: {   
+        dist: {   
           options: {                       
             optimizationLevel: 3,
             svgoPlugins: [{ removeViewBox: false }],
             use: [mozjpeg()]
           },
-          files: {                         // Dictionary of files 
-            'images/logo.png': '/images/src/logo.png', // 'destination': 'source' 
-            'images/telemedellin_pie.png': '/images/src/telemedellin_pie.png',
-            'images/logos-alc.png': '/images/src/logos-alc.png'
+          files: { 
+            'images/src/logo.png' : 'images/logo.png',
+            'images/src/telemedellin_pie.png' : 'images/telemedellin_pie.png',
+            'images/src/logos-alc.png' : 'images/logos-alc.png'
           }
         },
-        dynamic: {                         // Another target 
+        dynamic: {     
           files: [{
-            expand: true,                  // Enable dynamic expansion 
-            cwd: 'images/src',                   // Src matches are relative to this path 
-            src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match 
-            dest: 'images/'                  // Destination path prefix 
+            expand: true,
+            cwd: 'images/', 
+            src: ['**/*.{png,jpg,gif}'],
+            dest: 'images/src/'     
           }]
         }
     },
@@ -65,7 +65,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
 
-  grunt.registerTask('default', ['uglify','imagemin','sass']);
+  grunt.registerTask('default', ['uglify','imagemin:dist','sass']);
   grunt.registerTask('styles', ['sass']);
 
 }
