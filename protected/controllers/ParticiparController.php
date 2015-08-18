@@ -36,11 +36,21 @@ class ParticiparController extends CController
 
     public function actionParticipar()
     {
-        $preguntas = Pregunta::model()->findAll('fecha = ?', array(0 => date('Y-m-d')));
-        $this->generateToken();
-        $preguntas = $this->validarTiempo($preguntas);
+        if( $this->validarCuentas() ) 
+        {     
+        die;  
+            $preguntas = Pregunta::model()->findAll('fecha = ?', array(0 => date('Y-m-d')));
+            $this->generateToken();
+            $preguntas = $this->validarTiempo($preguntas);
+            $this->render('participar', array('preguntas' => $preguntas));
+        }
+        else
+        {
+            // Codigo 3 debe estar en el contenido de la base de datos .
+            $this->redirect(array('site/contenido', 'id' => 3 ));
+            Yii::app()->end();
+        }
 
-        $this->render('participar', array('preguntas' => $preguntas));
     }
 
     public function actionResponder()
@@ -78,68 +88,79 @@ class ParticiparController extends CController
         if( $this->validarToken() )
         {
 
-            $respuesta = Respuesta::model()->find('id = ?', array(0 => $id));
-            $pregunta = Pregunta::model()->find('id = ?', array(0 => $respuesta->pregunta->id));
-            $puntos = $respuesta->pregunta->nivel->puntos;
-            //$pregunta->estado = 0;
-            //$pregunta->save();
+           if( $this->validarCuentas() ) 
+           {
+                $respuesta  = Respuesta::model()->find('id = ?', array(0 => $id));
+                $pregunta   = Pregunta::model()->find('id = ?', array(0 => $respuesta->pregunta->id));
+                $puntos     = $respuesta->pregunta->nivel->puntos;
+                //$pregunta->estado = 0;
+                //$pregunta->save();
 
-            $respuestaJugador   = new RespuestaXJugador();
-            $log                = new Logs();
-            $respuestaJugador->pregunta_id  = $respuesta->pregunta->id;
-            $respuestaJugador->respuesta_id = $id;
-            $respuestaJugador->jugador_id   = Yii::app()->session['jugador_id'];
-            $respuestaJugador->fecha        = date('Y-m-d G:i:s');
-            $respuestaJugador->ip           = $_SERVER['REMOTE_ADDR'].' : '.$_SERVER['REMOTE_PORT'];
+                $respuestaJugador   = new RespuestaXJugador();
+                $log                = new Logs();
+                $respuestaJugador->pregunta_id  = $respuesta->pregunta->id;
+                $respuestaJugador->respuesta_id = $id;
+                $respuestaJugador->jugador_id   = Yii::app()->session['jugador_id'];
+                $respuestaJugador->fecha        = date('Y-m-d G:i:s');
+                $respuestaJugador->ip           = $_SERVER['REMOTE_ADDR'].' : '.$_SERVER['REMOTE_PORT'];
 
-         try {
+                try {
 
-                $log->accion            = 'Contesto Pregunta #'.$respuesta->pregunta->id;
-                $log->usuario           = Yii::app()->session['jugador_id'];
-                $log->msg               = 'IP: '.$_SERVER['REMOTE_ADDR'].' : '.$_SERVER['REMOTE_PORT'];
-                $log->fecha             = date('Y-m-d G:i:s');
+                    $log->accion            = 'Contesto Pregunta #'.$respuesta->pregunta->id;
+                    $log->usuario           = Yii::app()->session['jugador_id'];
+                    $log->msg               = 'IP: '.$_SERVER['REMOTE_ADDR'].' : '.$_SERVER['REMOTE_PORT'];
+                    $log->fecha             = date('Y-m-d G:i:s');
 
-                $log->save();
-                
-            } catch (Exception $e) 
-            {
-                $log->accion            = 'Error log';
-                $log->msg               = '';
-                $log->fecha             = '';
+                    $log->save();
+                    
+                } catch (Exception $e) 
+                {
+                    $log->accion            = 'Error log';
+                    $log->msg               = '';
+                    $log->fecha             = '';
 
-                $log->save();
-            }   
+                    $log->save();
+                }   
 
 
-            $respuestaJugador->save();
-            $respuesta = Respuesta::model()->find('id = ?', array(0 => $id));
+                $respuestaJugador->save();
+                $respuesta = Respuesta::model()->find('id = ?', array(0 => $id));
 
-            $r = array();
+                $r = array();
 
-            switch (($respuesta->es_correcta == 1))
-            {
-                case true:
-                    $r['message'] = 'Felicitaciones, tu respuesta es correcta.';
-                    $r['status'] = 'success';
-                    break;
-                case false:
-                    $r['message'] = '¡Lo sentimos! Tu respuesta fue incorrecta.';
-                    $r['status'] = 'error';
-                    break;
-            }
-            $r['puntos'] = $puntos;
-            $this->clearTokenVal();
+                switch (($respuesta->es_correcta == 1))
+                {
+                    case true:
+                        $r['message']   = 'Felicitaciones, tu respuesta es correcta.';
+                        $r['status']    = 'success';
+                        break;
+                    case false:
+                        $r['message']   = '¡Lo sentimos! Tu respuesta fue incorrecta.';
+                        $r['status']    = 'error';
+                        break;
+                }
+                $r['puntos'] = $puntos;
+                $this->clearTokenVal();
+           }
+           else
+           {
+               $r = array();
+               $r['message']    = 'Moral error: No puedes jugar aun.';
+               $r['status']     = 'error';
+               // Codigo 3 debe estar en el contenido de la base de datos .
+               $this->redirect(array('site/contenido', 'id' => 3 ));
+               Yii::app()->end();
+           }
+
         }
         else
         {
             $r = array();
             $r['message']    = 'Error , token de seguridad invalido.';
             $r['status']     = 'error';
-
         }
 
         
-
         header('Content-Type: application/json; charset="UTF-8"');
         echo CJSON::encode($r);
         Yii::app()->end();
@@ -185,6 +206,35 @@ class ParticiparController extends CController
         {
             return false;
         }
+    }
+
+    private function validarCuentas()
+    {
+        if( isset(Yii::app()->session['jugador_id'] ) && !empty(Yii::app()->session['jugador_id'] ) )
+        {
+            echo date('Y-m-d G:i:s');
+            die;
+            $rj = RespuestaXJugador::model()->find("( TIMESTAMPDIFF(MINUTE,fecha,?) <= 10 AND jugador_id <> ? ) AND RTRIM( SUBSTR(ip, 1, (INSTR(ip, ':')-1)) ) = ?",
+                                                    array(  0 => date('Y-m-d G:i:s'),
+                                                            1 => Yii::app()->session['jugador_id'] ,
+                                                            2=> $_SERVER['REMOTE_ADDR']) 
+                                                         );
+
+            if($rj === null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+        else
+        {
+            return false;
+        }
+
     }
 
     
