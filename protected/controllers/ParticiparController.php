@@ -2,6 +2,9 @@
 
 class ParticiparController extends CController
 {
+
+    private $_token = 0;
+
     /**
      * @return array action filters
      */
@@ -34,7 +37,7 @@ class ParticiparController extends CController
     public function actionParticipar()
     {
         $preguntas = Pregunta::model()->findAll('fecha = ?', array(0 => date('Y-m-d')));
-        
+        $this->generateToken();
         $preguntas = $this->validarTiempo($preguntas);
 
         $this->render('participar', array('preguntas' => $preguntas));
@@ -46,6 +49,7 @@ class ParticiparController extends CController
         if (!Yii::app()->request->isAjaxRequest) throw new CHttpException('403', 'Forbidden access.');
 
         $id = Yii::app()->request->restParams['id'];
+
         $pregunta = Yii::app()->request->restParams['pregunta'];
         $respuestas = Respuesta::model()->findAll('pregunta_id = ?', array(0 => $id));
 
@@ -63,69 +67,127 @@ class ParticiparController extends CController
 
     public function actionRespuesta()
     {
-        $this->layout = "single";
-        if (!Yii::app()->request->isAjaxRequest) throw new CHttpException('403', 'Forbidden access.');
 
+        $this->layout = "single"; 
+        if (!Yii::app()->request->isAjaxRequest) throw new CHttpException('403', 'Forbidden access.');
         $id = Yii::app()->request->restParams['id'];
 
-        $respuesta = Respuesta::model()->find('id = ?', array(0 => $id));
-        $pregunta = Pregunta::model()->find('id = ?', array(0 => $respuesta->pregunta->id));
-        $puntos = $respuesta->pregunta->nivel->puntos;
-        //$pregunta->estado = 0;
-        //$pregunta->save();
 
-        $respuestaJugador   = new RespuestaXJugador();
-        $log                = new Logs();
-        $respuestaJugador->pregunta_id = $respuesta->pregunta->id;
-        $respuestaJugador->respuesta_id = $id;
-        $respuestaJugador->jugador_id = Yii::app()->session['jugador_id'];
-        $respuestaJugador->fecha = date('Y-m-d G:i:s');
+        // Validar token
 
-
-     try {
-
-            $log->accion            = 'Contesto Pregunta #'.$respuesta->pregunta->id;
-            $log->usuario           = Yii::app()->session['jugador_id'];
-            $log->msg               = 'IP: '.$_SERVER['REMOTE_ADDR'].' : '.$_SERVER['REMOTE_PORT'];
-            $log->fecha             = date('Y-m-d G:i:s');
-
-            $log->save();
-            
-        } catch (Exception $e) 
+        if( $this->validarToken() )
         {
-            $log->accion            = 'Error log';
-            $log->msg               = '';
-            $log->fecha             = '';
 
-            $log->save();
-        }   
+            $respuesta = Respuesta::model()->find('id = ?', array(0 => $id));
+            $pregunta = Pregunta::model()->find('id = ?', array(0 => $respuesta->pregunta->id));
+            $puntos = $respuesta->pregunta->nivel->puntos;
+            //$pregunta->estado = 0;
+            //$pregunta->save();
+
+            $respuestaJugador   = new RespuestaXJugador();
+            $log                = new Logs();
+            $respuestaJugador->pregunta_id  = $respuesta->pregunta->id;
+            $respuestaJugador->respuesta_id = $id;
+            $respuestaJugador->jugador_id   = Yii::app()->session['jugador_id'];
+            $respuestaJugador->fecha        = date('Y-m-d G:i:s');
+            $respuestaJugador->ip           = $_SERVER['REMOTE_ADDR'].' : '.$_SERVER['REMOTE_PORT'];
+
+         try {
+
+                $log->accion            = 'Contesto Pregunta #'.$respuesta->pregunta->id;
+                $log->usuario           = Yii::app()->session['jugador_id'];
+                $log->msg               = 'IP: '.$_SERVER['REMOTE_ADDR'].' : '.$_SERVER['REMOTE_PORT'];
+                $log->fecha             = date('Y-m-d G:i:s');
+
+                $log->save();
+                
+            } catch (Exception $e) 
+            {
+                $log->accion            = 'Error log';
+                $log->msg               = '';
+                $log->fecha             = '';
+
+                $log->save();
+            }   
 
 
-        $respuestaJugador->save();
+            $respuestaJugador->save();
+            $respuesta = Respuesta::model()->find('id = ?', array(0 => $id));
 
-        $respuesta = Respuesta::model()->find('id = ?', array(0 => $id));
+            $r = array();
 
-        $r = array();
-
-        switch (($respuesta->es_correcta == 1))
+            switch (($respuesta->es_correcta == 1))
+            {
+                case true:
+                    $r['message'] = 'Felicitaciones, tu respuesta es correcta.';
+                    $r['status'] = 'success';
+                    break;
+                case false:
+                    $r['message'] = '¡Lo sentimos! Tu respuesta fue incorrecta.';
+                    $r['status'] = 'error';
+                    break;
+            }
+            $r['puntos'] = $puntos;
+            $this->clearTokenVal();
+        }
+        else
         {
-            case true:
-                $r['message'] = 'Felicitaciones, tu respuesta es correcta.';
-                $r['status'] = 'success';
-                break;
-            case false:
-                $r['message'] = '¡Lo sentimos! Tu respuesta fue incorrecta.';
-                $r['status'] = 'error';
-                break;
+            $r = array();
+            $r['message']    = 'Error , token de seguridad invalido.';
+            $r['status']     = 'error';
+
         }
 
-        $r['puntos'] = $puntos;
+        
 
         header('Content-Type: application/json; charset="UTF-8"');
         echo CJSON::encode($r);
         Yii::app()->end();
     }
 
+    private function generateToken()
+    {
+       $this->_token                =   bin2hex(rand(0, 40000)).'abc1234*';
+       $this->setTokenVal($this->_token);
+    }
+
+    private function setTokenVal($pass)
+    {
+        Yii::app()->session['token'] = $pass;
+    }
+
+    private function getTokenVal()
+    {
+        return  $this->_token ;
+    }
+
+    private function clearTokenVal()
+    {
+        Yii::app()->session['token'] = '';
+    }
+
+    private function validarToken()
+    {
+        if( isset(Yii::app()->session['token']) && !empty(Yii::app()->session['token']) 
+            && !empty(Yii::app()->session['token']) )
+        {
+            if( substr(Yii::app()->session['token'], -8) === 'abc1234*' )
+            {
+              return true;    
+            }
+            else
+            {
+                return false;
+            }
+             
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    
     public function validarTiempo($preguntas)
     {
         foreach ($preguntas as $key => $value)

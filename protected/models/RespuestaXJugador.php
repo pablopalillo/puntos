@@ -73,6 +73,7 @@ class RespuestaXJugador extends CActiveRecord
 			'respuesta_id' => 'Respuesta',
 			'jugador_id' => 'Jugador',
 			'fecha' => 'Fecha',
+			'ip' => 'ip'
 		);
 	}
 }
