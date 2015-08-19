@@ -38,7 +38,6 @@ class ParticiparController extends CController
     {
         if( $this->validarCuentas() ) 
         {     
-        die;  
             $preguntas = Pregunta::model()->findAll('fecha = ?', array(0 => date('Y-m-d')));
             $this->generateToken();
             $preguntas = $this->validarTiempo($preguntas);
@@ -212,14 +211,12 @@ class ParticiparController extends CController
     {
         if( isset(Yii::app()->session['jugador_id'] ) && !empty(Yii::app()->session['jugador_id'] ) )
         {
-            echo date('Y-m-d G:i:s');
-            die;
+
             $rj = RespuestaXJugador::model()->find("( TIMESTAMPDIFF(MINUTE,fecha,?) <= 10 AND jugador_id <> ? ) AND RTRIM( SUBSTR(ip, 1, (INSTR(ip, ':')-1)) ) = ?",
                                                     array(  0 => date('Y-m-d G:i:s'),
                                                             1 => Yii::app()->session['jugador_id'] ,
                                                             2=> $_SERVER['REMOTE_ADDR']) 
                                                          );
-
             if($rj === null)
             {
                 return true;
@@ -232,6 +229,24 @@ class ParticiparController extends CController
         }
         else
         {
+            
+            if( Yii::app()->user->id )
+            {
+                $jugador = Jugador::model()->find('usuario_id = ' . Yii::app()->user->id);
+
+                if ($jugador != null)
+                {
+                    $jugador_id = $jugador->id;
+                    Yii::app()->session['jugador_id']   = $jugador_id;
+                            // Metodo recursivo.
+                    if( !empty(Yii::app()->session['jugador_id']) )
+                    {
+                        $this->validarCuentas();    
+                    }
+
+                }
+            }
+
             return false;
         }
 
@@ -271,4 +286,6 @@ class ParticiparController extends CController
 
         return $preguntas;
     }
+
+
 }
