@@ -28,7 +28,6 @@ class Logs extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('msg', 'length', 'max'=>45),
 			array('usuario', 'length', 'max'=>80),
 			array('fecha', 'safe'),
 			// The following rule is used by search().

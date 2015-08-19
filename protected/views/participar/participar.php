@@ -8,7 +8,6 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->getBaseUrl().'/js/juego
 
 <div id="content" class="ctn_participar">
     <h2>Participa</h2>
- 
     <div class="ctn_preguntas">
     <?php if (count($preguntas) > 0): ?>
     
