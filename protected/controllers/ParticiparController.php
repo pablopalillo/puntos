@@ -180,15 +180,27 @@ class ParticiparController extends CController
                 switch (($respuesta->es_correcta == 1))
                 {
                     case true:
-                        $r['message']   = 'Felicitaciones, tu respuesta es correcta.';
+                        // Respuesta correcta , que por ley no se puede informar al usuario.
+                        $r['message']   = 'Gracias por participar, recuerda revisar tu perfil al final del día para saber los resultados.';
                         $r['status']    = 'success';
                         break;
                     case false:
-                        $r['message']   = '¡Lo sentimos! Tu respuesta fue incorrecta.';
-                        $r['status']    = 'error';
+                        // Respuesta Incorrecta , que por ley no se puede informar al usuario.
+                        $r['message']   = 'Gracias por participar, recuerda revisar tu perfil al final del día para saber los resultados.';
+                        /**
+                        * formato viejo 
+                        **/
+                        $r['status']    = 'success';
+                       // $r['status']    = 'error';
                         break;
                 }
-                $r['puntos'] = $puntos;
+                /** 
+                *
+                * Formato Viejo , por seguridad ya no se m
+                * mandan los puntos al JS.
+                **/
+                //$r['puntos'] = $puntos;
+                $r['puntos'] = 'null';
                 $this->clearTokenVal();
            }
            else

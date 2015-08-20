@@ -383,7 +383,9 @@ $(function() {
                 img.attr('src','images/' + r.status + '.png');
                 if(r.status == 'success')
                 {
-                  $('#progress').html(h4.text(r.message).append('<p>Has ganado ' + r.puntos + ' puntos.').prepend(img));
+                // Formato Viejo 
+                   //  $('#progress').html(h4.text(r.message).append('<p>Has ganado ' + r.puntos + ' puntos.').prepend(img));
+                   $('#progress').html(h4.text(r.message).prepend(img));
                 }
                 else
                 {
