@@ -94,12 +94,24 @@ class ParticiparController extends CController
 
         $id = Yii::app()->request->restParams['id'];
 
-        $pregunta = Yii::app()->request->restParams['pregunta'];
-        $respuestas = Respuesta::model()->findAll('pregunta_id = ?', array(0 => $id));
+        $pregunta       = Yii::app()->request->restParams['pregunta'];
+        $respuestas     = Respuesta::model()->findAll('pregunta_id = ?', array(0 => $id));
+
+        $confundir      = $this->confundidoVivoYo($respuestas);
+
+        if( $confundir !== NULL)
+        {
+            $respuestas = $confundir;
+        }
+        
+        $opciones       = array('A','B','C','D');
+        $cajasLocas     = array('btn-primary', 'btn-warning','btn-success');
 
         $datos = array(
-            'respuestas' => $respuestas,
-            'pregunta' => $pregunta
+            'respuestas'    => $respuestas,
+            'pregunta'      => $pregunta,
+            'opciones'      => $opciones,
+            'cajasLocas'    => $cajasLocas
         );
 
         $html = $this->render('responder', $datos, true);
@@ -363,6 +375,30 @@ class ParticiparController extends CController
         }
 
         return $preguntas;
+    }
+
+    /**
+    * Confundido vivo yo
+    * Metodo cuyo objetivo es confundir al usuario 
+    * Que utiliza varias cuentas, mezclarle las preguntas
+    * y cambiarle los identificadores para que no utilice
+    * programas automatizadores de formularios y se dificulte la
+    * difusion de las respuestas .
+    * @author Pablo Martìnez
+    * @param  Model -> Respuestas
+    * @return Model -> Respuestas
+    *
+    **/
+    private function confundidoVivoYo($model)
+    {
+        //Funcion que organiza aleatoreamente un array.
+        if( shuffle($model) )
+        {         
+            return $model;
+        }
+
+        return NULL;
+
     }
 
 

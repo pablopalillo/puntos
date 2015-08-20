@@ -757,6 +757,27 @@ a.btn-jugar:hover {
 .ctn_btn-cerrar-sesion{
 	clear: both;
 }
+
+.table-result {
+    font-size: 12px;
+    tr {
+    	border-bottom: 1px solid $naranja;;
+	    th {
+		    min-width: 60px;
+		    text-align: center;
+		}
+		.center
+		{
+			text-align: center;
+		}
+		td
+		{
+			max-width: 200px;
+    		padding: 5px;
+		}
+	}
+	
+}
 /* ------------------ Juego -----------------*/
 
 /*Juego Puntos TM*/

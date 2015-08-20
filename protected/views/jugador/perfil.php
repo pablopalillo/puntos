@@ -55,6 +55,47 @@
 				<p>Documento: <?php echo $jugador->documento_adulto ?></p>
 			<?php endif; ?>
 
+			<section id="perfil-puntaje">
+				<header>
+					<h2 class="subtitulos">Ultimas Respuestas</h2>
+				</header>
+
+				<?php if( ! empty($rxj) ): ?>
+				<table class="table-result" >
+					<tr>
+						<th>Pregunta</th>
+						<th>Respuesta</th>
+						<th>Puntos </th>
+						<th>Fecha</th>
+
+					</tr>
+					<?php foreach ($rxj as $key => $res): ?>
+						<tr>
+							<td><?php echo $res->pregunta->pregunta ?></td>
+							<td class="td-center"><?php
+								if( $res->respuesta->es_correcta == 1)
+								{
+									 echo "Correcta" ;
+								}
+								else
+								{
+									echo 'Fallò' ;
+								}
+							 ?>
+							</td>
+							<td class="td-center"><?php echo  $res->pregunta->nivel->puntos ?></td>
+							<td><?php echo  $res->fecha ?></td>
+						</tr>
+
+
+					<?php endforeach; ?>
+				</table>	
+				<?php endif; ?>
+
+
+
+			</section>
+
 			<!--<div >
 				<?php echo CHtml::link( 'Editar Información', Yii::app()->request->baseUrl . '/editar-perfil', array('class'=>'btn-general_md') ); ?>
 			</div>-->
@@ -62,5 +103,8 @@
 	            <?php echo CHtml::link( 'Cerrar sesion', array('/cerrar-sesion'), array('class' => 'btn-general_md' ) ); ?>
 	        </div>
 		</section>
+		
+
+
 	</div><!-- /ctn_datos -->
 </div><!-- /ctn_perfil -->

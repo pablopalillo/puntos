@@ -38,8 +38,13 @@ class JugadorController extends Controller
 	public function actionPerfil()
 	{
 		$usuario_id = Yii::app()->user->id;
-		$jugador = Jugador::model()->with('usuario', 'parentesco')->findByAttributes(array('usuario_id' => $usuario_id));
-        
+		$jugador 	= Jugador::model()->with('usuario', 'parentesco')->findByAttributes(array('usuario_id' => $usuario_id));
+
+		$rxj 		= RespuestaXJugador::model()
+					 ->with('pregunta', 'respuesta', 'pregunta.nivel')
+					 ->findAll(array('order'=>'pregunta.fecha DESC' ,
+					 				 'condition' => 'jugador_id ='. $jugador->id ), array('limit'=>10) );
+
         $mes = date('m');
         $anho = date('Y');
 
@@ -69,7 +74,15 @@ class JugadorController extends Controller
             }
         }
 
-		$this->render('perfil', array('jugador' => $jugador, 'ranking_mes' => $r_m, 'ranking_anho' => $r_a, 'puntaje_mes' => $p_m, 'puntaje_anho' => $p_a));
+		$this->render('perfil', array(	'jugador' => $jugador,
+										'rxj' => $rxj, 
+										'ranking_mes' => $r_m,
+										'ranking_anho' => $r_a,
+										'puntaje_mes' => $p_m,
+										'puntaje_anho' => $p_a
+									)
+		);
+
 	}
 
 
