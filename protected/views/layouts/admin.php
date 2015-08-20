@@ -37,6 +37,7 @@
 									array('label'=>'Inicio', 'url'=>array('/admin/administrator/'), 'linkOptions' => array('class' => 'item1')),
 									array('label'=>'Nuevo', 'url'=>array('/admin/administrator/create/'), 'linkOptions' => array('class' => 'item1')),
 									array('label'=>'Contenidos', 'url'=>array('/admin/contenido'), 'linkOptions' => array('class' => 'item1')),
+									array('label'=>'Usuarios', 'url'=>array('/admin/usuario'), 'linkOptions' => array('class' => 'item1')),
 									array('label'=>'Salir', 'url'=>array('/site/logout/'), 'linkOptions' => array('class' => 'item1')),
 								),
 							)); ?>
@@ -56,7 +57,7 @@
 	<footer class="container-fluid ctn_footer">
 		<div  class="row">
 			<a class="tm" href="http://www.telemedellin.tv" target="_blank">Telemedellín</a>
-			<?php echo CHtml::link( 'Términos y condiciones', array('/terminos-y-condiciones'), array('class' => 'terminos' ) ); ?> <span>Puntos Telemedellín version 1.0</span>
+			<?php echo CHtml::link( 'Términos y condiciones', array('/terminos-y-condiciones'), array('class' => 'terminos' ) ); ?> <span>Puntos Telemedellín version 1.1</span>
 		</div>
 	</footer>
 </div>

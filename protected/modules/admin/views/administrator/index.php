@@ -9,20 +9,19 @@ $this->pageTitle = Yii::app()->name;
 		<div class="col-sm-9 admin-info">
 			<h2> Hola, admin </h2>
 			<p>
-				Puedes programar tus preguntas desde este lugar y crear una en cualquier momento.
+				Woo, Te contamos que tenemos novedades y actualizaciones.
 			</p>
 			<p>
-				Las preguntas estan ordenadas por fecha de creación, que aparecerán
-				desde la mas actuales hasta las mas antiguas.
-				Recuerda que los niveles corresponden a la cantidad de puntos que se
-				pueden lograr en caso de responder esta pregunta correctamente.
+				<ul>
+					<li>Ahora puedes programar tus preguntas mucho mas fácil.</li>
+					<li>Mejoras de seguridad al momento de responder preguntas.</li>
+					<li>Ahora los usuarios deberán esperar a que termine la pregunta programada para saber su resultado.</li>
+					<li>Los usuarios pueden ver sus ultimas 5 participaciones desde su perfil.</li>
+					<li>Ahora puedes editar contenidos de la pagina.</li>
+					<li>Puedes ver el listado de usuarios registrados.</li>
+				</ul>
 			<p>
 
-			<ul>
-				<li><strong>Nivel 1</strong> 10 puntos </strong></li>
-				<li><strong>Nivel 2</strong> 20 puntos </strong></li>
-				<li><strong>Nivel 3</strong> 30 puntos </strong></li>
-			</ul>
 		</div>
 		<div class="col-sm-3">
 			<?php echo CHtml::link('Nueva',Yii::app()->request->baseUrl . '/admin/administrator/create', array('class'=>'btn-general_md')); ?>
