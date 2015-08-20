@@ -713,6 +713,21 @@ a.btn-jugar:hover {
 .ctn_btn-cerrar-sesion {
   clear: both; }
 
+.table-result {
+  font-size: 12px; }
+  .table-result tr {
+    border-bottom: 1px solid #E88A2C; }
+    .table-result tr th {
+      min-width: 60px;
+      text-align: center; }
+    .table-result tr
+.td-center {
+      text-align: center; }
+    .table-result tr
+td {
+      max-width: 200px;
+      padding: 5px; }
+
 /* ------------------ Juego -----------------*/
 /*Juego Puntos TM*/
 .ctn_participar p {

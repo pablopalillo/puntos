@@ -38,12 +38,13 @@ class JugadorController extends Controller
 	public function actionPerfil()
 	{
 		$usuario_id = Yii::app()->user->id;
+		$ahora 		= date('Y-m-d G:i:s');
 		$jugador 	= Jugador::model()->with('usuario', 'parentesco')->findByAttributes(array('usuario_id' => $usuario_id));
 
 		$rxj 		= RespuestaXJugador::model()
 					 ->with('pregunta', 'respuesta', 'pregunta.nivel')
-					 ->findAll(array('order'=>'pregunta.fecha DESC' ,
-					 				 'condition' => 'jugador_id ='. $jugador->id ), array('limit'=>10) );
+					 ->findAll(array('order'=>'t.fecha DESC' ,
+					 				 'condition' => 'TIMESTAMPDIFF(MINUTE,  CONCAT(pregunta.fecha," ",pregunta.hora_fin), "'.$ahora.'" ) >= 5 AND jugador_id ='. $jugador->id ), array('limit'=>10) );
 
         $mes = date('m');
         $anho = date('Y');
