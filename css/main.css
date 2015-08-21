@@ -231,7 +231,8 @@ ul.yiiPager a:visited {
   overflow: hidden; }
 
 #ctn_panelmenu {
-  float: right; }
+  position: absolute;
+  right: 0; }
 
 #page {
   margin-top: -30px;
@@ -719,7 +720,8 @@ a.btn-jugar:hover {
     border-bottom: 1px solid #E88A2C; }
     .table-result tr th {
       min-width: 60px;
-      text-align: center; }
+      text-align: center;
+      padding-bottom: 5px; }
     .table-result tr
 .td-center {
       text-align: center; }

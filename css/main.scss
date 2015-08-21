@@ -266,7 +266,8 @@ a{
 
 #ctn_panelmenu
 {
-	float: right;
+	position: absolute;
+    right: 0;
 }
 
 #page {
@@ -765,6 +766,7 @@ a.btn-jugar:hover {
 	    th {
 		    min-width: 60px;
 		    text-align: center;
+		    padding-bottom: 5px;
 		}
 		.td-center
 		{
