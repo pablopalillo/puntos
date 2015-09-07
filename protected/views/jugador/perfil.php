@@ -83,7 +83,17 @@
 								}
 							 ?>
 							</td>
-							<td class="td-center"><?php echo  $res->pregunta->nivel->puntos ?></td>
+							<td class="td-center">
+							<?php
+								if( $res->respuesta->es_correcta == 1)
+								{
+									 echo  $res->pregunta->nivel->puntos;
+								}
+								else
+								{
+									echo ' - ' ;
+								}
+							 ?>
 							<td><?php echo  $res->fecha ?></td>
 						</tr>
 

@@ -60,13 +60,6 @@ class AdministratorController extends Controller
 		$pregunta 	= new Pregunta ;
 		$respuestas = null;
 
-
-		// Fecha con formato de la bd de mysql
-		$formatoFecha = Yii::app()->dateFormatter->format(
-			'yyyy-MM-dd',
-			CDateTimeParser::parse( $pregunta->fecha, 'dd/MM/yyyy')
-			); 
-
 		// Ajax validation
 		$this->performAjaxValidation($pregunta);
 
@@ -99,6 +92,13 @@ class AdministratorController extends Controller
 				{
 
 					$fechaForm 		 = $pregunta->fecha;
+
+					// Fecha con formato de la bd de mysql
+					$formatoFecha = Yii::app()->dateFormatter->format(
+						'yyyy-MM-dd',
+						CDateTimeParser::parse( $pregunta->fecha, 'dd/MM/yyyy')
+						); 
+
 					$pregunta->fecha = $formatoFecha;
 
 					if( $pregunta->save(false,'save') )

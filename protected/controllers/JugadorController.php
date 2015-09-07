@@ -44,7 +44,7 @@ class JugadorController extends Controller
 		$rxj 		= RespuestaXJugador::model()
 					 ->with('pregunta', 'respuesta', 'pregunta.nivel')
 					 ->findAll(array('order'=>'t.fecha DESC' ,
-					 				 'condition' => 'TIMESTAMPDIFF(MINUTE,  CONCAT(pregunta.fecha," ",pregunta.hora_fin), "'.$ahora.'" ) >= 5 AND jugador_id ='. $jugador->id ), array('limit'=>10) );
+					 				 'condition' => 'TIMESTAMPDIFF(MINUTE,  CONCAT(pregunta.fecha," ",pregunta.hora_fin), "'.$ahora.'" ) >= 5 AND jugador_id ='. $jugador->id ), array('limit'=>'10') );
 
         $mes = date('m');
         $anho = date('Y');
