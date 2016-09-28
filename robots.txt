@@ -1,4 +1,0 @@
-User-agent: * 
-Disallow: /tm/
-Disallow: /arvi/
-Disallow: /fonvalmed/

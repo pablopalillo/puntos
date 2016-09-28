@@ -324,7 +324,7 @@ class JugarController extends Controller
 			if( $n_rondasdia >= Yii::app()->params['rondasxdia'] )
 			{
 				Yii::app()->user->setFlash('error', "Ya has jugado " . Yii::app()->params['rondasxdia'] . ' veces el día de hoy, vuelve mañana para que sigas acumulando puntos.');
-				$this->redirect('puntajes');
+				//$this->redirect('puntajes');
 				Yii::app()->end();
 			}
 

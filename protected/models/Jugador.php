@@ -192,7 +192,7 @@ class Jugador extends CActiveRecord
                 $w = "WHERE r.es_correcta = 1 AND YEAR(rj.fecha) = " . $q;
                 break;
         }
-        $w 	.=	" AND TIMESTAMPDIFF(MINUTE,  CONCAT(p.fecha,' ',p.hora_fin), '".$ahora."' ) >= 5 "; 
+        //$w 	.=	" AND TIMESTAMPDIFF(MINUTE,  CONCAT(p.fecha,' ',p.hora_fin), '".$ahora."' ) >= 5 "; 
 
         $l = ($l == true) ? 'LIMIT 10' : '';
 

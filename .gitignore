@@ -1,9 +1,0 @@
-assets/.gitignore
-protected/runtime/*
-protected/runtime/.gitignore
-protected/runtime/application.log
-protected/config/*
-protected/config/main.php
-index.php
-.htaccess
-assets/

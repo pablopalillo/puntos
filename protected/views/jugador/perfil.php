@@ -4,7 +4,7 @@
 <div class="ctn_perfil">
 	<div id="estadisticas" class="col-sm-6 ctn_estadisticas">
 		<header>
-			<?php echo CHtml::link( 'Participa', array('/participar'), array('class' => 'btnParticipar' ) ); ?>
+			<?php echo CHtml::link( 'Participa', array('/jugar'), array('class' => 'btnParticipar' ) ); ?>
 		</header>
 		<section class="col-sm-12" id="estadisticas-content">
 			<div class="ctn_puntaje-mes ctn_puntajes">

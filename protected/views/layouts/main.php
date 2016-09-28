@@ -28,7 +28,7 @@
 			<div class="col-sm-5 col-md-5">
 				<div class="row">
 					<div class="ctn-btnParticipar col-sm-12 col-xs-6">
-						<a href="<?php echo Yii::app()->getBaseUrl(true).'/participar' ?>" class="btnParticipar">Juega Aquí</a>
+						<a href="<?php echo Yii::app()->getBaseUrl(true).'/jugar' ?>" class="btnParticipar">Juega Aquí</a>
 					</div>
 					<div class="ctn_mainmenu col-sm-12 col-xs-6">
 						<div id="mainmenu">
@@ -37,7 +37,7 @@
                   array('label'=>'Perfil', 'url'=>array('/perfil'), 'linkOptions' => array('class' => 'perfil'), 'visible'=>!Yii::app()->user->isGuest),
 									array('label'=>'Mecánica', 'url'=>array('/como-jugar'), 'linkOptions' => array('class' => 'item1')),
 									array('label'=>'Premios', 'url'=>array('/site/contenido/id/1'), 'linkOptions' => array('class' => 'item1')),
-									array('label'=>'Ranking', 'url'=>array('/ranking'), 'linkOptions' => array('class' => 'item1')),
+									array('label'=>'Ranking', 'url'=>array('/puntajes'), 'linkOptions' => array('class' => 'item1')),
 								),
 							)); ?>
 						</div>

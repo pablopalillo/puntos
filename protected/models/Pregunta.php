@@ -7,6 +7,9 @@
  * @property integer $id
  * @property integer $nivel_id
  * @property string $pregunta
+ * @property date $fecha
+ * @property time $hora_inicio
+ * @property time $hora_fin
  * @property integer $estado
  *
  * The followings are the available model relations:
